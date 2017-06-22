@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle mcfunction",
+        "command": "mcfunction:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "mcfunction",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "mcfunction:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
