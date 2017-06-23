@@ -1,13 +1,41 @@
 '.source.mcfunction':
 	'Advancement':
 		'prefix': 'advance'
-		'body': 'advancement ${1:grant/revoke} ${2:player} ${3:only/until/from/through} ${4:advancement} ${5:criterion}'
+		'body': 'advancement ${1:grant/revoke} ${2:player} ${3:only/until/from/through} ${4:advancement} ${5:criterion}\n$6'
 	'Advencement Everything':
 		'prefix': 'advance everything'
-		'body': 'advancement ${1:grant/revoke} ${2:player} everything'
+		'body': 'advancement ${1:grant/revoke} ${2:player} everything\n$3'
 	'Advancement Test':
 		'prefix': 'advance test'
-		'body': 'advancement test ${1:player} ${2:advancement} ${3:criterion}'
+		'body': 'advancement test ${1:player} ${2:advancement} ${3:criterion}\n$4'
+	'Blockdata':
+		'prefix': 'blockdata'
+		'body': 'blockdata ${1:x} ${2:y} ${3:z} \\{${4:NBT}\\}\n$5'
+	'Clear':
+		'prefix': 'clear'
+		'body': 'clear ${1:player} ${2:minecraft}:${3:block} ${4:block data} ${5:count} ${6:\\{}$7${6:\\}}\n$8'
+	'Clone':
+		'prefix': 'clone'
+		'body': 'clone ${1:x1} ${2:y1} ${3:z1} ${4:x2} ${5:y2} ${6:z2} ${7:x} ${8:y} ${9:z} replace ${11:force/move/normal}'
+	'Clone Masked':
+		'prefix': 'clone masked'
+		'body': 'clone ${1:x1} ${2:y1} ${3:z1} ${4:x2} ${5:y2} ${6:z2} ${7:x} ${8:y} ${9:z} masked ${12:force/move/normal}'
+	'Clone Filtered':
+		'prefix': 'clone filtered'
+		'body': 'clone ${1:x1} ${2:y1} ${3:z1} ${4:x2} ${5:y2} ${6:z2} ${7:x} ${8:y} ${9:z} filtered ${11:force/move/normal} ${12:minecraft}:${13:block} ${14:block data}'
+	'Default Gamemode':
+		'prefix': 'defaultgamemode'
+		'body': 'defaultgamemode ${1:mode}'
+	'Difficulty':
+		'prefix': 'difficulty'
+		'body': 'difficulty ${1:difficulty}'
+	'Effect':
+		'prefix': 'effect'
+		'body': 'effect ${1:player} ${2:minecraft}:${3:effect} ${4:seconds} ${5:amplifier} ${6:hide particles}'
+	'Effect clear':
+		'prefix': 'effect clear'
+		'body': 'effect ${1:player} clear'
+	
 	'Setblock':
 		'prefix': 'setblock'
-		'body': 'setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:\\{}$8${7:\\}}'
+		'body': 'setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:\\{}$8${7:\\}}\n$9'
