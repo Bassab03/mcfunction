@@ -1,9 +1,0 @@
-'scopeName': 'source.mcfunction'
-'name': 'MCFunction'
-'fileTypes': ['mcfunction']
-
-'patterns': [
-	{
-		
-	}
-]
