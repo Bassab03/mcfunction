@@ -35,7 +35,10 @@
 	'Effect clear':
 		'prefix': 'effect clear'
 		'body': 'effect ${1:player} clear'
+<<<<<<< HEAD
 	
+=======
+>>>>>>> b9df3b9eaeeadc4846abc9ef30f41262c6b36e76
 	'Setblock':
 		'prefix': 'setblock'
 		'body': 'setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:\\{}$8${7:\\}}\n$9'
