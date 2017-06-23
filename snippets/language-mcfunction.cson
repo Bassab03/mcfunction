@@ -1,0 +1,13 @@
+'.source.mcfunction':
+	'Advancement':
+		'prefix': 'advance'
+		'body': 'advancement ${1:grant/revoke} ${2:player} ${3:only/until/from/through} ${4:advancement} ${5:criterion}'
+	'Advencement Everything':
+		'prefix': 'advance everything'
+		'body': 'advancement ${1:grant/revoke} ${2:player} everything'
+	'Advancement Test':
+		'prefix': 'advance test'
+		'body': 'advancement test ${1:player} ${2:advancement} ${3:criterion}'
+	'Setblock':
+		'prefix': 'setblock'
+		'body': 'setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:\\{}$8${7:\\}}'
