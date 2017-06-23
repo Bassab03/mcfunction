@@ -1,12 +1,13 @@
 {
   "name": "mcfunction",
-  "main": "./lib/mcfunction",
   "version": "0.0.0",
   "description": "Minecraft function",
-  "repository": "https://github.com/MrYurihi/mcfunction",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/MrYurihi/mcfunction.git"},
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": "*"
   },
   "dependencies": {
   }
