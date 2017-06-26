@@ -1,15 +1,15 @@
 {
-  "name": "mcfunction",
-  "version": "0.0.0",
-  "description": "Minecraft function",
-  "repository": {
-	  "type": "git",
-	  "url": "https://github.com/MrYurihi/mcfunction.git"},
-  "license": "MIT",
-  "engines": {
-    "atom": "*"
-  },
-  "dependencies": {
-  },
-  "main": "./lib/main.coffee"
+	"name": "mcfunction",
+	"version": "0.0.0",
+	"description": "Minecraft function",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MrYurihi/mcfunction.git"},
+	"license": "MIT",
+	"engines": {
+		"atom": "*"
+	},
+	"dependencies": {
+	},
+	"main": "./lib/main.coffee"
 }
