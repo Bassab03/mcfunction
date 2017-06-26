@@ -10,5 +10,6 @@
     "atom": "*"
   },
   "dependencies": {
-  }
+  },
+  "main": "./lib/main.coffee"
 }
