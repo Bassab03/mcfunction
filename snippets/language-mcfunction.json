@@ -123,6 +123,142 @@
 		"Say": {
 			"prefix": "say",
 			"body": "say ${1:message}\n$2"
+		},
+		"Setblock": {
+			"prefix": "setblock",
+			"body": "setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:block handling} ${8:\\{${9:NBT}\\}}\n$10"
+		},
+		"Setblock Replace": {
+			"prefix": "setblock replace",
+			"body": "setblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} replace ${7:minecraft}:${8:block} ${10:block data}\n$11"
+		},
+		"Setworldspawn": {
+			"prefix": "setworldspawn",
+			"body": "setworldspawn ${1:x} ${2:y} ${3:z}"
+		},
+		"Spreadplayers": {
+			"prefix": "spreadplayers",
+			"body": "spreadplayers ${1:x} ${2:z} ${3:spread distance} ${4:max range} ${5:respect teams} ${6:players}\n$7"
+		},
+		"Stats Block Set": {
+			"prefix": "stats block set",
+			"body": "stats block ${1:x} ${2:y} ${3:z} set ${4:stat} ${5:selector} ${6:objective}\n$7"
+		},
+		"Stats Block Clear": {
+			"prefix": "stats block clear",
+			"body": "stats block ${1:x} ${2:y} ${3:z} clear ${4:stat}\n$5"
+		},
+		"Stats Entity Set": {
+			"prefix": "stats entity set",
+			"body": "stats entity ${1:selector} set ${2:stat} ${3:selector} ${4:objective}\n$5"
+		},
+		"Stats Entity Clear": {
+			"prefix": "stats entity clear",
+			"body": "stats entity ${1:selector} clear ${2:stat}\n$3"
+		},
+		"Summon": {
+			"prefix": "summon",
+			"body": "${1:minecraft}:${2:entity} ${3:x} ${4:y} ${5:z} ${6:\\{${7:NBT}\\}}\n$8"
+		},
+		"Teleport": {
+			"prefix": "teleport",
+			"body": "teleport ${1:entity} ${2:x} ${3:y} ${4:z} ${5:y rotation} ${6:x rotation}\n$7"
+		},
+		"Tell": {
+			"prefix": "tell",
+			"body": "tell ${1:player} ${2:message}\n$3"
+		},
+		"Tellraw": {
+			"prefix": "tellraw",
+			"body": "tellraw ${1:player} ${2:JSON}\n$3"
+		},
+		"Testfor": {
+			"prefix": "testfor",
+			"body": "testfor ${1:selector} ${2:\\{${3:NBT}\\}}\n$4"
+		},
+		"Testforblock": {
+			"prefix": "testforblock",
+			"body": "testforblock ${1:x} ${2:y} ${3:z} ${4:minecraft}:${5:block} ${6:block data} ${7:\\{${8:NBT}\\}}\n$9"
+		},
+		"Testforblocks": {
+			"prefix": "testforblocks",
+			"body": "testforblocks ${1:x1} ${2:y1} ${3:z1} ${4:x2} ${5:y2} ${6:z2} ${7:x} ${8:y} ${9:z} ${10:mode}\n$11"
+		},
+		"Time": {
+			"prefix": "time",
+			"body": "time ${1:add/query/set} ${2:value}\n$3"
+		},
+		"Title": {
+			"prefix": "title",
+			"body": "title ${1:player} ${2:option} ${3:JSON}\n$4"
+		},
+		"Title Clear": {
+			"prefix": "title clear",
+			"body": "title ${1:player} clear\n$2"
+		},
+		"Title Reset": {
+			"prefix": "title reset",
+			"body": "title ${1:player} reset\n$2"
+		},
+		"Title Times": {
+			"prefix": "title times",
+			"body": "title ${1:player} times ${2:fade in} ${3:stay} ${4:fade out}\n$5"
+		},
+		"Toggledownfall": {
+			"prefix": "toggledownfall",
+			"body": "toggledownfall\n$1"
+		},
+		"Tp Coord": {
+			"prefix": "tp coord",
+			"body": "tp ${1:selector} ${2:x} ${3:y} ${4:z}"
+		},
+		"Tp Entity": {
+			"prefix": "tp entity",
+			"body": "tp ${1:selector} ${2:selector}\n$3"
+		},
+		"Trigger": {
+			"prefix": "trigger",
+			"body": "trigger ${1:objective} ${2:add/set} ${3:value}\n$4"
+		},
+		"Weather": {
+			"prefix": "weather",
+			"body": "weather ${1:weather}\n$2"
+		},
+		"Worldborder Center": {
+			"prefix": "worldborder center",
+			"body": "worldborder center ${1:x} ${2:z}\n$3"
+		},
+		"Worldborder Add": {
+			"prefix": "worldborder add",
+			"body": "worldborder add ${1:radius} ${2:seconds}\n$3"
+		},
+		"Worldborder Set": {
+			"prefix": "worldborder set",
+			"body": "worldborder set ${1:radius} ${2:seconds}\n$3"
+		},
+		"Worldborder Damage Amount": {
+			"prefix": "worldborder damage amount",
+			"body": "worldborder damage amount ${1:damage per block}\n$2"
+		},
+		"Worldborder Damage Buffer": {
+			"prefix": "worldborder damage buffer",
+			"body": "worldborder damage buffer ${1:blocks}\n$2"
+		},
+		"Worldborder Get": {
+			"prefix": "worldborder get",
+			"body": "worldborder get\n$1"
+		},
+		"Worldborder Warning Distance": {
+			"prefix": "worldborder warning distance",
+			"body": "worldborder warning distance ${1:distance}\n$2"
+		},
+		"Worldborder Warning Time": {
+			"prefix": "worldborder warning time",
+			"body": "worldborder warning time ${1:time}\n$2"
+		},
+		"XP": {
+			"prefix": "xp",
+			"body": "xp ${1:amount}${2:L} ${3:player}\n$4"
 		}
 	}
 }
