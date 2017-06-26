@@ -4,22 +4,28 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.mcfunction {
+.syntax--mcfunction {
+	.syntax--selector {
+		color: #0000ff;
+		.syntax--argument {
+			color: #55f;
+		}
+	}
 
-}
+	.syntax--error {
+		background-color: #f00;
+		color: #fff;
+	}
 
-.syntax--mcfunction .syntax--selector {
-	color: #0000ff;
-}
+	.syntax--command {
+		color: #8f00b3;
+	}
 
-.syntax--mcfunction .syntax--command {
-	color: #8f00b3;
-}
+	.syntax--comment {
+		color: #999;
+	}
 
-.syntax--mcfunction .syntax--comment {
-	color: #999;
-}
-
-.syntax--coord {
-	color: #777;
+	.syntax--coord {
+		color: #777;
+	}
 }
