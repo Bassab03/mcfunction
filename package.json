@@ -4,12 +4,11 @@
 	"description": "Minecraft function",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/MrYurihi/mcfunction.git"},
+		"url": "https://github.com/MrYurihi/language-mcfunction.git"},
 	"license": "MIT",
 	"engines": {
 		"atom": "*"
 	},
 	"dependencies": {
-	},
-	"main": "./lib/main.coffee"
+	}
 }
