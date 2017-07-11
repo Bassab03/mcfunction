@@ -1,10 +1,10 @@
 {
   "name": "mcfunction",
-  "version": "0.3.0",
+  "version": "0.1.0",
   "description": "Minecraft function",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrYurihi/language-mcfunction.git"
+    "url": "https://github.com/MrYurihi/mcfunction.git"
   },
   "license": "MIT",
   "engines": {
