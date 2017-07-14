@@ -4,16 +4,24 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"match": "(@[paers])(?:\\[(.*=.*)+\\])?",
+			"match": "(@[paers])(?:\\[(?:(.*)=(.*),)+(.*)=(.*)\\])?",
 			"captures": {
 				"1": {
-					"name": "mcfunction.target"
+					"name": "mcfunction.selector.target"
 				},
 				"2": {
-					"name": "mcfunction.argument"
+					"name": "mcfunction.selector.argument.name"
+				},
+				"3": {
+					"name": "mcfunction.selector.argument.value"
+				},
+				"4": {
+					"name": "mcfunction.selector.argument.name"
+				},
+				"5": {
+					"name": "mcfunction.selector.argument.value"
 				}
-			},
-			"name": "mcfunction.selector"
+			}
 		},
 		{
 			"match": "^(advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",

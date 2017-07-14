@@ -5,16 +5,23 @@
 @import "ui-variables";
 
 .syntax--mcfunction {
+
 	.syntax--selector {
-		color: #0000ff;
+
+		.syntax--target {
+			color: #f00;
+		}
+
 		.syntax--argument {
-			color: #55f;
+			.syntax--name {
+				color: #00ccff;
+			}
 		}
 	}
 
 	.syntax--error {
-		background-color: #f00;
-		color: #fff;
+		background-color: #ff0000;
+		color: #ffffff;
 	}
 
 	.syntax--command {
@@ -22,10 +29,10 @@
 	}
 
 	.syntax--comment {
-		color: #999;
+		color: #999999;
 	}
 
 	.syntax--coord {
-		color: #777;
+		color: #777777;
 	}
 }

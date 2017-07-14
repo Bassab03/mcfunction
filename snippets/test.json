@@ -1,8 +1,0 @@
-{
-	".source.mcfunction": {
-		"Hi": {
-			"prefix": "hello",
-			"body": "hi"
-		}
-	}
-}
