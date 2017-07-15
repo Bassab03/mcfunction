@@ -16,15 +16,56 @@
 					"match": "([\\w_]+)=([\\w_]*)",
 					"captures": {
 						"1": {
-							"name": "argument.name"
+							"name": "name"
 						},
 						"2": {
-							"name": "argument.value"
+							"name": "value"
+						}
+					},
+					"name": "argument"
+				}
+			],
+			"name": "selector"
+		},
+		{
+			"match": "@[parse]",
+			"name": "selector.target"
+		},
+		{
+			"begin": "{",
+			"end": "}",
+			"patterns": [
+				{
+					"include": "$self"
+				},
+				{
+					"match": "((?:\"[^\"\\n]*\")|(?:[\\w_]+))[ \\t]*:",
+					"captures":{
+						"1": {
+							"name": "name"
+						}
+					}
+				},
+				{
+					"begin": ":[ \\t]*",
+					"match": "\"[^\\n\"]*\"",
+					"captures": {
+						"0": {
+							"name": "value.string"
+						}
+					}
+				},
+				{
+					"begin": ":[ \\t]*",
+					"match": "[\\d]+(?:\\.[\\d]+)?",
+					"captures": {
+						"0": {
+							"name": "value.number"
 						}
 					}
 				}
 			],
-			"name": "selector"
+			"name": "nbt"
 		},
 		{
 			"match": "^(advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
