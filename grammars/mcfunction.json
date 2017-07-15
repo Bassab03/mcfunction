@@ -41,15 +41,6 @@
 		{
 			"match": "^/",
 			"name": "error.fslash"
-		},
-		{
-			"match": "^(?:hello){3}",
-			"patterns": [
-				{
-					"match": "hello",
-					"name": "one"
-				}
-			]
 		}
 	]
 }
