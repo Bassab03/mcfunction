@@ -6,3 +6,6 @@
 
 ## 0.2.0
  * add syntax highlighting for selectors and NBT
+
+## 0.2.1
+ * fix some bugs with syntax highlighting for NBT
