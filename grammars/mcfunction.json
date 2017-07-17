@@ -65,7 +65,10 @@
 			"name": "compound",
 			"patterns": [
 				{
-					"include": "#nbt-key"
+					"include": "#nbt-key-quoted"
+				},
+				{
+					"include": "#nbt-key-unquoted"
 				},
 				{
 					"begin": ":[\\t_]*",
@@ -78,17 +81,18 @@
 				}
 			]
 		},
-		"nbt-key": {
-			"match": "(\".*?\")|[\\w_]+",
-			"captures": {
-				"1": {
-					"patterns": [
-						{
-							"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
-						}
-					]
+		"nbt-key-quoted": {
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
 				}
-			},
+			],
+			"name": "key"
+		},
+		"nbt-key-unquoted": {
+			"match": "[\\w_]+",
 			"name": "key"
 		},
 		"nbt-value": {
