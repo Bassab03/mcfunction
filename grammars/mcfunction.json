@@ -32,7 +32,7 @@
 			"include": "#nbt-compound"
 		},
 		{
-			"match": "^(?:advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
+			"match": "^(?:advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|function|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
 			"name": "command"
 		},
 		{
@@ -50,7 +50,7 @@
 	],
 	"repository": {
 		"nbt-array": {
-			"begin": "\\[(?:[IB];)?",
+			"begin": "\\[",
 			"end": "\\]",
 			"name": "array",
 			"patterns": [
@@ -69,7 +69,7 @@
 				},
 				{
 					"begin": ":[\\t_]*",
-					"end": "(?=[\\t ]*})|,",
+					"end": "(?=[\\t ]*}|,)",
 					"patterns": [
 						{
 							"include": "#nbt-value"
@@ -112,11 +112,7 @@
 			"end": "\"",
 			"patterns": [
 				{
-					"patterns": [
-						{
-							"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
-						}
-					]
+					"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
 				}
 			],
 			"name": "value.string"
