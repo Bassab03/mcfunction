@@ -4,35 +4,26 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"begin": "(@[parse])\\[",
-			"beginCaptures": {
+			"match": "(@[parse])(\\[(?:[\\w_]+=[\\w_]*,)*[\\w_]+=[\\w_]*\\])?",
+			"captures": {
 				"1": {
 					"name": "target"
-				}
-			},
-			"end": "\\]",
-			"patterns": [
-				{
-					"match": "([\\w_]+)=([\\w_]*)",
-					"captures": {
-						"1": {
-							"name": "name"
-						},
-						"2": {
-							"name": "value"
+				},
+				"2": {
+					"name": "argument",
+					"patterns": [
+						{
+							"match": "([\\w_]+)=([\\w_]*)",
+							"captures": {
+								"1": {
+									"name": "name"
+								},
+								"2": {
+									"name": "value"
+								}
+							}
 						}
-					},
-					"name": "argument"
-				}
-			],
-			"name": "selector"
-		},
-		{
-			"match": "@[parse]",
-			"captures": {
-				"0": {
-					"match": "@[parse]",
-					"name": "target"
+					]
 				}
 			},
 			"name": "selector"
@@ -75,7 +66,7 @@
 		},
 		{
 			"match": "^(?:advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
-			"name": "command",
+			"name": "command"
 		},
 		{
 			"match": "#.*",
