@@ -29,8 +29,7 @@
 			"name": "selector"
 		},
 		{
-			"include": "#nbt-compound",
-			"name": "nbt"
+			"include": "#nbt-compound"
 		},
 		{
 			"match": "^(?:advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
