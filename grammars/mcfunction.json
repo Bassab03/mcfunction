@@ -29,6 +29,9 @@
 			"name": "selector"
 		},
 		{
+			"include": "#nbt-array"
+		},
+		{
 			"include": "#nbt-compound"
 		},
 		{
@@ -52,7 +55,7 @@
 		"nbt-array": {
 			"begin": "\\[",
 			"end": "\\]",
-			"name": "array",
+			"name": "array.nbt",
 			"patterns": [
 				{
 					"include": "#nbt-value"
@@ -62,7 +65,7 @@
 		"nbt-compound": {
 			"begin": "{",
 			"end": "}",
-			"name": "compound",
+			"name": "compound.nbt",
 			"patterns": [
 				{
 					"include": "#nbt-key-quoted"
@@ -89,7 +92,7 @@
 					"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
 				}
 			],
-			"name": "key"
+			"name": "key.nbt"
 		},
 		"nbt-key-unquoted": {
 			"match": "[\\w_]+",
@@ -119,11 +122,11 @@
 					"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
 				}
 			],
-			"name": "value.string"
+			"name": "value.string.nbt"
 		},
 		"nbt-number": {
 			"match": "-?\\d+(?:\\.\\d+)?[bfdl]?",
-			"name": "value.number"
+			"name": "value.number.nbt"
 		}
 	}
 }
