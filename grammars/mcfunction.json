@@ -29,7 +29,13 @@
 		},
 		{
 			"match": "@[parse]",
-			"name": "selector.target"
+			"captures": {
+				"0": {
+					"match": "@[parse]",
+					"name": "target"
+				}
+			},
+			"name": "selector"
 		},
 		{
 			"begin": "{",
@@ -68,15 +74,15 @@
 			"name": "nbt"
 		},
 		{
-			"match": "^(advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
-			"name": "command"
+			"match": "^(?:advancement|blockdata|clear|clone|defaultgamemode|difficulty|effect|enchant|entitydata|execute|fill|funtion|gamemode|gamerule|give|kill|locate|particle|playsound|recipe|reload|replaceitem|say|scoreboard|setblock|setworldspawn|spreadplayers|stats|stopsound|summon|teleport|tell|tellraw|testfor|testforblock|testforblocks|time|title|toggledownfall|tp|trigger|weather|worldborder|xp)",
+			"name": "command",
 		},
 		{
 			"match": "#.*",
 			"name": "comment"
 		},
 		{
-			"match": "( ((~(-?\\d+(\\.\\d+)?)?)|(-?\\d+(\\.\\d+)?))){3}",
+			"match": "(?: (?:(?:~(?:-?\\d+(?:\\.\\d+)?)?)|(?:-?\\d+(?:\\.\\d+)?))){3}",
 			"name": "coord"
 		},
 		{
