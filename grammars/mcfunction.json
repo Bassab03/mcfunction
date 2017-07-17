@@ -29,39 +29,7 @@
 			"name": "selector"
 		},
 		{
-			"begin": "{",
-			"end": "}",
-			"patterns": [
-				{
-					"include": "$self"
-				},
-				{
-					"match": "((?:\"[^\"\\n]*\")|(?:[\\w_]+))[ \\t]*:",
-					"captures":{
-						"1": {
-							"name": "name"
-						}
-					}
-				},
-				{
-					"begin": ":[ \\t]*",
-					"match": "\"[^\\n\"]*\"",
-					"captures": {
-						"0": {
-							"name": "value.string"
-						}
-					}
-				},
-				{
-					"begin": ":[ \\t]*",
-					"match": "[\\d]+(?:\\.[\\d]+)?",
-					"captures": {
-						"0": {
-							"name": "value.number"
-						}
-					}
-				}
-			],
+			"include": "#nbt-compound",
 			"name": "nbt"
 		},
 		{
@@ -80,5 +48,83 @@
 			"match": "^/",
 			"name": "error.fslash"
 		}
-	]
+	],
+	"repository": {
+		"nbt-array": {
+			"begin": "\\[(?:[IB];)?",
+			"end": "\\]",
+			"name": "array",
+			"patterns": [
+				{
+					"include": "#nbt-value"
+				}
+			]
+		},
+		"nbt-compound": {
+			"begin": "{",
+			"end": "}",
+			"name": "compound",
+			"patterns": [
+				{
+					"include": "#nbt-key"
+				},
+				{
+					"begin": ":[\\t_]*",
+					"end": "(?=[\\t ]*})|,",
+					"patterns": [
+						{
+							"include": "#nbt-value"
+						}
+					]
+				}
+			]
+		},
+		"nbt-key": {
+			"match": "(\".*?\")|[\\w_]+",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
+						}
+					]
+				}
+			},
+			"name": "key"
+		},
+		"nbt-value": {
+			"patterns": [
+				{
+					"include": "#nbt-string"
+				},
+				{
+					"include": "#nbt-number"
+				},
+				{
+					"include": "#nbt-compound"
+				},
+				{
+					"include": "#nbt-array"
+				}
+			]
+		},
+		"nbt-string": {
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"patterns": [
+						{
+							"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
+						}
+					]
+				}
+			],
+			"name": "value.string"
+		},
+		"nbt-number": {
+			"match": "-?\\d+(?:\\.\\d+)?[bfdl]?",
+			"name": "value.number"
+		}
+	}
 }
