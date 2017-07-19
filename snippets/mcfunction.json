@@ -158,7 +158,7 @@
 		},
 		"Summon": {
 			"prefix": "summon",
-			"body": "${1:minecraft}:${2:entity} ${3:x} ${4:y} ${5:z} ${6:\\{${7:NBT}\\}}\n$8"
+			"body": "summon ${1:minecraft}:${2:entity} ${3:x} ${4:y} ${5:z} ${6:\\{${7:NBT}\\}}\n$8"
 		},
 		"Teleport": {
 			"prefix": "teleport",
