@@ -13,7 +13,7 @@
 					"name": "argument",
 					"patterns": [
 						{
-							"match": "([\\w_]+)=([\\w_]*)",
+							"match": "([\\w_]+)=(!?[\\w_]*)",
 							"captures": {
 								"1": {
 									"name": "name"
