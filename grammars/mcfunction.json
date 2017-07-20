@@ -4,7 +4,7 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"match": "(@[parse])(\\[(?:[\\w_]+=[\\w_]*,)*[\\w_]+=[\\w_]*\\])?",
+			"match": "(@[parse])(\\[(?:[\\w_]+=!?[\\w_]*,)*[\\w_]+=!?[\\w_]*\\])?",
 			"captures": {
 				"1": {
 					"name": "target"
