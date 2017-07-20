@@ -15,3 +15,6 @@
 
 ## 0.2.3
  * Fix bugs
+
+## 0.2.5
+ * Fix APM stuff
