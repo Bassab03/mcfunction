@@ -4,7 +4,7 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"match": "(@[parse])(\\[(?:[\\w_]+=!?[\\w_]*,)*[\\w_]+=!?[\\w_]*\\])?",
+			"match": "(@[parse])(\\[(?:[a-zA-Z_]+=(?:!?[a-zA-Z_]*)|(?:-?\\d+)*,)*[a-zA-Z_]+=(?:-?\\d+|!?[a-zA-Z_]*)\\])?",
 			"captures": {
 				"1": {
 					"name": "target"
@@ -13,7 +13,7 @@
 					"name": "argument",
 					"patterns": [
 						{
-							"match": "([\\w_]+)=(!?[\\w_]*)",
+							"match": "([a-zA-Z_]+)=(-?\\d+|!?[a-zA-z_]*)",
 							"captures": {
 								"1": {
 									"name": "name"
