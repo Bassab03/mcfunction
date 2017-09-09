@@ -4,22 +4,22 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.syntax--mcfunction {
+.syntax--source.syntax--mcfunction {
 
 	.syntax--selector {
 
 		.syntax--target {
-			color: #33f;
+			color: @hue-1;
 		}
 
-		.syntax--argument{
+		.syntax--argument {
 
 			.syntax--name {
-				color: #0cf;
+				color: @hue-5;
 			}
 
 			.syntax--value {
-				color: #0b9;
+				color: @hue-4;
 			}
 		}
 	}
@@ -27,28 +27,19 @@
 	.syntax--nbt {
 
 		.syntax--key {
-			color: #0cf;
+			color: @hue-5;
 		}
 
 		.syntax--value {
-			color: #0b9;
+			color: @hue-4;
 		}
 	}
 
-	.syntax--error {
-		background-color: #ff0000;
-		color: #ffffff;
-	}
-
 	.syntax--command {
-		color: #8f00b3;
-	}
-
-	.syntax--comment {
-		color: #999999;
+		color: @hue-3;
 	}
 
 	.syntax--coord {
-		color: #777777;
+		color: @mono-3;
 	}
 }
