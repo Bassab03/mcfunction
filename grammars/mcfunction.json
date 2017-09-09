@@ -48,7 +48,7 @@
 		},
 		{
 			"match": "^/",
-			"name": "error.fslash"
+			"name": "invalid.illegal.error.fslash"
 		}
 	],
 	"repository": {
@@ -96,7 +96,7 @@
 		},
 		"nbt-key-unquoted": {
 			"match": "[\\w_]+",
-			"name": "key"
+			"name": "key.nbt"
 		},
 		"nbt-value": {
 			"patterns": [

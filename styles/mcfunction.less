@@ -2,24 +2,35 @@
 //
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
+
+.syntax--string {
+	color: @syntax-color-snippet;
+}
+
+.syntax--comment {
+	color: #7c7c7c;
+	font-style: italic;
+}
+
 @import "ui-variables";
+@import (optional) "index.less";
 
 .syntax--source.syntax--mcfunction {
 
 	.syntax--selector {
 
 		.syntax--target {
-			color: @hue-1;
+			color: @syntax-color-function;
 		}
 
 		.syntax--argument {
 
 			.syntax--name {
-				color: @hue-5;
+				color: @syntax-color-tag;
 			}
 
 			.syntax--value {
-				color: @hue-4;
+				.syntax--string;
 			}
 		}
 	}
@@ -27,19 +38,20 @@
 	.syntax--nbt {
 
 		.syntax--key {
-			color: @hue-5;
+			color: @syntax-color-tag;
 		}
 
 		.syntax--value {
-			color: @hue-4;
+			.syntax--string;
 		}
 	}
 
 	.syntax--command {
-		color: @hue-3;
+		color: @syntax-color-keyword;
 	}
 
 	.syntax--coord {
-		color: @mono-3;
+		.syntax--comment;
+		font-style: normal;
 	}
 }
