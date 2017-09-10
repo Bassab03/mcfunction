@@ -1,0 +1,408 @@
+{
+	"commands": {
+		"advancement": {
+			"name": "advancement",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"grant",
+						"revoke",
+						"test"
+					],
+					"change": {
+						"test":  [
+
+						]
+					}
+				},
+				{
+					"type": "player",
+					"name": "players: players"
+				},
+				{
+					"type": "option",
+					"value": [
+						"everything",
+						"from",
+						"only",
+						"through",
+						"until"
+					],
+					"change": {
+						"everything": {
+							"cycle": [
+								{
+									"type": "end"
+								}
+							]
+						},
+						"only": {
+							"insert": {
+								"position": "after"
+							},
+							"cycle": [
+								{
+									"type": "id",
+									"value": "criterion: id"
+								}
+							]
+						}
+					}
+				},
+				{
+					"type": "id",
+					"value": "advancement: id"
+				}
+			]
+		},
+		"clear": {
+			"name": "clear",
+			"cycleMarkers": [
+				{
+					"type": "player",
+					"optional": true,
+					"value": "players: players"
+				},
+				{
+					"type": "item",
+					"optional": true,
+					"value": "item: item"
+				},
+				{
+					"type": "string",
+					"optional": true,
+					"value": "maxCount: string"
+				}
+			]
+		},
+		"clone": {
+			"name": "clone",
+			"cycleMarkers": [
+				{
+					"type": "coord",
+					"value": "begin: x y z"
+				},
+				{
+					"type": "coord",
+					"value": "end: x y z"
+				},
+				{
+					"type": "coord",
+					"value": "destination: x y z"
+				},
+				{
+					"type": "option",
+					"optional": true,
+					"value": [
+						"filtered",
+						"masked",
+						"replace"
+					],
+					"change": {
+						"filtered": {
+							"cycle": [
+								{
+									"type": "block",
+									"value": "filter: block"
+								}
+							]
+						}
+					}
+				},
+				{
+					"type": "option",
+					"optional": true,
+					"value": [
+						"force",
+						"move",
+						"normal"
+					]
+				}
+			]
+		},
+		"defaultgamemode": {
+			"name": "defaultgamemode",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"adventure",
+						"creative",
+						"spectator",
+						"survival"
+					]
+				}
+			]
+		},
+		"difficulty": {
+			"name": "difficulty",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"easy",
+						"hard",
+						"normal",
+						"peaceful"
+					]
+				}
+			]
+		},
+		"effect": {
+			"name": "effect",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"clear",
+						"give"
+					],
+					"change": {
+						"clear": {
+							"insert": {
+								"position": "marker",
+								"value": "clear"
+							},
+							"cycle": [
+								{
+									"type": "end"
+								}
+							]
+						}
+					}
+				},
+				{
+					"type": "entity",
+					"value": "entities: entities"
+				},
+				{
+					"type": "effect",
+					"value": "effect: id",
+					"marker": "clear"
+				},
+				{
+					"type": "string",
+					"value": "seconds: int",
+					"optional": true
+				},
+				{
+					"type": "string",
+					"value": "amplifier: int",
+					"optional": true
+				},
+				{
+					"type": "boolean",
+					"value": "hideParticles: boolean",
+					"optional": true
+				}
+			]
+		},
+		"enchant": {
+			"name": "enchant",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "entities: entities"
+				},
+				{
+					"type": "enchantment",
+					"value": "enchantment: id"
+				},
+				{
+					"type": "string",
+					"value": "level: int",
+					"optional": true
+				}
+			]
+		},
+		"entitydata": {
+			"name": "entitydata",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "entities: entities"
+				},
+				{
+					"type": "nbt",
+					"value": "nbt: nbt",
+					"optional": true
+				}
+			]
+		},
+		"execute": {
+			"name": "execute",
+			"cycleMarkers": [
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				},
+				{
+					"include": "execute"
+				}
+			]
+		},
+		"fill": {
+			"name": "fill",
+			"cycleMarkers": [
+				{
+					"type": "coord",
+					"value": "from: x y z"
+				},
+				{
+					"type": "coord",
+					"value": "to: x y z"
+				},
+				{
+					"type": "block",
+					"value": "block: block"
+				},
+				{
+					"type": "option",
+					"optional": true,
+					"value": [
+						"destroy",
+						"hollow",
+						"keep",
+						"outline",
+						"replace"
+					],
+					"change": {
+						"replace": {
+							"cycle": [
+								{
+									"type": "block",
+									"filter": "filter: block"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"function": {
+			"name": "function",
+			"cycleMarkers": [
+				{
+					"type": "function",
+					"value": "name: id"
+				}
+			]
+		},
+		"gamemode": {
+			"name": "gamemode",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"adventure",
+						"creative",
+						"spectator",
+						"survival"
+					]
+				},
+				{
+					"type": "player",
+					"value": "target: players",
+					"optional": true
+				}
+			]
+		}
+	},
+	"reference": {
+		"execute": {
+			"type": "option",
+			"value": [
+				"as",
+				"at",
+				"if",
+				"offset",
+				"store",
+				"unless",
+				"then"
+			],
+			"change": {
+				"as": {
+					"cycle": [
+						{
+							"type": "entity",
+							"value": "entities: entities"
+						}
+					]
+				},
+				"at": {
+					"cycle": [
+						{
+							"type": "entity",
+							"value": "entities: entities"
+						}
+					]
+				},
+				"if": {
+					"cycle": [
+						{
+							"type": "entity",
+							"value": "entities: entities"
+						}
+					]
+				},
+				"unless": {
+					"cycle": [
+						{
+							"type": "entity",
+							"value": "entities: entities"
+						}
+					]
+				},
+				"offset": {
+					"cycle": [
+						{
+							"type": "coord",
+							"value": "pos: x y z"
+						}
+					]
+				},
+				"store": {
+					"cycle": [
+						{
+							"type": "option",
+							"value": [
+								"result",
+								"success"
+							]
+						},
+						{
+							"type": "entity",
+							"value": "name: entity"
+						},
+						{
+							"type": "text",
+							"value": "objective: string"
+						}
+					]
+				},
+				"then": {
+					"cycle": [
+						{
+							"type": "command"
+						}
+					]
+				}
+			}
+		}
+	}
+}

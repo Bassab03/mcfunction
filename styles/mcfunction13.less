@@ -15,6 +15,13 @@
 @import "ui-variables";
 @import (optional) "index.less";
 
+.icon {
+	&.command {
+		color: @syntax-color-keyword;
+		background: fadeout(@syntax-color-keyword, 80%);
+	}
+}
+
 .syntax--source.syntax--mcfunction13 {
 
 	.syntax--selector {
