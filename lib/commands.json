@@ -11,9 +11,25 @@
 						"test"
 					],
 					"change": {
-						"test":  [
-
-						]
+						"test":  {
+							"cycle": [
+								{
+									"type": "entity",
+									"value": "players: players"
+								},
+								{
+									"type": "advancement",
+									"value": "advancement: id"
+								},
+								{
+									"type": "string",
+									"value": "criterion: id"
+								},
+								{
+									"type": "end"
+								}
+							]
+						}
 					}
 				},
 				{
@@ -44,7 +60,7 @@
 									"value": "advancement: id"
 								},
 								{
-									"type": "criterion",
+									"type": "string",
 									"value": "criterion: id"
 								},
 								{
@@ -333,8 +349,261 @@
 						"disableElytraMovementCheck",
 						"doDaylightCycle",
 						"doEntityDrops",
-						"doFireTick"
+						"doFireTick",
+						"doLimitedCrafting",
+						"doMobloot",
+						"doMobSpawning",
+						"doTileDrops",
+						"doWeatherCycle",
+						"gameLoopFunction",
+						"keepInventory",
+						"logAdminCommands",
+						"maxCommandChainLength",
+						"maxEntityCramming",
+						"mobGreifing",
+						"naturalRegeneration",
+						"randomTickSpeed",
+						"reducedDebugInfo",
+						"sendCommandFeedback",
+						"showDeathMessages",
+						"spawnRadius",
+						"spectatorsGenerateChunks",
+						"structureSaveLocation"
+					],
+					"change": {
+						"gameLoopFunction": {
+							"cycle": [
+								{
+									"type": "function",
+									"value": "value: function"
+								},
+								{
+									"type": "end"
+								}
+							]
+						},
+						"maxCommandChainLength": {
+							"cycle": [
+								{
+									"type": "string",
+									"value": "value: int"
+								},
+								{
+									"type": "end"
+								}
+							]
+						},
+						"maxEntityCramming": {
+							"cycle": [
+								{
+									"type": "string",
+									"value": "value: int"
+								},
+								{
+									"type": "end"
+								}
+							]
+						},
+						"randomTickSpeed": {
+							"cycle": [
+								{
+									"type": "string",
+									"value": "value: int"
+								},
+								{
+									"type": "end"
+								}
+							]
+						},
+						"spawnRadius": {
+							"cycle": [
+								{
+									"type": "string",
+									"value": "value: int"
+								},
+								{
+									"type": "end"
+								}
+							]
+						},
+						"structureSaveDestination": {
+							"cycle": [
+								{
+									"type": "string",
+									"value": "string"
+								},
+								{
+									"type": "end"
+								}
+							]
+						}
+					}
+				},
+				{
+					"type": "boolean",
+					"value": "value: bool"
+				}
+			]
+		},
+		"give": {
+			"name": "give",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "target: players"
+				},
+				{
+					"type": "item",
+					"value": "item: item"
+				},
+				{
+					"type": "string",
+					"value": "count: int"
+				}
+			]
+		},
+		"kill": {
+			"name": "kill",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "vicitms: entities"
+				}
+			]
+		},
+		"locate": {
+			"name": "locate",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"EndCity",
+						"Fortress",
+						"Mansion",
+						"Mineshaft",
+						"Monument",
+						"Stronghold",
+						"Temple",
+						"Village"
 					]
+				}
+			]
+		},
+		"me": {
+			"name": "me",
+			"cycleMarkers": [
+				{
+					"type": "greedy",
+					"value": "action: string"
+				}
+			]
+		},
+		"msg": {
+			"name": "msg",
+			"cycleMarkers": [
+				{
+					"type": "greedy",
+					"value": "message: string"
+				}
+			]
+		},
+		"particle": {
+			"name": "particle",
+			"cycleMarkers": [
+				{
+					"type": "particle",
+					"value": "name: id"
+				},
+				{
+					"type": "coord",
+					"value": "pos: x y z"
+				},
+				{
+					"type": "coord",
+					"value": "delta: x y z"
+				},
+				{
+					"type": "string",
+					"value": "speed: int"
+				},
+				{
+					"type": "string",
+					"value": "count: int"
+				},
+				{
+					"type": "option",
+					"value": [
+						"normal",
+						"force"
+					]
+				},
+				{
+					"type": "entity",
+					"value": "veiwers: players"
+				}
+			]
+		},
+		"playsound": {
+			"name": "playsound",
+			"cycleMarkers": [
+				{
+					"type": "sound",
+					"value": "name: id"
+				},
+				{
+					"type": "option",
+					"value": [
+						"ambient",
+						"block",
+						"hostile",
+						"master",
+						"music",
+						"neutral",
+						"player",
+						"record",
+						"voice",
+						"weather"
+					]
+				},
+				{
+					"type": "entity",
+					"value": "target: players"
+				},
+				{
+					"type": "coord",
+					"value": "pos: x y z"
+				},
+				{
+					"type": "string",
+					"value": "volume: float"
+				},
+				{
+					"type": "string",
+					"value": "pitch: float"
+				},
+				{
+					"type": "string",
+					"value": "minVolume: float"
+				}
+			]
+		},
+		"recipe": {
+			"name": "recipe",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"give",
+						"take"
+					]
+				},
+				{
+					"type": "entity",
+					"value": "target: players"
+				},
+				{
+					"type": "recipe",
+					"value": "recipe: id"
 				}
 			]
 		}
