@@ -1473,14 +1473,15 @@
 				"then"
 			],
 			"change": {
-				"as": {
-					"cycle": [
-						{
-							"type": "entity",
-							"value": "entities: entities"
-						}
-					]
-				},
+				"as": [
+					{
+						"type": "entity",
+						"value": "entities: entities"
+					},
+					{
+						"type": "end"
+					}
+				],
 				"at": [
 					{
 						"type": "entity",
