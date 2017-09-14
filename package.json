@@ -1,22 +1,22 @@
 {
-	"name": "mcfunction",
-	"version": "0.3.2",
-	"description": "Minecraft function language. Has syntax highlighting and snippets",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/MrYurihi/mcfunction.git"
-	},
-	"main": "./lib/main",
-	"license": "MIT",
-	"engines": {
-		"atom": "*"
-	},
-	"providedServices": {
-		"autocomplete.provider": {
-			"versions": {
-				"2.0.0": "getProvider"
-			}
-		}
-	},
-	"dependencies": {}
+  "name": "mcfunction",
+  "version": "0.4.0",
+  "description": "Minecraft function language. Has syntax highlighting and snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrYurihi/mcfunction.git"
+  },
+  "main": "./lib/main",
+  "license": "MIT",
+  "engines": {
+    "atom": "*"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
+  "dependencies": {}
 }
