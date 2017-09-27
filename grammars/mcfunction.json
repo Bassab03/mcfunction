@@ -13,7 +13,7 @@
 					"name": "argument",
 					"patterns": [
 						{
-							"match": "([a-zA-Z_]+)=((?:-?\\d+)|(?:!?[a-zA-Z_]*))",
+							"match": "([a-zA-Z_]+)=((?:!?[\\w_]*)|(?:-?\\d+))",
 							"captures": {
 								"1": {
 									"name": "name"

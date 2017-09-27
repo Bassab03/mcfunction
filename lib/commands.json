@@ -234,24 +234,6 @@
 			"cycleMarkers": [
 				{
 					"include": "execute"
-				},
-				{
-					"include": "execute"
-				},
-				{
-					"include": "execute"
-				},
-				{
-					"include": "execute"
-				},
-				{
-					"include": "execute"
-				},
-				{
-					"include": "execute"
-				},
-				{
-					"include": "execute"
 				}
 			]
 		},
@@ -1479,31 +1461,43 @@
 						"value": "entities: entities"
 					},
 					{
-						"type": "end"
+						"include": "execute"
 					}
 				],
 				"at": [
 					{
 						"type": "entity",
 						"value": "entities: entities"
+					},
+					{
+						"include": "execute"
 					}
 				],
 				"if": [
 					{
 						"type": "entity",
 						"value": "entities: entities"
+					},
+					{
+						"include": "execute"
 					}
 				],
 				"unless": [
 					{
 						"type": "entity",
 						"value": "entities: entities"
+					},
+					{
+						"include": "execute"
 					}
 				],
 				"offset": [
 					{
 						"type": "coord",
 						"value": "pos: x y z"
+					},
+					{
+						"include": "execute"
 					}
 				],
 				"store": [
@@ -1521,6 +1515,9 @@
 					{
 						"type": "string",
 						"value": "objective: string"
+					},
+					{
+						"include": "execute"
 					}
 				],
 				"then": [
