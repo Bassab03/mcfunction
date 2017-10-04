@@ -4,32 +4,33 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"match": "(@[parse])(\\[.*\\])?",
-			"captures": {
-				"1": {
-					"name": "target"
-				},
-				"2": {
-					"name": "argument",
-					"patterns": [
-						{
-							"match": "([a-zA-Z_]+)=((?:!?[\\w_]*)|(?:-?\\d+))",
-							"captures": {
-								"1": {
-									"name": "name"
-								},
-								"2": {
-									"name": "value"
-								}
-							}
-						}
-					]
-				}
-			},
+			"match": "@[parse]",
 			"name": "selector"
 		},
 		{
-			"include": "#nbt-array"
+			"name": "argument",
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"match": "([\\w_]+)(?==)",
+					"captures": {
+						"1": {
+							"name": "name"
+						}
+					}
+				},
+				{
+					"begin": "(?<==)",
+					"end": "(?=,|\\])",
+					"name": "value",
+					"patterns": [
+						{
+							"match": "[\\w_]"
+						}
+					]
+				}
+			]
 		},
 		{
 			"include": "#nbt-compound"

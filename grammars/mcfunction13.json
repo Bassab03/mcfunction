@@ -3,57 +3,51 @@
 	"name": "mcfunction13",
 	"patterns": [
 		{
-			"match": "(@[parse])(\\[.*\\])?",
-			"captures": {
-				"1": {
-					"name": "target"
-				},
-				"2": {
-					"name": "argument",
-					"patterns": [
-						{
-							"match": "([\\w_]+)(?==)",
-							"captures": {
-								"1": {
-									"name": "name"
-								}
-							}
-						},
-						{
-							"begin": "(?<==)",
-							"end": "(?=,|\\])",
-							"name": "value",
-							"patterns": [
-								{
-									"begin": "\"",
-									"end": "\"",
-									"patterns": [
-										{
-											"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
-										}
-									]
-								},
-								{
-									"match": "^[\\w_]"
-								},
-								{
-									"include": "#nbt-compound"
-								}
-							]
-						}
-					]
-				}
-			},
+			"match": "@[parse]",
 			"name": "selector"
 		},
 		{
-			"include": "#nbt-array"
+			"name": "argument",
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"match": "([\\w_]+)(?==)",
+					"captures": {
+						"1": {
+							"name": "name"
+						}
+					}
+				},
+				{
+					"begin": "(?<==)",
+					"end": "(?=,|\\])",
+					"name": "value",
+					"patterns": [
+						{
+							"begin": "\"",
+							"end": "\"",
+							"patterns": [
+								{
+									"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
+								}
+							]
+						},
+						{
+							"match": "[\\w_]"
+						},
+						{
+							"include": "#nbt-compound"
+						}
+					]
+				}
+			]
 		},
 		{
 			"include": "#nbt-compound"
 		},
 		{
-			"match": "(?<=^|then )(?:advancement|blockdata|clear|clone|defaultgamemode|detect|difficulty|effect|enchant|entitydata|execute|fill|function|gamemode|gamerule|give|kill|locate|msg|offset|particle|playsound|recipe|reload|replaceitem|say|scoreboard|seed|setblock|setworldspawn|spreadplayers|stopsound|summon|teleport|tellraw|tell|time|title|toggledownfall|tp|trigger|w|weather|worldborder|xp)\\b",
+			"match": "(?:^|(?<=then ))(?:advancement|blockdata|clear|clone|defaultgamemode|detect|difficulty|effect|enchant|entitydata|execute|fill|function|gamemode|gamerule|give|kill|locate|msg|offset|particle|playsound|recipe|reload|replaceitem|say|scoreboard|seed|setblock|setworldspawn|spreadplayers|stopsound|summon|teleport|tellraw|tell|time|title|toggledownfall|tp|trigger|w|weather|worldborder|xp)\\b",
 			"name": "command"
 		},
 		{

@@ -15,23 +15,27 @@
 @import "ui-variables";
 @import (optional) "index.less";
 
-.syntax--source.syntax--mcfunction {
+.icon {
+	&.command {
+		color: @syntax-color-keyword;
+		background: fadeout(@syntax-color-keyword, 80%);
+	}
+}
+
+.syntax--source.syntax--mcfunction13 {
 
 	.syntax--selector {
+		color: @syntax-color-function;
+	}
 
-		.syntax--target {
-			color: @syntax-color-function;
+	.syntax--argument {
+
+		.syntax--name {
+			color: @syntax-color-tag;
 		}
 
-		.syntax--argument {
-
-			.syntax--name {
-				color: @syntax-color-tag;
-			}
-
-			.syntax--value {
-				.syntax--string;
-			}
+		.syntax--value {
+			.syntax--string;
 		}
 	}
 
