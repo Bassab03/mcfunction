@@ -1,6 +1,6 @@
 {
   "name": "mcfunction",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Minecraft function language. Has syntax highlighting and snippets",
   "repository": {
     "type": "git",
