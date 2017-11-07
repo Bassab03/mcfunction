@@ -7,32 +7,12 @@
 					"type": "option",
 					"value": [
 						"grant",
-						"revoke",
-						"test"
-					],
-					"change": {
-						"test": [
-							{
-								"type": "entity",
-								"value": "players: players"
-							},
-							{
-								"type": "advancement",
-								"value": "advancement: id"
-							},
-							{
-								"type": "string",
-								"value": "criterion: id"
-							},
-							{
-								"type": "end"
-							}
-						]
-					}
+						"revoke"
+					]
 				},
 				{
 					"type": "entity",
-					"value": "players: players"
+					"value": "target"
 				},
 				{
 					"type": "option",
@@ -52,11 +32,11 @@
 						"only": [
 							{
 								"type": "advancement",
-								"value": "advancement: id"
+								"value": "advancement"
 							},
 							{
 								"type": "string",
-								"value": "criterion: id"
+								"value": "criterion"
 							},
 							{
 								"type": "end"
@@ -66,7 +46,20 @@
 				},
 				{
 					"type": "advancement",
-					"value": "advancement: id"
+					"value": "advancement"
+				}
+			]
+		},
+		"blockdata": {
+			"name": "blockdata",
+			"cycleMarkers": [
+				{
+					"type": "coord",
+					"value": "pos"
+				},
+				{
+					"type": "nbt",
+					"value": "nbt"
 				}
 			]
 		},
@@ -75,15 +68,15 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "players: players"
+					"value": "targets"
 				},
 				{
 					"type": "item",
-					"value": "item: item"
+					"value": "item"
 				},
 				{
 					"type": "string",
-					"value": "maxCount: string"
+					"value": "maxCount"
 				}
 			]
 		},
@@ -92,15 +85,15 @@
 			"cycleMarkers": [
 				{
 					"type": "coord",
-					"value": "begin: x y z"
+					"value": "x1 y1 z1"
 				},
 				{
 					"type": "coord",
-					"value": "end: x y z"
+					"value": "x2 y2 z2"
 				},
 				{
 					"type": "coord",
-					"value": "destination: x y z"
+					"value": "xt yt zt"
 				},
 				{
 					"type": "option",
@@ -113,7 +106,7 @@
 						"filtered": [
 							{
 								"type": "block",
-								"value": "filter: block"
+								"value": "filter"
 							}
 						]
 					}
@@ -169,7 +162,7 @@
 						"clear": [
 							{
 								"type": "entity",
-								"value": "entities: entities"
+								"value": "targets"
 							},
 							{
 								"type": "end"
@@ -179,40 +172,23 @@
 				},
 				{
 					"type": "entity",
-					"value": "entities: entities"
+					"value": "targets"
 				},
 				{
 					"type": "effect",
-					"value": "effect: id"
+					"value": "effect"
 				},
 				{
 					"type": "string",
-					"value": "seconds: int"
+					"value": "seconds"
 				},
 				{
 					"type": "string",
-					"value": "amplifier: int"
+					"value": "amplifier"
 				},
 				{
 					"type": "boolean",
-					"value": "hideParticles: boolean"
-				}
-			]
-		},
-		"enchant": {
-			"name": "enchant",
-			"cycleMarkers": [
-				{
-					"type": "entity",
-					"value": "entities: entities"
-				},
-				{
-					"type": "enchantment",
-					"value": "enchantment: id"
-				},
-				{
-					"type": "string",
-					"value": "level: int"
+					"value": "hideParticles"
 				}
 			]
 		},
@@ -221,11 +197,11 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "entities: entities"
+					"value": "targets"
 				},
 				{
 					"type": "nbt",
-					"value": "nbt: nbt"
+					"value": "nbt"
 				}
 			]
 		},
@@ -237,20 +213,66 @@
 				}
 			]
 		},
+		"experience": {
+			"name": "experience",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"add",
+						"set",
+						"query"
+					],
+					"change": {
+						"query": [
+							{
+								"type": "entity",
+								"value": "player"
+							},
+							{
+								"type": "option",
+								"value": [
+									"points",
+									"levels"
+								]
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "entity",
+					"value": "players"
+				},
+				{
+					"type": "string",
+					"value": "amount"
+				},
+				{
+					"type": "option",
+					"value": [
+						"points",
+						"levels"
+					]
+				}
+			]
+		},
 		"fill": {
 			"name": "fill",
 			"cycleMarkers": [
 				{
 					"type": "coord",
-					"value": "from: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "coord",
-					"value": "to: x y z"
+					"value": "xt yt zt"
 				},
 				{
 					"type": "block",
-					"value": "block: block"
+					"value": "block"
 				},
 				{
 					"type": "option",
@@ -265,7 +287,7 @@
 						"replace": [
 							{
 								"type": "block",
-								"filter": "filter: block"
+								"filter": "filter"
 							}
 						]
 					}
@@ -277,7 +299,7 @@
 			"cycleMarkers": [
 				{
 					"type": "function",
-					"value": "name: id"
+					"value": "name"
 				}
 			]
 		},
@@ -295,7 +317,7 @@
 				},
 				{
 					"type": "player",
-					"value": "target: players",
+					"value": "target",
 					"optional": true
 				}
 			]
@@ -336,7 +358,7 @@
 						"gameLoopFunction": [
 							{
 								"type": "function",
-								"value": "value: function"
+								"value": "value"
 							},
 							{
 								"type": "end"
@@ -345,7 +367,7 @@
 						"maxCommandChainLength": [
 							{
 								"type": "string",
-								"value": "value: int"
+								"value": "value"
 							},
 							{
 								"type": "end"
@@ -354,7 +376,7 @@
 						"maxEntityCramming": [
 							{
 								"type": "string",
-								"value": "value: int"
+								"value": "value"
 							},
 							{
 								"type": "end"
@@ -363,7 +385,7 @@
 						"randomTickSpeed": [
 							{
 								"type": "string",
-								"value": "value: int"
+								"value": "value"
 							},
 							{
 								"type": "end"
@@ -372,7 +394,7 @@
 						"spawnRadius": [
 							{
 								"type": "string",
-								"value": "value: int"
+								"value": "value"
 							},
 							{
 								"type": "end"
@@ -391,7 +413,7 @@
 				},
 				{
 					"type": "boolean",
-					"value": "value: bool"
+					"value": "value"
 				}
 			]
 		},
@@ -400,15 +422,15 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target"
 				},
 				{
 					"type": "item",
-					"value": "item: item"
+					"value": "item"
 				},
 				{
 					"type": "string",
-					"value": "count: int"
+					"value": "count"
 				}
 			]
 		},
@@ -417,7 +439,7 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "vicitms: entities"
+					"value": "vicitms"
 				}
 			]
 		},
@@ -444,45 +466,36 @@
 			"cycleMarkers": [
 				{
 					"type": "greedy",
-					"value": "action: string"
+					"value": "action"
 				}
 			]
 		},
 		"msg": {
 			"name": "msg",
-			"cycleMarkers": [
-				{
-					"type": "entity",
-					"value": "players: players"
-				},
-				{
-					"type": "greedy",
-					"value": "message: string"
-				}
-			]
+			"alias": "tell"
 		},
 		"particle": {
 			"name": "particle",
 			"cycleMarkers": [
 				{
 					"type": "particle",
-					"value": "name: id"
+					"value": "name"
 				},
 				{
 					"type": "coord",
-					"value": "pos: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "coord",
-					"value": "delta: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "string",
-					"value": "speed: int"
+					"value": "speed"
 				},
 				{
 					"type": "string",
-					"value": "count: int"
+					"value": "count"
 				},
 				{
 					"type": "option",
@@ -493,7 +506,7 @@
 				},
 				{
 					"type": "entity",
-					"value": "veiwers: players"
+					"value": "veiwers"
 				}
 			]
 		},
@@ -502,7 +515,7 @@
 			"cycleMarkers": [
 				{
 					"type": "sound",
-					"value": "name: id"
+					"value": "name"
 				},
 				{
 					"type": "option",
@@ -521,23 +534,32 @@
 				},
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target"
 				},
 				{
 					"type": "coord",
-					"value": "pos: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "string",
-					"value": "volume: float"
+					"value": "volume"
 				},
 				{
 					"type": "string",
-					"value": "pitch: float"
+					"value": "pitch"
 				},
 				{
 					"type": "string",
-					"value": "minVolume: float"
+					"value": "minVolume"
+				}
+			]
+		},
+		"enchant": {
+			"name":"enchant",
+			"cycleMarkers": [
+				{
+					"type": "enchantment",
+					"value": "hi"
 				}
 			]
 		},
@@ -553,11 +575,11 @@
 				},
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target"
 				},
 				{
 					"type": "recipe",
-					"value": "recipe: id"
+					"value": "recipe"
 				}
 			]
 		},
@@ -574,28 +596,28 @@
 						"entity": [
 							{
 								"type": "entity",
-								"value": "entities: entities"
+								"value": "targets"
 							}
 						],
 						"block": [
 							{
 								"type": "coord",
-								"value": "pos: x y z"
+								"value": "x y z"
 							}
 						]
 					}
 				},
 				{
 					"type": "inventory-slot",
-					"value": "slot: string"
+					"value": "slot"
 				},
 				{
 					"type": "item",
-					"value": "item: item"
+					"value": "item"
 				},
 				{
 					"type": "string",
-					"value": "count: int"
+					"value": "count"
 				}
 			]
 		},
@@ -604,7 +626,7 @@
 			"cycleMarkers": [
 				{
 					"type": "greedy",
-					"value": "message: string"
+					"value": "message"
 				}
 			]
 		},
@@ -631,11 +653,11 @@
 									"add": [
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "objective",
-											"value": "criteria: id"
+											"value": "criteria"
 										},
 										{
 											"type": "end"
@@ -644,7 +666,7 @@
 									"remove": [
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "end"
@@ -653,11 +675,11 @@
 									"setdisplay": [
 										{
 											"type": "objective-slot",
-											"value": "slot: id"
+											"value": "slot"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "end"
@@ -684,15 +706,15 @@
 									"add": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "string",
-											"value": "score: int"
+											"value": "score"
 										},
 										{
 											"type": "end"
@@ -701,11 +723,11 @@
 									"enable": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "trigger: string"
+											"value": "trigger"
 										},
 										{
 											"type": "end"
@@ -714,7 +736,7 @@
 									"list": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "end"
@@ -723,11 +745,11 @@
 									"operation": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "target objective: string"
+											"value": "target objective"
 										},
 										{
 											"type": "option",
@@ -745,11 +767,11 @@
 										},
 										{
 											"type": "entity",
-											"value": "source: entities"
+											"value": "source"
 										},
 										{
 											"type": "string",
-											"value": "source objective: string"
+											"value": "source objective"
 										},
 										{
 											"type": "end"
@@ -758,15 +780,15 @@
 									"remove": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "string",
-											"value": "score: int"
+											"value": "score"
 										},
 										{
 											"type": "end"
@@ -775,11 +797,11 @@
 									"reset": [
 										{
 											"type": "entity",
-											"value": "entities: entities"
+											"value": "targets"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "end"
@@ -788,15 +810,15 @@
 									"set": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "string",
-											"value": "score: int"
+											"value": "score"
 										},
 										{
 											"type": "end"
@@ -805,7 +827,7 @@
 									"tag": [
 										{
 											"type": "entity",
-											"value": "taget: entities"
+											"value": "taget"
 										},
 										{
 											"type": "option",
@@ -824,25 +846,25 @@
 										},
 										{
 											"type": "string",
-											"value": "name: string"
+											"value": "name"
 										}
 									],
 									"test": [
 										{
 											"type": "entity",
-											"value": "target: entities"
+											"value": "target"
 										},
 										{
 											"type": "string",
-											"value": "objective: string"
+											"value": "objective"
 										},
 										{
 											"type": "string",
-											"value": "min: int"
+											"value": "min"
 										},
 										{
 											"type": "string",
-											"value": "min: int"
+											"value": "min"
 										},
 										{
 											"type": "end"
@@ -867,11 +889,11 @@
 									"add": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										},
 										{
 											"type": "greedy",
-											"value": "display name: string"
+											"value": "display name"
 										},
 										{
 											"type": "end"
@@ -880,7 +902,7 @@
 									"empty": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										},
 										{
 											"type": "end"
@@ -889,11 +911,11 @@
 									"join": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										},
 										{
 											"type": "entity",
-											"value": "memebers: entities"
+											"value": "memebers"
 										},
 										{
 											"type": "end"
@@ -902,7 +924,7 @@
 									"leave": [
 										{
 											"type": "entity",
-											"value": "memebers: entities"
+											"value": "memebers"
 										},
 										{
 											"type": "end"
@@ -911,7 +933,7 @@
 									"list": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										},
 										{
 											"type": "end"
@@ -920,7 +942,7 @@
 									"option": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										},
 										{
 											"type": "option",
@@ -990,7 +1012,7 @@
 												"friendlyFire": [
 													{
 														"type": "boolean",
-														"value": "value: bool"
+														"value": "value"
 													},
 													{
 														"type": "end"
@@ -1013,7 +1035,7 @@
 												"seeFriendlyInvisibles": [
 													{
 														"type": "boolean",
-														"value": "value: bool"
+														"value": "value"
 													},
 													{
 														"type": "end"
@@ -1025,7 +1047,7 @@
 									"remove": [
 										{
 											"type": "string",
-											"value": "team: string"
+											"value": "team"
 										}
 									]
 								}
@@ -1044,11 +1066,11 @@
 			"cycleMarkers": [
 				{
 					"type": "coord",
-					"value": "pos: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "block",
-					"value": "block: block"
+					"value": "block"
 				},
 				{
 					"type": "option",
@@ -1065,7 +1087,7 @@
 			"cycleMarkers": [
 				{
 					"type": "coord",
-					"value": "pos: x y z"
+					"value": "x y z"
 				}
 			]
 		},
@@ -1074,11 +1096,13 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target",
+					"optional": true
 				},
 				{
 					"type": "coord",
-					"value": "spawnPos: x y z"
+					"value": "x y z",
+					"optional": true
 				}
 			]
 		},
@@ -1087,23 +1111,23 @@
 			"cycleMarkers": [
 				{
 					"type": "center",
-					"value": "center: x z"
+					"value": "x z"
 				},
 				{
 					"type": "string",
-					"value": "spreadDistance: float"
+					"value": "spreadDistance"
 				},
 				{
 					"type": "string",
-					"value": "maxRange: float"
+					"value": "maxRange"
 				},
 				{
 					"type": "boolean",
-					"value": "respectTeams: bool"
+					"value": "respectTeams"
 				},
 				{
 					"type": "entity",
-					"value": "victims: entities"
+					"value": "victims"
 				}
 			]
 		},
@@ -1112,7 +1136,7 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target"
 				},
 				{
 					"type": "option",
@@ -1131,7 +1155,7 @@
 				},
 				{
 					"type": "sound",
-					"value": "name: id"
+					"value": "name"
 				}
 			]
 		},
@@ -1140,15 +1164,15 @@
 			"cycleMarkers": [
 				{
 					"type": "entity-id",
-					"value": "name: id"
+					"value": "name"
 				},
 				{
 					"type": "coord",
-					"value": "pos: x y z"
+					"value": "x y z"
 				},
 				{
 					"type": "nbt",
-					"value": "nbt: nbt"
+					"value": "nbt"
 				}
 			]
 		},
@@ -1157,11 +1181,11 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "players: players"
+					"value": "targets"
 				},
 				{
 					"type": "greedy",
-					"value": "message: string"
+					"value": "message"
 				}
 			]
 		},
@@ -1170,11 +1194,11 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "players: players"
+					"value": "targets"
 				},
 				{
 					"type": "string",
-					"value": "message: json"
+					"value": "message"
 				}
 			]
 		},
@@ -1192,7 +1216,7 @@
 						"add": [
 							{
 								"type": "string",
-								"value": "time: int"
+								"value": "time"
 							},
 							{
 								"type": "end"
@@ -1214,7 +1238,7 @@
 						"set": [
 							{
 								"type": "string",
-								"value": "time: int"
+								"value": "time"
 							},
 							{
 								"type": "end"
@@ -1229,7 +1253,7 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target: players"
+					"value": "target"
 				},
 				{
 					"type": "option",
@@ -1245,15 +1269,15 @@
 						"times": [
 							{
 								"type": "string",
-								"value": "fadeIn: int"
+								"value": "fadeIn"
 							},
 							{
 								"type": "string",
-								"value": "stay: int"
+								"value": "stay"
 							},
 							{
 								"type": "string",
-								"value": "fadeOut: int"
+								"value": "fadeOut"
 							},
 							{
 								"type": "end"
@@ -1263,7 +1287,7 @@
 				},
 				{
 					"type": "string",
-					"value": "title: json"
+					"value": "title"
 				}
 			]
 		},
@@ -1276,7 +1300,7 @@
 			"cycleMarkers": [
 				{
 					"type": "string",
-					"value": "objective: string"
+					"value": "objective"
 				},
 				{
 					"type": "option",
@@ -1289,16 +1313,7 @@
 		},
 		"w": {
 			"name": "w",
-			"cycleMarkers": [
-				{
-					"type": "entity",
-					"value": "players: players"
-				},
-				{
-					"type": "greedy",
-					"value": "message: string"
-				}
-			]
+			"alias": "tell"
 		},
 		"weather": {
 			"name": "weather",
@@ -1313,7 +1328,7 @@
 				},
 				{
 					"type": "string",
-					"value": "duration: int"
+					"value": "duration"
 				}
 			]
 		},
@@ -1334,11 +1349,11 @@
 						"add": [
 							{
 								"type": "string",
-								"value": "distance: int"
+								"value": "distance"
 							},
 							{
 								"type": "string",
-								"value": "time: int"
+								"value": "time"
 							},
 							{
 								"type": "end"
@@ -1347,7 +1362,7 @@
 						"center": [
 							{
 								"type": "center",
-								"value": "center: x z"
+								"value": "x z"
 							},
 							{
 								"type": "end"
@@ -1364,7 +1379,7 @@
 									"amount": [
 										{
 											"type": "string",
-											"value": "damagePerBlock: float"
+											"value": "damagePerBlock"
 										},
 										{
 											"type": "end"
@@ -1373,7 +1388,7 @@
 									"buffer": [
 										{
 											"type": "string",
-											"value": "distance: float"
+											"value": "distance"
 										},
 										{
 											"type": "end"
@@ -1385,11 +1400,11 @@
 						"set": [
 							{
 								"type": "string",
-								"value": "distance: int"
+								"value": "distance"
 							},
 							{
 								"type": "string",
-								"value": "time: int"
+								"value": "time"
 							},
 							{
 								"type": "end"
@@ -1406,7 +1421,7 @@
 									"distance": [
 										{
 											"type": "string",
-											"value": "distance: int"
+											"value": "distance"
 										},
 										{
 											"type": "end"
@@ -1415,7 +1430,7 @@
 									"time": [
 										{
 											"type": "string",
-											"value": "time: int"
+											"value": "time"
 										},
 										{
 											"type": "end"
@@ -1429,20 +1444,87 @@
 			]
 		},
 		"xp": {
-			"name": "xp",
-			"cycleMarkers": [
-				{
-					"type": "string",
-					"value": "experience: int"
-				},
-				{
-					"type": "entity",
-					"value": "entities: entities"
-				}
-			]
+			"alias": "experience",
+			"name": "xp"
 		}
 	},
 	"reference": {
+		"if-unless": {
+			"type": "option",
+			"value": [
+				"entity",
+				"block",
+				"blocks",
+				"score"
+			],
+			"change": {
+				"entity": [
+					{
+						"type": "entity",
+						"value": "targets"
+					}
+				],
+				"block": [
+					{
+						"type": "coord",
+						"value": "x y z"
+					},
+					{
+						"type": "block",
+						"value": "block"
+					}
+				],
+				"blocks": [
+					{
+						"type": "coord",
+						"value": "x1 y1 z1"
+					},
+					{
+						"type": "coord",
+						"value": "x2 y2 z2"
+					},
+					{
+						"type": "coord",
+						"value": "xt yt zt"
+					},
+					{
+						"type": "option",
+						"value": [
+							"all",
+							"masked"
+						]
+					}
+				],
+				"score": [
+					{
+						"type": "entity",
+						"value": "target"
+					},
+					{
+						"type": "string",
+						"value": "targetObjective"
+					},
+					{
+						"type": "option",
+						"value": [
+							"<",
+							"<=",
+							"=",
+							">=",
+							">"
+						]
+					},
+					{
+						"type": "entity",
+						"value": "source"
+					},
+					{
+						"type": "string",
+						"value": "sourceObjective"
+					}
+				]
+			}
+		},
 		"execute": {
 			"type": "option",
 			"value": [
@@ -1452,13 +1534,13 @@
 				"offset",
 				"store",
 				"unless",
-				"then"
+				"run"
 			],
 			"change": {
 				"as": [
 					{
 						"type": "entity",
-						"value": "entities: entities"
+						"value": "targets"
 					},
 					{
 						"include": "execute"
@@ -1467,7 +1549,7 @@
 				"at": [
 					{
 						"type": "entity",
-						"value": "entities: entities"
+						"value": "targets"
 					},
 					{
 						"include": "execute"
@@ -1475,8 +1557,7 @@
 				],
 				"if": [
 					{
-						"type": "entity",
-						"value": "entities: entities"
+						"include": "if-unless"
 					},
 					{
 						"include": "execute"
@@ -1484,8 +1565,7 @@
 				],
 				"unless": [
 					{
-						"type": "entity",
-						"value": "entities: entities"
+						"include": "if-unless"
 					},
 					{
 						"include": "execute"
@@ -1494,7 +1574,7 @@
 				"offset": [
 					{
 						"type": "coord",
-						"value": "pos: x y z"
+						"value": "x y z"
 					},
 					{
 						"include": "execute"
@@ -1510,17 +1590,17 @@
 					},
 					{
 						"type": "entity",
-						"value": "name: entity"
+						"value": "name"
 					},
 					{
 						"type": "string",
-						"value": "objective: string"
+						"value": "objective"
 					},
 					{
 						"include": "execute"
 					}
 				],
-				"then": [
+				"run": [
 					{
 						"type": "command"
 					}
