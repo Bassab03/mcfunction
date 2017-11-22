@@ -1,6 +1,7 @@
 {
 	"scopeName": "source.mcfunction13",
 	"name": "mcfunction13",
+	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
 			"match": "@[parse]",
