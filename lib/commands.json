@@ -50,19 +50,6 @@
 				}
 			]
 		},
-		"blockdata": {
-			"name": "blockdata",
-			"cycleMarkers": [
-				{
-					"type": "coord",
-					"value": "pos"
-				},
-				{
-					"type": "nbt",
-					"value": "nbt"
-				}
-			]
-		},
 		"clear": {
 			"name": "clear",
 			"cycleMarkers": [
@@ -118,6 +105,114 @@
 						"move",
 						"normal"
 					]
+				}
+			]
+		},
+		"data": {
+			"name": "data",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"get",
+						"merge",
+						"remove"
+					],
+					"change": {
+						"get": [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "x y z"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									]
+								}
+							},
+							{
+								"type": "string",
+								"value": "path",
+								"optional": true
+							},
+							{
+								"type": "string",
+								"value": "scale",
+								"optional": true
+							},
+							{
+								"type": "end"
+							}
+						],
+						"merge": [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "x y z"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									]
+								}
+							},
+							{
+								"type": "nbt",
+								"value": "nbt"
+							}
+						],
+						"remove": [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "x y z"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									]
+								}
+							},
+							{
+								"type": "string",
+								"value": "path"
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
 				}
 			]
 		},
@@ -189,19 +284,6 @@
 				{
 					"type": "boolean",
 					"value": "hideParticles"
-				}
-			]
-		},
-		"entitydata": {
-			"name": "entitydata",
-			"cycleMarkers": [
-				{
-					"type": "entity",
-					"value": "targets"
-				},
-				{
-					"type": "nbt",
-					"value": "nbt"
 				}
 			]
 		},
@@ -1285,10 +1367,6 @@
 					"value": "title"
 				}
 			]
-		},
-		"toggledownfall": {
-			"name": "toggledownfall",
-			"cycleMarkers": []
 		},
 		"trigger": {
 			"name": "trigger",
