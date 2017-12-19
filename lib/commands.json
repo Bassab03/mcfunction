@@ -180,6 +180,9 @@
 							{
 								"type": "nbt",
 								"value": "nbt"
+							},
+							{
+								"type": "end"
 							}
 						],
 						"remove": [
@@ -1680,12 +1683,58 @@
 						]
 					},
 					{
-						"type": "entity",
-						"value": "name"
+						"type": "option",
+						"value": [
+							"block",
+							"entity",
+							"score"
+						],
+						"change": {
+							"block": [
+								{
+									"type": "coord",
+									"value": "x y z"
+								}
+							],
+							"entity": [
+								{
+									"type": "entity",
+									"value": "target"
+								}
+							],
+							"score": [
+								{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"include": "execute"
+								}
+							]
+						}
 					},
 					{
 						"type": "string",
-						"value": "objective"
+						"value": "path"
+					},
+					{
+						"type": "option",
+						"value": [
+							"byte",
+							"double",
+							"float",
+							"int",
+							"long",
+							"short"
+						]
+					},
+					{
+						"type": "string",
+						"value": "scale"
 					},
 					{
 						"include": "execute"
