@@ -4,12 +4,13 @@
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
-			"match": "@[parse]",
-			"name": "selector"
-		},
-		{
 			"name": "argument",
-			"begin": "\\[",
+			"begin": "(@[parse])\\[",
+			"beginCaptures": {
+				"1": {
+					"name": "selector"
+				}
+			},
 			"end": "\\]",
 			"patterns": [
 				{
@@ -45,6 +46,10 @@
 			]
 		},
 		{
+			"match": "@[parse]",
+			"name": "selector"
+		},
+		{
 			"include": "#nbt-compound"
 		},
 		{
@@ -62,6 +67,9 @@
 		{
 			"match": "^/",
 			"name": "error.fslash"
+		},
+		{
+			"include": "source.json"
 		}
 	],
 	"repository": {
