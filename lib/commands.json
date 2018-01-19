@@ -429,7 +429,7 @@
 						"logAdminCommands",
 						"maxCommandChainLength",
 						"maxEntityCramming",
-						"mobGreifing",
+						"mobGriefing",
 						"naturalRegeneration",
 						"randomTickSpeed",
 						"reducedDebugInfo",
