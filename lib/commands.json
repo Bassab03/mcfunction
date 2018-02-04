@@ -706,8 +706,8 @@
 				}
 			]
 		},
-		"teams": {
-			"name": "teams",
+		"team": {
+			"name": "team",
 			"cycleMarkers": [
 				{
 					"type": "option",
