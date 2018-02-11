@@ -69,22 +69,22 @@
 			"name": "error.fslash"
 		},
 		{
+			"match": "\\[(?:(?:(\\w+)=(\\w+)),)*(?:(\\w+)=(\\w+))\\]",
 			"name": "state",
-			"begin": "\\[",
-			"end": "\\]",
-			"patterns": [
-				{
-					"match": "([\\w_]+)(?==)",
-					"captures": {
-						"1": {
-							"name": "name"
-						}
-					}
+			"captures": {
+				"1": {
+					"name": "name"
 				},
-				{
-					"match": "[\\w_]"
+				"3": {
+					"name": "name"
+				},
+				"2": {
+					"name": "value"
+				},
+				"4": {
+					"name": "value"
 				}
-			]
+			}
 		},
 		{
 			"include": "source.json"
