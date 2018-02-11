@@ -69,6 +69,24 @@
 			"name": "error.fslash"
 		},
 		{
+			"name": "state",
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"match": "([\\w_]+)(?==)",
+					"captures": {
+						"1": {
+							"name": "name"
+						}
+					}
+				},
+				{
+					"match": "[\\w_]"
+				}
+			]
+		},
+		{
 			"include": "source.json"
 		}
 	],
