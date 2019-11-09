@@ -1,10 +1,26 @@
-# mcfunction package
+# mcfunction-1.14 package
 
-<!-- ## This project is not going to be updated for a while until the language server by Levertion and I is complete -->
+A syntax highlighter, auto-complete provider and snippet package for Minecraft 1.14 function files.
 
-A syntax highlighter and snippet package for Minecraft's function files
-<!-- ![image not loading](https://mryurihi.github.io/atom-mcfunction-image.png) -->
+The autocomplete provider is *very* competent and almost has an identical feel to Minecraft's native tab completions.
 
-This is a fork of https://github.com/MrYurihi/mcfunction, I just felt like updating it to 1.14 
+#Info
+This is a fork of https://github.com/MrYurihi/mcfunction.
+I have no idea how he made this, but adding and removing entries in a JSON file,
+I do know how to do, so I updated it to 1.14. All Credit goes to them.
 
-It also has a *very* competent autocomplete+ provider that is almost identical to Minecraft's native tab completions, so you will feel right at home
+#Changed :
+##Added :
+	data "modify ...."
+	gamerule "disableRaids"
+	scoreboard "get target objective"
+	"minecraft:" prefix for NamespacedID
+	execute if score target objective "matches range" run .....
+##Removed
+	gamerule "structureSaveLocation"
+	gamerule "gameLoopFunction"
+
+#IMO
+This is the best available package on npm for datapacks in 1.14.
+This is not the best available package on npm for datapacks in 1.13.
+For 1.13 use : https://github.com/MrYurihi/mcfunction.

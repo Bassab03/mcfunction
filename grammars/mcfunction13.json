@@ -87,6 +87,10 @@
 			}
 		},
 		{
+			"match" : "\\.\\.\\d+|\\d+\\.\\.\\d+|\\d+\\.\\.|\\d+",
+			"name" : "range"
+		},
+		{
 			"include": "source.json"
 		}
 	],

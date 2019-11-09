@@ -1656,19 +1656,61 @@
 						"change" : {
 							"matches" : [
 								{
-									"type" : "range",
+									"type" : "string",
 									"value" : "range"
+								}
+							],
+							"<" : [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "sourceObjective"
+								}
+							],
+							"<=" : [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "sourceObjective"
+								}
+							],
+							"=" : [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "sourceObjective"
+								}
+							],
+							"=>" : [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "sourceObjective"
+								}
+							],
+							">" : [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "sourceObjective"
 								}
 							]
 						}
-					},
-					{
-						"type": "entity",
-						"value": "source"
-					},
-					{
-						"type": "string",
-						"value": "sourceObjective"
 					}
 				]
 			}
