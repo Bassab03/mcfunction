@@ -116,6 +116,7 @@
 					"value": [
 						"get",
 						"merge",
+						"modify",
 						"remove"
 					],
 					"change": {
@@ -183,6 +184,95 @@
 							},
 							{
 								"type": "end"
+							}
+						],
+						"modify" : [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "x y z"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									]
+								}
+							},
+							{
+								"type": "string",
+								"value": "path",
+								"optional": true
+							},
+							{
+								"type": "option",
+								"value": [
+									"append",
+									"insert",
+									"merge",
+									"prepend",
+									"set"
+								],
+								"change": {
+									"insert": [
+										{
+											"type": "string",
+											"value": "index"
+										}
+									]
+								}
+							},
+							{
+								"type" : "option",
+								"value" : [
+									"from",
+									"value"
+								],
+								"change": {
+									"from" : [
+										{
+											"type": "option",
+											"value": [
+												"block",
+												"entity"
+											],
+											"change": {
+												"block": [
+													{
+														"type": "coord",
+														"value": "x y z"
+													}
+												],
+												"entity": [
+													{
+														"type": "entity",
+														"value": "target"
+													}
+												]
+											}
+										},
+										{
+											"type": "string",
+											"value": "path",
+											"optional": true
+										}
+									],
+									"value" : [
+										{
+											"type" : "string",
+											"value" : "value"
+										}
+									]
+								}
 							}
 						],
 						"remove": [
@@ -416,6 +506,7 @@
 						"announceAdvancements",
 						"commandBlockOutput",
 						"disableElytraMovementCheck",
+						"disableRaids",
 						"doDaylightCycle",
 						"doEntityDrops",
 						"doFireTick",
@@ -424,7 +515,6 @@
 						"doMobSpawning",
 						"doTileDrops",
 						"doWeatherCycle",
-						"gameLoopFunction",
 						"keepInventory",
 						"logAdminCommands",
 						"maxCommandChainLength",
@@ -436,19 +526,9 @@
 						"sendCommandFeedback",
 						"showDeathMessages",
 						"spawnRadius",
-						"spectatorsGenerateChunks",
-						"structureSaveLocation"
+						"spectatorsGenerateChunks"
 					],
 					"change": {
-						"gameLoopFunction": [
-							{
-								"type": "function",
-								"value": "value"
-							},
-							{
-								"type": "end"
-							}
-						],
 						"maxCommandChainLength": [
 							{
 								"type": "string",
@@ -480,15 +560,6 @@
 							{
 								"type": "string",
 								"value": "value"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"structureSaveDestination": [
-							{
-								"type": "string",
-								"value": "string"
 							},
 							{
 								"type": "end"
@@ -985,7 +1056,7 @@
 									"remove",
 									"reset",
 									"set",
-									"test"
+									"get"
 								],
 								"change": {
 									"add": [
@@ -1109,22 +1180,14 @@
 											"type": "end"
 										}
 									],
-									"test": [
+									"get": [
 										{
 											"type": "entity",
-											"value": "target"
+											"value": "targets"
 										},
 										{
 											"type": "string",
 											"value": "objective"
-										},
-										{
-											"type": "string",
-											"value": "min"
-										},
-										{
-											"type": "string",
-											"value": "min"
 										},
 										{
 											"type": "end"
@@ -1587,8 +1650,17 @@
 							"<=",
 							"=",
 							">=",
-							">"
-						]
+							">",
+							"matches"
+						],
+						"change" : {
+							"matches" : [
+								{
+									"type" : "range",
+									"value" : "range"
+								}
+							]
+						}
 					},
 					{
 						"type": "entity",

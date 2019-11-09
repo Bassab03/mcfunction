@@ -1,0 +1,23 @@
+
+
+
+? add sound ref file (lib/id/sound)
+
+? nbt values
+
+? selector options
+
+execute if score selector table matches range
+
+
+Done :
+	scoreboard players get
+
+	data modify
+
+	gamerule :
+		add :
+			disableRaids
+		remove :
+			gameLoopFunction
+			structureSaveLocation
