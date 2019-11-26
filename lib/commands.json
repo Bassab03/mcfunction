@@ -125,7 +125,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -137,6 +138,12 @@
 									"entity": [
 										{
 											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
+										{
+											"type": "string",
 											"value": "target"
 										}
 									]
@@ -161,7 +168,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -173,6 +181,12 @@
 									"entity": [
 										{
 											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
+										{
+											"type": "string",
 											"value": "target"
 										}
 									]
@@ -191,7 +205,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -243,7 +258,8 @@
 											"type": "option",
 											"value": [
 												"block",
-												"entity"
+												"entity",
+												"storage"
 											],
 											"change": {
 												"block": [
@@ -257,8 +273,13 @@
 														"type": "entity",
 														"value": "target"
 													}
+												],
+												"storage": [
+													{
+														"type": "string",
+														"value": "target"
+													}
 												]
-											}
 										},
 										{
 											"type": "string",
@@ -280,7 +301,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -292,6 +314,12 @@
 									"entity": [
 										{
 											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
+										{
+											"type": "string",
 											"value": "target"
 										}
 									]
@@ -351,6 +379,7 @@
 							{
 								"type": "entity",
 								"value": "targets"
+								"optional" : true
 							},
 							{
 								"type": "end"
@@ -660,7 +689,8 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "vicitms"
+					"value": "vicitms",
+					"optional" : true
 				}
 			]
 		},
@@ -1787,7 +1817,7 @@
 				"as",
 				"at",
 				"if",
-				"offset",
+				"positioned",
 				"store",
 				"unless",
 				"run"
@@ -1844,7 +1874,7 @@
 						"include": "execute"
 					}
 				],
-				"offset": [
+				"positioned": [
 					{
 						"type": "coord",
 						"value": "x y z"
@@ -1866,7 +1896,8 @@
 						"value": [
 							"block",
 							"entity",
-							"score"
+							"score",
+							"storage"
 						],
 						"change": {
 							"block": [
@@ -1892,6 +1923,12 @@
 								},
 								{
 									"include": "execute"
+								}
+							],
+							"storage": [
+								{
+									"type": "string",
+									"value": "target"
 								}
 							]
 						}
