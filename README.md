@@ -22,6 +22,6 @@ I do know how to do, so I updated it to 1.14. All Credit goes to them.
 	gamerule "gameLoopFunction"
 
 ## IMO
-This is the best available package on apm for datapacks in 1.14.  
+This is the best available package on apm for datapacks in 1.15.  
 This is *not* the best available package on apm for datapacks in 1.13.  
 For 1.13, use https://github.com/MrYurihi/mcfunction.
