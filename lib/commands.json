@@ -2,8 +2,7 @@
 	"commands": {
 		"advancement": {
 			"name": "advancement",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"grant",
@@ -24,13 +23,10 @@
 						"until"
 					],
 					"change": {
-						"everything": [
-							{
-								"type": "end"
-							}
-						],
-						"only": [
-							{
+						"everything": [{
+							"type": "end"
+						}],
+						"only": [{
 								"type": "advancement",
 								"value": "advancement"
 							},
@@ -52,8 +48,7 @@
 		},
 		"clear": {
 			"name": "clear",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "targets"
 				},
@@ -69,8 +64,7 @@
 		},
 		"clone": {
 			"name": "clone",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "coord",
 					"value": "x1 y1 z1"
 				},
@@ -90,12 +84,10 @@
 						"replace"
 					],
 					"change": {
-						"filtered": [
-							{
-								"type": "block",
-								"value": "filter"
-							}
-						]
+						"filtered": [{
+							"type": "block",
+							"value": "filter"
+						}]
 					}
 				},
 				{
@@ -110,276 +102,232 @@
 		},
 		"data": {
 			"name": "data",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"get",
-						"merge",
-						"modify",
-						"remove"
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"get",
+					"merge",
+					"modify",
+					"remove"
+				],
+				"change": {
+					"get": [{
+							"type": "option",
+							"value": [
+								"block",
+								"entity",
+								"storage"
+							],
+							"change": {
+								"block": [{
+									"type": "coord",
+									"value": "x y z"
+								}],
+								"entity": [{
+									"type": "entity",
+									"value": "target"
+								}],
+								"storage": [{
+									"type": "string",
+									"value": "target"
+								}]
+							}
+						},
+						{
+							"type": "string",
+							"value": "path",
+							"optional": true
+						},
+						{
+							"type": "string",
+							"value": "scale",
+							"optional": true
+						},
+						{
+							"type": "end"
+						}
 					],
-					"change": {
-						"get": [
-							{
-								"type": "option",
-								"value": [
-									"block",
-									"entity",
-									"storage"
-								],
-								"change": {
-									"block": [
-										{
-											"type": "coord",
-											"value": "x y z"
-										}
-									],
-									"entity": [
-										{
-											"type": "entity",
-											"value": "target"
-										}
-									],
-									"storage": [
-										{
-											"type": "string",
-											"value": "target"
-										}
-									]
-								}
-							},
-							{
-								"type": "string",
-								"value": "path",
-								"optional": true
-							},
-							{
-								"type": "string",
-								"value": "scale",
-								"optional": true
-							},
-							{
-								"type": "end"
+					"merge": [{
+							"type": "option",
+							"value": [
+								"block",
+								"entity",
+								"storage"
+							],
+							"change": {
+								"block": [{
+									"type": "coord",
+									"value": "x y z"
+								}],
+								"entity": [{
+									"type": "entity",
+									"value": "target"
+								}],
+								"storage": [{
+									"type": "string",
+									"value": "target"
+								}]
 							}
-						],
-						"merge": [
-							{
-								"type": "option",
-								"value": [
-									"block",
-									"entity",
-									"storage"
-								],
-								"change": {
-									"block": [
-										{
-											"type": "coord",
-											"value": "x y z"
-										}
-									],
-									"entity": [
-										{
-											"type": "entity",
-											"value": "target"
-										}
-									],
-									"storage": [
-										{
-											"type": "string",
-											"value": "target"
-										}
-									]
-								}
-							},
-							{
-								"type": "nbt",
-								"value": "nbt"
-							},
-							{
-								"type": "end"
+						},
+						{
+							"type": "nbt",
+							"value": "nbt"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"modify": [{
+							"type": "option",
+							"value": [
+								"block",
+								"entity",
+								"storage"
+							],
+							"change": {
+								"block": [{
+									"type": "coord",
+									"value": "x y z"
+								}],
+								"entity": [{
+									"type": "entity",
+									"value": "target"
+								}]
 							}
-						],
-						"modify" : [
-							{
-								"type": "option",
-								"value": [
-									"block",
-									"entity",
-									"storage"
-								],
-								"change": {
-									"block": [
-										{
-											"type": "coord",
-											"value": "x y z"
-										}
-									],
-									"entity": [
-										{
-											"type": "entity",
-											"value": "target"
-										}
-									]
-								}
-							},
-							{
-								"type": "string",
-								"value": "path",
-								"optional": true
-							},
-							{
-								"type": "option",
-								"value": [
-									"append",
-									"insert",
-									"merge",
-									"prepend",
-									"set"
-								],
-								"change": {
-									"insert": [
-										{
-											"type": "string",
-											"value": "index"
-										}
-									]
-								}
-							},
-							{
-								"type" : "option",
-								"value" : [
-									"from",
-									"value"
-								],
-								"change": {
-									"from" : [
-										{
-											"type": "option",
-											"value": [
-												"block",
-												"entity",
-												"storage"
-											],
-											"change": {
-												"block": [
-													{
-														"type": "coord",
-														"value": "x y z"
-													}
-												],
-												"entity": [
-													{
-														"type": "entity",
-														"value": "target"
-													}
-												],
-												"storage": [
-													{
-														"type": "string",
-														"value": "target"
-													}
-												]
-										},
-										{
-											"type": "string",
-											"value": "path",
-											"optional": true
-										}
-									],
-									"value" : [
-										{
-											"type" : "string",
-											"value" : "value"
-										}
-									]
-								}
+						},
+						{
+							"type": "string",
+							"value": "path",
+							"optional": true
+						},
+						{
+							"type": "option",
+							"value": [
+								"append",
+								"insert",
+								"merge",
+								"prepend",
+								"set"
+							],
+							"change": {
+								"insert": [{
+									"type": "string",
+									"value": "index"
+								}]
 							}
-						],
-						"remove": [
-							{
-								"type": "option",
-								"value": [
-									"block",
-									"entity",
-									"storage"
+						},
+						{
+							"type": "option",
+							"value": [
+								"from",
+								"value"
+							],
+							"change": {
+								"from": [{
+										"type": "option",
+										"value": [
+											"block",
+											"entity",
+											"storage"
+										],
+										"change": {
+											"block": [{
+												"type": "coord",
+												"value": "x y z"
+											}],
+											"entity": [{
+												"type": "entity",
+												"value": "target"
+											}],
+											"storage": [{
+												"type": "string",
+												"value": "target"
+											}]
+										}
+									},
+									{
+										"type": "string",
+										"value": "path",
+										"optional": true
+									}
 								],
-								"change": {
-									"block": [
-										{
-											"type": "coord",
-											"value": "x y z"
-										}
-									],
-									"entity": [
-										{
-											"type": "entity",
-											"value": "target"
-										}
-									],
-									"storage": [
-										{
-											"type": "string",
-											"value": "target"
-										}
-									]
-								}
-							},
-							{
-								"type": "string",
-								"value": "path"
-							},
-							{
-								"type": "end"
+								"value": [{
+									"type": "string",
+									"value": "value"
+								}]
 							}
-						]
-					}
+						}
+					],
+					"remove": [{
+							"type": "option",
+							"value": [
+								"block",
+								"entity",
+								"storage"
+							],
+							"change": {
+								"block": [{
+									"type": "coord",
+									"value": "x y z"
+								}],
+								"entity": [{
+									"type": "entity",
+									"value": "target"
+								}],
+								"storage": [{
+									"type": "string",
+									"value": "target"
+								}]
+							}
+						},
+						{
+							"type": "string",
+							"value": "path"
+						},
+						{
+							"type": "end"
+						}
+					]
 				}
-			]
+			}]
 		},
 		"defaultgamemode": {
 			"name": "defaultgamemode",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"adventure",
-						"creative",
-						"spectator",
-						"survival"
-					]
-				}
-			]
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"adventure",
+					"creative",
+					"spectator",
+					"survival"
+				]
+			}]
 		},
 		"difficulty": {
 			"name": "difficulty",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"easy",
-						"hard",
-						"normal",
-						"peaceful"
-					]
-				}
-			]
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"easy",
+					"hard",
+					"normal",
+					"peaceful"
+				]
+			}]
 		},
 		"effect": {
 			"name": "effect",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"clear",
 						"give"
 					],
 					"change": {
-						"clear": [
-							{
+						"clear": [{
 								"type": "entity",
-								"value": "targets"
-								"optional" : true
+								"value": "targets",
+								"optional": true
 							},
 							{
 								"type": "end"
@@ -411,16 +359,13 @@
 		},
 		"execute": {
 			"name": "execute",
-			"cycleMarkers": [
-				{
-					"include": "execute"
-				}
-			]
+			"cycleMarkers": [{
+				"include": "execute"
+			}]
 		},
 		"experience": {
 			"name": "experience",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"add",
@@ -428,8 +373,7 @@
 						"query"
 					],
 					"change": {
-						"query": [
-							{
+						"query": [{
 								"type": "entity",
 								"value": "player"
 							},
@@ -465,8 +409,7 @@
 		},
 		"fill": {
 			"name": "fill",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "coord",
 					"value": "x y z"
 				},
@@ -488,94 +431,84 @@
 						"replace"
 					],
 					"change": {
-						"replace": [
-							{
-								"type": "block",
-								"filter": "filter"
-							}
-						]
+						"replace": [{
+							"type": "block",
+							"filter": "filter"
+						}]
 					}
 				}
 			]
 		},
-		"forceload" : {
+		"forceload": {
 			"name": "forceload",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"add",
-						"remove",
-						"query"
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"add",
+					"remove",
+					"query"
+				],
+				"change": {
+					"add": [{
+							"type": "string",
+							"value": "x1"
+						},
+						{
+							"type": "string",
+							"value": "y1"
+						},
+						{
+							"type": "string",
+							"value": "x2",
+							"optional": true
+						},
+						{
+							"type": "string",
+							"value": "y2",
+							"optional": true
+						}
 					],
-					"change": {
-						"add": [
-							{
-								"type": "string",
-								"value": "x1"
-							},
-							{
-								"type": "string",
-								"value": "y1"
-							},
-							{
-								"type": "string",
-								"value": "x2",
-								"optional" : true
-							},
-							{
-								"type": "string",
-								"value": "y2",
-								"optional" : true
-							}
-						],
-						"remove": [
-							{
-								"type": "string",
-								"value": "x1"
-							},
-							{
-								"type": "string",
-								"value": "y1"
-							},
-							{
-								"type": "string",
-								"value": "x2",
-								"optional" : true
-							},
-							{
-								"type": "string",
-								"value": "y2",
-								"optional" : true
-							}
-						],
-						"query": [
-							{
-								"type": "string",
-								"value": "x1"
-							},
-							{
-								"type": "string",
-								"value": "y1"
-							}
-						]
-					}
+					"remove": [{
+							"type": "string",
+							"value": "x1"
+						},
+						{
+							"type": "string",
+							"value": "y1"
+						},
+						{
+							"type": "string",
+							"value": "x2",
+							"optional": true
+						},
+						{
+							"type": "string",
+							"value": "y2",
+							"optional": true
+						}
+					],
+					"query": [{
+							"type": "string",
+							"value": "x1"
+						},
+						{
+							"type": "string",
+							"value": "y1"
+						}
+					]
 				}
-			]
+			}]
 		},
 		"function": {
 			"name": "function",
-			"cycleMarkers": [
-				{
-					"type": "function",
-					"value": "name"
-				}
-			]
+			"cycleMarkers": [{
+				"type": "function",
+				"value": "name"
+			}]
 		},
 		"gamemode": {
 			"name": "gamemode",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"adventure",
@@ -593,8 +526,7 @@
 		},
 		"gamerule": {
 			"name": "gamerule",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"announceAdvancements",
@@ -623,8 +555,7 @@
 						"spectatorsGenerateChunks"
 					],
 					"change": {
-						"maxCommandChainLength": [
-							{
+						"maxCommandChainLength": [{
 								"type": "string",
 								"value": "value"
 							},
@@ -632,8 +563,7 @@
 								"type": "end"
 							}
 						],
-						"maxEntityCramming": [
-							{
+						"maxEntityCramming": [{
 								"type": "string",
 								"value": "value"
 							},
@@ -641,8 +571,7 @@
 								"type": "end"
 							}
 						],
-						"randomTickSpeed": [
-							{
+						"randomTickSpeed": [{
 								"type": "string",
 								"value": "value"
 							},
@@ -650,8 +579,7 @@
 								"type": "end"
 							}
 						],
-						"spawnRadius": [
-							{
+						"spawnRadius": [{
 								"type": "string",
 								"value": "value"
 							},
@@ -669,8 +597,7 @@
 		},
 		"give": {
 			"name": "give",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "target"
 				},
@@ -686,40 +613,34 @@
 		},
 		"kill": {
 			"name": "kill",
-			"cycleMarkers": [
-				{
-					"type": "entity",
-					"value": "vicitms",
-					"optional" : true
-				}
-			]
+			"cycleMarkers": [{
+				"type": "entity",
+				"value": "vicitms",
+				"optional": true
+			}]
 		},
 		"locate": {
 			"name": "locate",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"EndCity",
-						"Fortress",
-						"Mansion",
-						"Mineshaft",
-						"Monument",
-						"Stronghold",
-						"Temple",
-						"Village"
-					]
-				}
-			]
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"EndCity",
+					"Fortress",
+					"Mansion",
+					"Mineshaft",
+					"Monument",
+					"Stronghold",
+					"Temple",
+					"Village"
+				]
+			}]
 		},
 		"me": {
 			"name": "me",
-			"cycleMarkers": [
-				{
-					"type": "greedy",
-					"value": "action"
-				}
-			]
+			"cycleMarkers": [{
+				"type": "greedy",
+				"value": "action"
+			}]
 		},
 		"msg": {
 			"name": "msg",
@@ -727,8 +648,7 @@
 		},
 		"particle": {
 			"name": "particle",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "particle",
 					"value": "name"
 				},
@@ -763,8 +683,7 @@
 		},
 		"playsound": {
 			"name": "playsound",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "sound",
 					"value": "name"
 				},
@@ -807,8 +726,7 @@
 		},
 		"recipe": {
 			"name": "recipe",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"give",
@@ -827,26 +745,21 @@
 		},
 		"replaceitem": {
 			"name": "replaceitem",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"entity",
 						"block"
 					],
 					"change": {
-						"entity": [
-							{
-								"type": "entity",
-								"value": "targets"
-							}
-						],
-						"block": [
-							{
-								"type": "coord",
-								"value": "x y z"
-							}
-						]
+						"entity": [{
+							"type": "entity",
+							"value": "targets"
+						}],
+						"block": [{
+							"type": "coord",
+							"value": "x y z"
+						}]
 					}
 				},
 				{
@@ -865,200 +778,181 @@
 		},
 		"say": {
 			"name": "say",
-			"cycleMarkers": [
-				{
-					"type": "greedy",
-					"value": "message"
-				}
-			]
+			"cycleMarkers": [{
+				"type": "greedy",
+				"value": "message"
+			}]
 		},
 		"team": {
 			"name": "team",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"add",
-						"empty",
-						"join",
-						"leave",
-						"list",
-						"option",
-						"remove"
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"add",
+					"empty",
+					"join",
+					"leave",
+					"list",
+					"option",
+					"remove"
+				],
+				"change": {
+					"add": [{
+							"type": "string",
+							"value": "team"
+						},
+						{
+							"type": "greedy",
+							"value": "display name"
+						},
+						{
+							"type": "end"
+						}
 					],
-					"change": {
-						"add": [
-							{
-								"type": "string",
-								"value": "team"
-							},
-							{
-								"type": "greedy",
-								"value": "display name"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"empty": [
-							{
-								"type": "string",
-								"value": "team"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"join": [
-							{
-								"type": "string",
-								"value": "team"
-							},
-							{
-								"type": "entity",
-								"value": "memebers"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"leave": [
-							{
-								"type": "entity",
-								"value": "memebers"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"list": [
-							{
-								"type": "string",
-								"value": "team"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"option": [
-							{
-								"type": "string",
-								"value": "team"
-							},
-							{
-								"type": "option",
-								"value": [
-									"collisionRule",
-									"color",
-									"deathMessageVisibility",
-									"friendlyFire",
-									"nametagVisibility",
-									"seeFriendlyInvisibles"
+					"empty": [{
+							"type": "string",
+							"value": "team"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"join": [{
+							"type": "string",
+							"value": "team"
+						},
+						{
+							"type": "entity",
+							"value": "memebers"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"leave": [{
+							"type": "entity",
+							"value": "memebers"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"list": [{
+							"type": "string",
+							"value": "team"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"option": [{
+							"type": "string",
+							"value": "team"
+						},
+						{
+							"type": "option",
+							"value": [
+								"collisionRule",
+								"color",
+								"deathMessageVisibility",
+								"friendlyFire",
+								"nametagVisibility",
+								"seeFriendlyInvisibles"
+							],
+							"change": {
+								"collisionRule": [{
+										"type": "option",
+										"value": [
+											"always",
+											"never",
+											"pushOtherTeams",
+											"pushOwnTeam"
+										]
+									},
+									{
+										"type": "end"
+									}
 								],
-								"change": {
-									"collisionRule": [
-										{
-											"type": "option",
-											"value": [
-												"always",
-												"never",
-												"pushOtherTeams",
-												"pushOwnTeam"
-											]
-										},
-										{
-											"type": "end"
-										}
-									],
-									"color": [
-										{
-											"type": "option",
-											"value": [
-												"aqua",
-												"black",
-												"blue",
-												"dark_blue",
-												"dark_green",
-												"dark_aqua",
-												"dark_red",
-												"dark_purple",
-												"dark_gray",
-												"gold",
-												"gray",
-												"green",
-												"red",
-												"light_purple",
-												"yellow",
-												"white"
-											]
-										},
-										{
-											"type": "end"
-										}
-									],
-									"deathMessageVisibility": [
-										{
-											"type": "option",
-											"value": [
-												"always",
-												"never",
-												"hideForOtherTeams",
-												"hideForOwnTeam"
-											]
-										},
-										{
-											"type": "end"
-										}
-									],
-									"friendlyFire": [
-										{
-											"type": "boolean",
-											"value": "value"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"nametagVisibility": [
-										{
-											"type": "option",
-											"value": [
-												"always",
-												"never",
-												"hideForOtherTeams",
-												"hideForOwnTeam"
-											]
-										},
-										{
-											"type": "end"
-										}
-									],
-									"seeFriendlyInvisibles": [
-										{
-											"type": "boolean",
-											"value": "value"
-										},
-										{
-											"type": "end"
-										}
-									]
-								}
+								"color": [{
+										"type": "option",
+										"value": [
+											"aqua",
+											"black",
+											"blue",
+											"dark_blue",
+											"dark_green",
+											"dark_aqua",
+											"dark_red",
+											"dark_purple",
+											"dark_gray",
+											"gold",
+											"gray",
+											"green",
+											"red",
+											"light_purple",
+											"yellow",
+											"white"
+										]
+									},
+									{
+										"type": "end"
+									}
+								],
+								"deathMessageVisibility": [{
+										"type": "option",
+										"value": [
+											"always",
+											"never",
+											"hideForOtherTeams",
+											"hideForOwnTeam"
+										]
+									},
+									{
+										"type": "end"
+									}
+								],
+								"friendlyFire": [{
+										"type": "boolean",
+										"value": "value"
+									},
+									{
+										"type": "end"
+									}
+								],
+								"nametagVisibility": [{
+										"type": "option",
+										"value": [
+											"always",
+											"never",
+											"hideForOtherTeams",
+											"hideForOwnTeam"
+										]
+									},
+									{
+										"type": "end"
+									}
+								],
+								"seeFriendlyInvisibles": [{
+										"type": "boolean",
+										"value": "value"
+									},
+									{
+										"type": "end"
+									}
+								]
 							}
-						],
-						"remove": [
-							{
-								"type": "string",
-								"value": "team"
-							}
-						]
-					}
+						}
+					],
+					"remove": [{
+						"type": "string",
+						"value": "team"
+					}]
 				}
-			]
+			}]
 		},
 		"tag": {
 			"name": "tag",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "target"
 				},
@@ -1070,11 +964,9 @@
 						"remove"
 					],
 					"change": {
-						"list": [
-							{
-								"type": "end"
-							}
-						]
+						"list": [{
+							"type": "end"
+						}]
 					}
 				},
 				{
@@ -1085,215 +977,198 @@
 		},
 		"scoreboard": {
 			"name": "scoreboard",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"objectives",
-						"players"
-					],
-					"change": {
-						"objectives": [
-							{
-								"type": "option",
-								"value": [
-									"add",
-									"remove",
-									"setdisplay"
-								],
-								"change": {
-									"add": [
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "objective",
-											"value": "criteria"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"remove": [
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"setdisplay": [
-										{
-											"type": "objective-slot",
-											"value": "slot"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "end"
-										}
-									]
-								}
-							}
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"objectives",
+					"players"
+				],
+				"change": {
+					"objectives": [{
+						"type": "option",
+						"value": [
+							"add",
+							"remove",
+							"setdisplay"
 						],
-						"players": [
-							{
-								"type": "option",
-								"value": [
-									"add",
-									"enable",
-									"list",
-									"operation",
-									"remove",
-									"reset",
-									"set",
-									"get"
-								],
-								"change": {
-									"add": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "string",
-											"value": "score"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"enable": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "string",
-											"value": "trigger"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"list": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"operation": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "string",
-											"value": "target objective"
-										},
-										{
-											"type": "option",
-											"value": [
-												"+=",
-												"-=",
-												"*=",
-												"/=",
-												"%=",
-												"=",
-												"<",
-												">",
-												"><"
-											]
-										},
-										{
-											"type": "entity",
-											"value": "source"
-										},
-										{
-											"type": "string",
-											"value": "source objective"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"remove": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "string",
-											"value": "score"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"reset": [
-										{
-											"type": "entity",
-											"value": "targets"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"set": [
-										{
-											"type": "entity",
-											"value": "target"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "string",
-											"value": "score"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"get": [
-										{
-											"type": "entity",
-											"value": "targets"
-										},
-										{
-											"type": "string",
-											"value": "objective"
-										},
-										{
-											"type": "end"
-										}
-									]
+						"change": {
+							"add": [{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "objective",
+									"value": "criteria"
+								},
+								{
+									"type": "end"
 								}
-							}
-						]
-					}
+							],
+							"remove": [{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"setdisplay": [{
+									"type": "objective-slot",
+									"value": "slot"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "end"
+								}
+							]
+						}
+					}],
+					"players": [{
+						"type": "option",
+						"value": [
+							"add",
+							"enable",
+							"list",
+							"operation",
+							"remove",
+							"reset",
+							"set",
+							"get"
+						],
+						"change": {
+							"add": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "string",
+									"value": "score"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"enable": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "trigger"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"list": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"operation": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "target objective"
+								},
+								{
+									"type": "option",
+									"value": [
+										"+=",
+										"-=",
+										"*=",
+										"/=",
+										"%=",
+										"=",
+										"<",
+										">",
+										"><"
+									]
+								},
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "source objective"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"remove": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "string",
+									"value": "score"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"reset": [{
+									"type": "entity",
+									"value": "targets"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"set": [{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "string",
+									"value": "score"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"get": [{
+									"type": "entity",
+									"value": "targets"
+								},
+								{
+									"type": "string",
+									"value": "objective"
+								},
+								{
+									"type": "end"
+								}
+							]
+						}
+					}]
 				}
-			]
+			}]
 		},
 		"seed": {
 			"name": "seed",
@@ -1301,8 +1176,7 @@
 		},
 		"setblock": {
 			"name": "setblock",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "coord",
 					"value": "x y z"
 				},
@@ -1322,17 +1196,14 @@
 		},
 		"setworldspawn": {
 			"name": "setworldspawn",
-			"cycleMarkers": [
-				{
-					"type": "coord",
-					"value": "x y z"
-				}
-			]
+			"cycleMarkers": [{
+				"type": "coord",
+				"value": "x y z"
+			}]
 		},
 		"spawnpoint": {
 			"name": "spawnpoint",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "target",
 					"optional": true
@@ -1346,8 +1217,7 @@
 		},
 		"spreadplayers": {
 			"name": "spreadplayers",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "center",
 					"value": "x z"
 				},
@@ -1371,8 +1241,7 @@
 		},
 		"stopsound": {
 			"name": "stopsound",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "target"
 				},
@@ -1399,8 +1268,7 @@
 		},
 		"summon": {
 			"name": "summon",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity-id",
 					"value": "name"
 				},
@@ -1416,8 +1284,7 @@
 		},
 		"tell": {
 			"name": "tell",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "targets"
 				},
@@ -1429,8 +1296,7 @@
 		},
 		"tellraw": {
 			"name": "tellraw",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "targets"
 				},
@@ -1442,54 +1308,48 @@
 		},
 		"time": {
 			"name": "time",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"add",
-						"query",
-						"set"
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"add",
+					"query",
+					"set"
+				],
+				"change": {
+					"add": [{
+							"type": "string",
+							"value": "time"
+						},
+						{
+							"type": "end"
+						}
 					],
-					"change": {
-						"add": [
-							{
-								"type": "string",
-								"value": "time"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"query": [
-							{
-								"type": "option",
-								"value": [
-									"day",
-									"daytime",
-									"gametime"
-								]
-							},
-							{
-								"type": "end"
-							}
-						],
-						"set": [
-							{
-								"type": "string",
-								"value": "time"
-							},
-							{
-								"type": "end"
-							}
-						]
-					}
+					"query": [{
+							"type": "option",
+							"value": [
+								"day",
+								"daytime",
+								"gametime"
+							]
+						},
+						{
+							"type": "end"
+						}
+					],
+					"set": [{
+							"type": "string",
+							"value": "time"
+						},
+						{
+							"type": "end"
+						}
+					]
 				}
-			]
+			}]
 		},
 		"title": {
 			"name": "title",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "entity",
 					"value": "target"
 				},
@@ -1504,8 +1364,7 @@
 						"title"
 					],
 					"change": {
-						"times": [
-							{
+						"times": [{
 								"type": "string",
 								"value": "fadeIn"
 							},
@@ -1531,8 +1390,7 @@
 		},
 		"trigger": {
 			"name": "trigger",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "string",
 					"value": "objective"
 				},
@@ -1551,8 +1409,7 @@
 		},
 		"weather": {
 			"name": "weather",
-			"cycleMarkers": [
-				{
+			"cycleMarkers": [{
 					"type": "option",
 					"value": [
 						"clear",
@@ -1568,114 +1425,101 @@
 		},
 		"worldborder": {
 			"name": "worldborder",
-			"cycleMarkers": [
-				{
-					"type": "option",
-					"value": [
-						"add",
-						"center",
-						"damage",
-						"get",
-						"set",
-						"warning"
+			"cycleMarkers": [{
+				"type": "option",
+				"value": [
+					"add",
+					"center",
+					"damage",
+					"get",
+					"set",
+					"warning"
+				],
+				"change": {
+					"add": [{
+							"type": "string",
+							"value": "distance"
+						},
+						{
+							"type": "string",
+							"value": "time"
+						},
+						{
+							"type": "end"
+						}
 					],
-					"change": {
-						"add": [
-							{
-								"type": "string",
-								"value": "distance"
-							},
-							{
-								"type": "string",
-								"value": "time"
-							},
-							{
-								"type": "end"
-							}
+					"center": [{
+							"type": "center",
+							"value": "x z"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"damage": [{
+						"type": "option",
+						"value": [
+							"amount",
+							"buffer"
 						],
-						"center": [
-							{
-								"type": "center",
-								"value": "x z"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"damage": [
-							{
-								"type": "option",
-								"value": [
-									"amount",
-									"buffer"
-								],
-								"change": {
-									"amount": [
-										{
-											"type": "string",
-											"value": "damagePerBlock"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"buffer": [
-										{
-											"type": "string",
-											"value": "distance"
-										},
-										{
-											"type": "end"
-										}
-									]
+						"change": {
+							"amount": [{
+									"type": "string",
+									"value": "damagePerBlock"
+								},
+								{
+									"type": "end"
 								}
-							}
-						],
-						"set": [
-							{
-								"type": "string",
-								"value": "distance"
-							},
-							{
-								"type": "string",
-								"value": "time"
-							},
-							{
-								"type": "end"
-							}
-						],
-						"warning": [
-							{
-								"type": "option",
-								"value": [
-									"distance",
-									"time"
-								],
-								"change": {
-									"distance": [
-										{
-											"type": "string",
-											"value": "distance"
-										},
-										{
-											"type": "end"
-										}
-									],
-									"time": [
-										{
-											"type": "string",
-											"value": "time"
-										},
-										{
-											"type": "end"
-										}
-									]
+							],
+							"buffer": [{
+									"type": "string",
+									"value": "distance"
+								},
+								{
+									"type": "end"
 								}
-							}
-						]
-					}
+							]
+						}
+					}],
+					"set": [{
+							"type": "string",
+							"value": "distance"
+						},
+						{
+							"type": "string",
+							"value": "time"
+						},
+						{
+							"type": "end"
+						}
+					],
+					"warning": [{
+						"type": "option",
+						"value": [
+							"distance",
+							"time"
+						],
+						"change": {
+							"distance": [{
+									"type": "string",
+									"value": "distance"
+								},
+								{
+									"type": "end"
+								}
+							],
+							"time": [{
+									"type": "string",
+									"value": "time"
+								},
+								{
+									"type": "end"
+								}
+							]
+						}
+					}]
 				}
-			]
+			}]
 		},
 		"xp": {
 			"alias": "experience",
@@ -1692,14 +1536,11 @@
 				"score"
 			],
 			"change": {
-				"entity": [
-					{
-						"type": "entity",
-						"value": "targets"
-					}
-				],
-				"block": [
-					{
+				"entity": [{
+					"type": "entity",
+					"value": "targets"
+				}],
+				"block": [{
 						"type": "coord",
 						"value": "x y z"
 					},
@@ -1708,8 +1549,7 @@
 						"value": "block"
 					}
 				],
-				"blocks": [
-					{
+				"blocks": [{
 						"type": "coord",
 						"value": "x1 y1 z1"
 					},
@@ -1729,8 +1569,7 @@
 						]
 					}
 				],
-				"score": [
-					{
+				"score": [{
 						"type": "entity",
 						"value": "target"
 					},
@@ -1748,15 +1587,12 @@
 							">",
 							"matches"
 						],
-						"change" : {
-							"matches" : [
-								{
-									"type" : "string",
-									"value" : "range"
-								}
-							],
-							"<" : [
-								{
+						"change": {
+							"matches": [{
+								"type": "string",
+								"value": "range"
+							}],
+							"<": [{
 									"type": "entity",
 									"value": "source"
 								},
@@ -1765,8 +1601,7 @@
 									"value": "sourceObjective"
 								}
 							],
-							"<=" : [
-								{
+							"<=": [{
 									"type": "entity",
 									"value": "source"
 								},
@@ -1775,8 +1610,7 @@
 									"value": "sourceObjective"
 								}
 							],
-							"=" : [
-								{
+							"=": [{
 									"type": "entity",
 									"value": "source"
 								},
@@ -1785,8 +1619,7 @@
 									"value": "sourceObjective"
 								}
 							],
-							"=>" : [
-								{
+							"=>": [{
 									"type": "entity",
 									"value": "source"
 								},
@@ -1795,8 +1628,7 @@
 									"value": "sourceObjective"
 								}
 							],
-							">" : [
-								{
+							">": [{
 									"type": "entity",
 									"value": "source"
 								},
@@ -1823,8 +1655,7 @@
 				"run"
 			],
 			"change": {
-				"align": [
-					{
+				"align": [{
 						"type": "option",
 						"value": [
 							"x",
@@ -1840,8 +1671,7 @@
 						"include": "execute"
 					}
 				],
-				"as": [
-					{
+				"as": [{
 						"type": "entity",
 						"value": "targets"
 					},
@@ -1849,8 +1679,7 @@
 						"include": "execute"
 					}
 				],
-				"at": [
-					{
+				"at": [{
 						"type": "entity",
 						"value": "targets"
 					},
@@ -1858,24 +1687,21 @@
 						"include": "execute"
 					}
 				],
-				"if": [
-					{
+				"if": [{
 						"include": "if-unless"
 					},
 					{
 						"include": "execute"
 					}
 				],
-				"unless": [
-					{
+				"unless": [{
 						"include": "if-unless"
 					},
 					{
 						"include": "execute"
 					}
 				],
-				"positioned": [
-					{
+				"positioned": [{
 						"type": "coord",
 						"value": "x y z"
 					},
@@ -1883,8 +1709,7 @@
 						"include": "execute"
 					}
 				],
-				"store": [
-					{
+				"store": [{
 						"type": "option",
 						"value": [
 							"result",
@@ -1900,20 +1725,15 @@
 							"storage"
 						],
 						"change": {
-							"block": [
-								{
-									"type": "coord",
-									"value": "x y z"
-								}
-							],
-							"entity": [
-								{
-									"type": "entity",
-									"value": "target"
-								}
-							],
-							"score": [
-								{
+							"block": [{
+								"type": "coord",
+								"value": "x y z"
+							}],
+							"entity": [{
+								"type": "entity",
+								"value": "target"
+							}],
+							"score": [{
 									"type": "entity",
 									"value": "target"
 								},
@@ -1925,12 +1745,10 @@
 									"include": "execute"
 								}
 							],
-							"storage": [
-								{
-									"type": "string",
-									"value": "target"
-								}
-							]
+							"storage": [{
+								"type": "string",
+								"value": "target"
+							}]
 						}
 					},
 					{
@@ -1956,11 +1774,9 @@
 						"include": "execute"
 					}
 				],
-				"run": [
-					{
-						"type": "command"
-					}
-				]
+				"run": [{
+					"type": "command"
+				}]
 			}
 		}
 	}
