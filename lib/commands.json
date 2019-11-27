@@ -192,6 +192,10 @@
 								"entity": [{
 									"type": "entity",
 									"value": "target"
+								}],
+								"storage": [{
+									"type": "string",
+									"value": "target"
 								}]
 							}
 						},
