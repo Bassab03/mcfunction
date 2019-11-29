@@ -1,0 +1,4366 @@
+{
+    "commands": {
+        "commands": {
+            "advancement": {
+                "name": "advancement",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "grant",
+                            "revoke"
+                        ]
+                    },
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "everything",
+                            "from",
+                            "only",
+                            "through",
+                            "until"
+                        ],
+                        "change": {
+                            "everything": [
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "only": [
+                                {
+                                    "type": "advancement",
+                                    "value": "advancement"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "criterion"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "advancement",
+                        "value": "advancement"
+                    }
+                ]
+            },
+            "clear": {
+                "name": "clear",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "targets"
+                    },
+                    {
+                        "type": "item",
+                        "value": "item"
+                    },
+                    {
+                        "type": "string",
+                        "value": "maxCount"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "clone",
+                "cycleMarkers": [
+                    {
+                        "type": "coord",
+                        "value": "x1 y1 z1"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x2 y2 z2"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "xt yt zt"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "filtered",
+                            "masked",
+                            "replace"
+                        ],
+                        "change": {
+                            "filtered": [
+                                {
+                                    "type": "block",
+                                    "value": "filter"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "force",
+                            "move",
+                            "normal"
+                        ]
+                    }
+                ]
+            },
+            "data": {
+                "name": "data",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "get",
+                            "merge",
+                            "modify",
+                            "remove"
+                        ],
+                        "change": {
+                            "get": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "block",
+                                        "entity",
+                                        "storage"
+                                    ],
+                                    "change": {
+                                        "block": [
+                                            {
+                                                "type": "coord",
+                                                "value": "x y z"
+                                            }
+                                        ],
+                                        "entity": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            }
+                                        ],
+                                        "storage": [
+                                            {
+                                                "type": "string",
+                                                "value": "target"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "path",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "scale",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "merge": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "block",
+                                        "entity",
+                                        "storage"
+                                    ],
+                                    "change": {
+                                        "block": [
+                                            {
+                                                "type": "coord",
+                                                "value": "x y z"
+                                            }
+                                        ],
+                                        "entity": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            }
+                                        ],
+                                        "storage": [
+                                            {
+                                                "type": "string",
+                                                "value": "target"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "nbt",
+                                    "value": "nbt"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "modify": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "block",
+                                        "entity",
+                                        "storage"
+                                    ],
+                                    "change": {
+                                        "block": [
+                                            {
+                                                "type": "coord",
+                                                "value": "x y z"
+                                            }
+                                        ],
+                                        "entity": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            }
+                                        ],
+                                        "storage": [
+                                            {
+                                                "type": "string",
+                                                "value": "target"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "path",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "append",
+                                        "insert",
+                                        "merge",
+                                        "prepend",
+                                        "set"
+                                    ],
+                                    "change": {
+                                        "insert": [
+                                            {
+                                                "type": "string",
+                                                "value": "index"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "from",
+                                        "value"
+                                    ],
+                                    "change": {
+                                        "from": [
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "block",
+                                                    "entity",
+                                                    "storage"
+                                                ],
+                                                "change": {
+                                                    "block": [
+                                                        {
+                                                            "type": "coord",
+                                                            "value": "x y z"
+                                                        }
+                                                    ],
+                                                    "entity": [
+                                                        {
+                                                            "type": "entity",
+                                                            "value": "target"
+                                                        }
+                                                    ],
+                                                    "storage": [
+                                                        {
+                                                            "type": "string",
+                                                            "value": "target"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "path",
+                                                "optional": true
+                                            }
+                                        ],
+                                        "value": [
+                                            {
+                                                "type": "string",
+                                                "value": "value"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "remove": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "block",
+                                        "entity",
+                                        "storage"
+                                    ],
+                                    "change": {
+                                        "block": [
+                                            {
+                                                "type": "coord",
+                                                "value": "x y z"
+                                            }
+                                        ],
+                                        "entity": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            }
+                                        ],
+                                        "storage": [
+                                            {
+                                                "type": "string",
+                                                "value": "target"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "path"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "defaultgamemode": {
+                "name": "defaultgamemode",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "adventure",
+                            "creative",
+                            "spectator",
+                            "survival"
+                        ]
+                    }
+                ]
+            },
+            "difficulty": {
+                "name": "difficulty",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "easy",
+                            "hard",
+                            "normal",
+                            "peaceful"
+                        ]
+                    }
+                ]
+            },
+            "effect": {
+                "name": "effect",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "clear",
+                            "give"
+                        ],
+                        "change": {
+                            "clear": [
+                                {
+                                    "type": "entity",
+                                    "value": "targets",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "entity",
+                        "value": "targets"
+                    },
+                    {
+                        "type": "effect",
+                        "value": "effect"
+                    },
+                    {
+                        "type": "string",
+                        "value": "seconds"
+                    },
+                    {
+                        "type": "string",
+                        "value": "amplifier"
+                    },
+                    {
+                        "type": "boolean",
+                        "value": "hideParticles"
+                    }
+                ]
+            },
+            "execute": {
+                "name": "execute",
+                "cycleMarkers": [
+                    {
+                        "include": "execute"
+                    }
+                ]
+            },
+            "experience": {
+                "name": "experience",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "set",
+                            "query"
+                        ],
+                        "change": {
+                            "query": [
+                                {
+                                    "type": "entity",
+                                    "value": "player"
+                                },
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "points",
+                                        "levels"
+                                    ]
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "entity",
+                        "value": "players"
+                    },
+                    {
+                        "type": "string",
+                        "value": "amount"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "points",
+                            "levels"
+                        ]
+                    }
+                ]
+            },
+            "fill": {
+                "name": "fill",
+                "cycleMarkers": [
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "xt yt zt"
+                    },
+                    {
+                        "type": "block",
+                        "value": "block"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "destroy",
+                            "hollow",
+                            "keep",
+                            "outline",
+                            "replace"
+                        ],
+                        "change": {
+                            "replace": [
+                                {
+                                    "type": "block",
+                                    "filter": "filter"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "forceload": {
+                "name": "forceload",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "remove",
+                            "query"
+                        ],
+                        "change": {
+                            "add": [
+                                {
+                                    "type": "string",
+                                    "value": "x1"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "y1"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "x2",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "y2",
+                                    "optional": true
+                                }
+                            ],
+                            "remove": [
+                                {
+                                    "type": "string",
+                                    "value": "x1"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "y1"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "x2",
+                                    "optional": true
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "y2",
+                                    "optional": true
+                                }
+                            ],
+                            "query": [
+                                {
+                                    "type": "string",
+                                    "value": "x1"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "y1"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "function": {
+                "name": "function",
+                "cycleMarkers": [
+                    {
+                        "type": "function",
+                        "value": "name"
+                    }
+                ]
+            },
+            "gamemode": {
+                "name": "gamemode",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "adventure",
+                            "creative",
+                            "spectator",
+                            "survival"
+                        ]
+                    },
+                    {
+                        "type": "player",
+                        "value": "target",
+                        "optional": true
+                    }
+                ]
+            },
+            "gamerule": {
+                "name": "gamerule",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "announceAdvancements",
+                            "commandBlockOutput",
+                            "disableElytraMovementCheck",
+                            "disableRaids",
+                            "doDaylightCycle",
+                            "doEntityDrops",
+                            "doFireTick",
+                            "doImmediateRespawn",
+                            "doInsomnia",
+                            "doLimitedCrafting",
+                            "doMobloot",
+                            "doMobSpawning",
+                            "drowningDamage",
+                            "doTileDrops",
+                            "doWeatherCycle",
+                            "fallDamage",
+                            "fireDamage",
+                            "keepInventory",
+                            "logAdminCommands",
+                            "maxCommandChainLength",
+                            "maxEntityCramming",
+                            "mobGriefing",
+                            "naturalRegeneration",
+                            "randomTickSpeed",
+                            "reducedDebugInfo",
+                            "sendCommandFeedback",
+                            "showDeathMessages",
+                            "spawnRadius",
+                            "spectatorsGenerateChunks"
+                        ],
+                        "change": {
+                            "maxCommandChainLength": [
+                                {
+                                    "type": "string",
+                                    "value": "value"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "maxEntityCramming": [
+                                {
+                                    "type": "string",
+                                    "value": "value"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "randomTickSpeed": [
+                                {
+                                    "type": "string",
+                                    "value": "value"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "spawnRadius": [
+                                {
+                                    "type": "string",
+                                    "value": "value"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "boolean",
+                        "value": "value"
+                    }
+                ]
+            },
+            "give": {
+                "name": "give",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "item",
+                        "value": "item"
+                    },
+                    {
+                        "type": "string",
+                        "value": "count"
+                    }
+                ]
+            },
+            "kill": {
+                "name": "kill",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "vicitms",
+                        "optional": true
+                    }
+                ]
+            },
+            "locate": {
+                "name": "locate",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "EndCity",
+                            "Fortress",
+                            "Mansion",
+                            "Mineshaft",
+                            "Monument",
+                            "Stronghold",
+                            "Temple",
+                            "Village"
+                        ]
+                    }
+                ]
+            },
+            "me": {
+                "name": "me",
+                "cycleMarkers": [
+                    {
+                        "type": "greedy",
+                        "value": "action"
+                    }
+                ]
+            },
+            "msg": {
+                "msg": {
+                    "name": "msg",
+                    "alias": "tell"
+                }
+            },
+            "particle": {
+                "name": "particle",
+                "cycleMarkers": [
+                    {
+                        "type": "particle",
+                        "value": "name"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "string",
+                        "value": "speed"
+                    },
+                    {
+                        "type": "string",
+                        "value": "count"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "normal",
+                            "force"
+                        ]
+                    },
+                    {
+                        "type": "entity",
+                        "value": "veiwers"
+                    }
+                ]
+            },
+            "playsound": {
+                "name": "playsound",
+                "cycleMarkers": [
+                    {
+                        "type": "sound",
+                        "value": "name"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "ambient",
+                            "block",
+                            "hostile",
+                            "master",
+                            "music",
+                            "neutral",
+                            "player",
+                            "record",
+                            "voice",
+                            "weather"
+                        ]
+                    },
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "string",
+                        "value": "volume"
+                    },
+                    {
+                        "type": "string",
+                        "value": "pitch"
+                    },
+                    {
+                        "type": "string",
+                        "value": "minVolume"
+                    }
+                ]
+            },
+            "recipe": {
+                "name": "recipe",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "give",
+                            "take"
+                        ]
+                    },
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "recipe",
+                        "value": "recipe"
+                    }
+                ]
+            },
+            "replaceitem": {
+                "name": "replaceitem",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "entity",
+                            "block"
+                        ],
+                        "change": {
+                            "entity": [
+                                {
+                                    "type": "entity",
+                                    "value": "targets"
+                                }
+                            ],
+                            "block": [
+                                {
+                                    "type": "coord",
+                                    "value": "x y z"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inventory-slot",
+                        "value": "slot"
+                    },
+                    {
+                        "type": "item",
+                        "value": "item"
+                    },
+                    {
+                        "type": "string",
+                        "value": "count"
+                    }
+                ]
+            },
+            "say": {
+                "name": "say",
+                "cycleMarkers": [
+                    {
+                        "type": "greedy",
+                        "value": "message"
+                    }
+                ]
+            },
+            "scoreboard": {
+                "name": "scoreboard",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "objectives",
+                            "players"
+                        ],
+                        "change": {
+                            "objectives": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "add",
+                                        "remove",
+                                        "setdisplay"
+                                    ],
+                                    "change": {
+                                        "add": [
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "objective",
+                                                "value": "criteria"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "remove": [
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "setdisplay": [
+                                            {
+                                                "type": "objective-slot",
+                                                "value": "slot"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "players": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "add",
+                                        "enable",
+                                        "list",
+                                        "operation",
+                                        "remove",
+                                        "reset",
+                                        "set",
+                                        "get"
+                                    ],
+                                    "change": {
+                                        "add": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "score"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "enable": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "trigger"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "list": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "operation": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "target objective"
+                                            },
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "+=",
+                                                    "-=",
+                                                    "*=",
+                                                    "/=",
+                                                    "%=",
+                                                    "=",
+                                                    "<",
+                                                    ">",
+                                                    "><"
+                                                ]
+                                            },
+                                            {
+                                                "type": "entity",
+                                                "value": "source"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "source objective"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "remove": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "score"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "reset": [
+                                            {
+                                                "type": "entity",
+                                                "value": "targets"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "set": [
+                                            {
+                                                "type": "entity",
+                                                "value": "target"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "score"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "get": [
+                                            {
+                                                "type": "entity",
+                                                "value": "targets"
+                                            },
+                                            {
+                                                "type": "string",
+                                                "value": "objective"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "seed": {
+                "name": "seed",
+                "cycleMarkers": []
+            },
+            "setblock": {
+                "name": "setblock",
+                "cycleMarkers": [
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "block",
+                        "value": "block"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "destroy",
+                            "keep",
+                            "replace"
+                        ]
+                    }
+                ]
+            },
+            "setworldspawn": {
+                "name": "setworldspawn",
+                "cycleMarkers": [
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    }
+                ]
+            },
+            "spawnpoint": {
+                "name": "spawnpoint",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "target",
+                        "optional": true
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x y z",
+                        "optional": true
+                    }
+                ]
+            },
+            "spreadplayers": {
+                "name": "spreadplayers",
+                "cycleMarkers": [
+                    {
+                        "type": "center",
+                        "value": "x z"
+                    },
+                    {
+                        "type": "string",
+                        "value": "spreadDistance"
+                    },
+                    {
+                        "type": "string",
+                        "value": "maxRange"
+                    },
+                    {
+                        "type": "boolean",
+                        "value": "respectTeams"
+                    },
+                    {
+                        "type": "entity",
+                        "value": "victims"
+                    }
+                ]
+            },
+            "stopsound": {
+                "name": "stopsound",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "ambient",
+                            "block",
+                            "hostile",
+                            "master",
+                            "music",
+                            "neutral",
+                            "player",
+                            "record",
+                            "voice",
+                            "weather"
+                        ]
+                    },
+                    {
+                        "type": "sound",
+                        "value": "name"
+                    }
+                ]
+            },
+            "summon": {
+                "name": "summon",
+                "cycleMarkers": [
+                    {
+                        "type": "entity-id",
+                        "value": "name"
+                    },
+                    {
+                        "type": "coord",
+                        "value": "x y z"
+                    },
+                    {
+                        "type": "nbt",
+                        "value": "nbt"
+                    }
+                ]
+            },
+            "tag": {
+                "name": "tag",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "list",
+                            "remove"
+                        ],
+                        "change": {
+                            "list": [
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "value": "name"
+                    }
+                ]
+            },
+            "team": {
+                "name": "team",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "empty",
+                            "join",
+                            "leave",
+                            "list",
+                            "option",
+                            "remove"
+                        ],
+                        "change": {
+                            "add": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                },
+                                {
+                                    "type": "greedy",
+                                    "value": "display name"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "empty": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "join": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                },
+                                {
+                                    "type": "entity",
+                                    "value": "memebers"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "leave": [
+                                {
+                                    "type": "entity",
+                                    "value": "memebers"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "list": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "option": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                },
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "collisionRule",
+                                        "color",
+                                        "deathMessageVisibility",
+                                        "friendlyFire",
+                                        "nametagVisibility",
+                                        "seeFriendlyInvisibles"
+                                    ],
+                                    "change": {
+                                        "collisionRule": [
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "always",
+                                                    "never",
+                                                    "pushOtherTeams",
+                                                    "pushOwnTeam"
+                                                ]
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "color": [
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "aqua",
+                                                    "black",
+                                                    "blue",
+                                                    "dark_blue",
+                                                    "dark_green",
+                                                    "dark_aqua",
+                                                    "dark_red",
+                                                    "dark_purple",
+                                                    "dark_gray",
+                                                    "gold",
+                                                    "gray",
+                                                    "green",
+                                                    "red",
+                                                    "light_purple",
+                                                    "yellow",
+                                                    "white"
+                                                ]
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "deathMessageVisibility": [
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "always",
+                                                    "never",
+                                                    "hideForOtherTeams",
+                                                    "hideForOwnTeam"
+                                                ]
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "friendlyFire": [
+                                            {
+                                                "type": "boolean",
+                                                "value": "value"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "nametagVisibility": [
+                                            {
+                                                "type": "option",
+                                                "value": [
+                                                    "always",
+                                                    "never",
+                                                    "hideForOtherTeams",
+                                                    "hideForOwnTeam"
+                                                ]
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "seeFriendlyInvisibles": [
+                                            {
+                                                "type": "boolean",
+                                                "value": "value"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "remove": [
+                                {
+                                    "type": "string",
+                                    "value": "team"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "tell": {
+                "name": "tell",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "targets"
+                    },
+                    {
+                        "type": "greedy",
+                        "value": "message"
+                    }
+                ]
+            },
+            "tellraw": {
+                "name": "tellraw",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "targets"
+                    },
+                    {
+                        "type": "string",
+                        "value": "message"
+                    }
+                ]
+            },
+            "time": {
+                "name": "time",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "query",
+                            "set"
+                        ],
+                        "change": {
+                            "add": [
+                                {
+                                    "type": "string",
+                                    "value": "time"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "query": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "day",
+                                        "daytime",
+                                        "gametime"
+                                    ]
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "set": [
+                                {
+                                    "type": "string",
+                                    "value": "time"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "title": {
+                "name": "title",
+                "cycleMarkers": [
+                    {
+                        "type": "entity",
+                        "value": "target"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "actionbar",
+                            "clear",
+                            "reset",
+                            "subtitle",
+                            "times",
+                            "title"
+                        ],
+                        "change": {
+                            "times": [
+                                {
+                                    "type": "string",
+                                    "value": "fadeIn"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "stay"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "fadeOut"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "value": "title"
+                    }
+                ]
+            },
+            "trigger": {
+                "name": "trigger",
+                "cycleMarkers": [
+                    {
+                        "type": "string",
+                        "value": "objective"
+                    },
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "set"
+                        ]
+                    }
+                ]
+            },
+            "w": {
+                "name": "w",
+                "alias": "tell"
+            },
+            "weather": {
+                "name": "weather",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "clear",
+                            "rain",
+                            "thunder"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "value": "duration"
+                    }
+                ]
+            },
+            "worldborder": {
+                "name": "worldborder",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "add",
+                            "center",
+                            "damage",
+                            "get",
+                            "set",
+                            "warning"
+                        ],
+                        "change": {
+                            "add": [
+                                {
+                                    "type": "string",
+                                    "value": "distance"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "time"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "center": [
+                                {
+                                    "type": "center",
+                                    "value": "x z"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "damage": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "amount",
+                                        "buffer"
+                                    ],
+                                    "change": {
+                                        "amount": [
+                                            {
+                                                "type": "string",
+                                                "value": "damagePerBlock"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "buffer": [
+                                            {
+                                                "type": "string",
+                                                "value": "distance"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "set": [
+                                {
+                                    "type": "string",
+                                    "value": "distance"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "time"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "warning": [
+                                {
+                                    "type": "option",
+                                    "value": [
+                                        "distance",
+                                        "time"
+                                    ],
+                                    "change": {
+                                        "distance": [
+                                            {
+                                                "type": "string",
+                                                "value": "distance"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ],
+                                        "time": [
+                                            {
+                                                "type": "string",
+                                                "value": "time"
+                                            },
+                                            {
+                                                "type": "end"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "xp": {
+                "alias": "experience",
+                "name": "xp"
+            }
+        },
+        "reference": {
+            "execute": {
+                "type": "option",
+                "value": [
+                    "align",
+                    "as",
+                    "at",
+                    "if",
+                    "positioned",
+                    "store",
+                    "unless",
+                    "run"
+                ],
+                "change": {
+                    "align": [
+                        {
+                            "type": "option",
+                            "value": [
+                                "x",
+                                "y",
+                                "z",
+                                "xy",
+                                "xz",
+                                "yz",
+                                "xyz"
+                            ]
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "as": [
+                        {
+                            "type": "entity",
+                            "value": "targets"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "at": [
+                        {
+                            "type": "entity",
+                            "value": "targets"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "if": [
+                        {
+                            "include": "if-unless"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "unless": [
+                        {
+                            "include": "if-unless"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "positioned": [
+                        {
+                            "type": "coord",
+                            "value": "x y z"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "store": [
+                        {
+                            "type": "option",
+                            "value": [
+                                "result",
+                                "success"
+                            ]
+                        },
+                        {
+                            "type": "option",
+                            "value": [
+                                "block",
+                                "entity",
+                                "score",
+                                "storage"
+                            ],
+                            "change": {
+                                "block": [
+                                    {
+                                        "type": "coord",
+                                        "value": "x y z"
+                                    }
+                                ],
+                                "entity": [
+                                    {
+                                        "type": "entity",
+                                        "value": "target"
+                                    }
+                                ],
+                                "score": [
+                                    {
+                                        "type": "entity",
+                                        "value": "target"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "objective"
+                                    },
+                                    {
+                                        "include": "execute"
+                                    }
+                                ],
+                                "storage": [
+                                    {
+                                        "type": "string",
+                                        "value": "target"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "string",
+                            "value": "path"
+                        },
+                        {
+                            "type": "option",
+                            "value": [
+                                "byte",
+                                "double",
+                                "float",
+                                "int",
+                                "long",
+                                "short"
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "value": "scale"
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
+                    "run": [
+                        {
+                            "type": "command"
+                        }
+                    ]
+                }
+            },
+            "if-unless": {
+                "type": "option",
+                "value": [
+                    "entity",
+                    "block",
+                    "blocks",
+                    "score"
+                ],
+                "change": {
+                    "entity": [
+                        {
+                            "type": "entity",
+                            "value": "targets"
+                        }
+                    ],
+                    "block": [
+                        {
+                            "type": "coord",
+                            "value": "x y z"
+                        },
+                        {
+                            "type": "block",
+                            "value": "block"
+                        }
+                    ],
+                    "blocks": [
+                        {
+                            "type": "coord",
+                            "value": "x1 y1 z1"
+                        },
+                        {
+                            "type": "coord",
+                            "value": "x2 y2 z2"
+                        },
+                        {
+                            "type": "coord",
+                            "value": "xt yt zt"
+                        },
+                        {
+                            "type": "option",
+                            "value": [
+                                "all",
+                                "masked"
+                            ]
+                        }
+                    ],
+                    "score": [
+                        {
+                            "type": "entity",
+                            "value": "target"
+                        },
+                        {
+                            "type": "string",
+                            "value": "targetObjective"
+                        },
+                        {
+                            "type": "option",
+                            "value": [
+                                "<",
+                                "<=",
+                                "=",
+                                ">=",
+                                ">",
+                                "matches"
+                            ],
+                            "change": {
+                                "matches": [
+                                    {
+                                        "type": "string",
+                                        "value": "range"
+                                    }
+                                ],
+                                "<": [
+                                    {
+                                        "type": "entity",
+                                        "value": "source"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "sourceObjective"
+                                    }
+                                ],
+                                "<=": [
+                                    {
+                                        "type": "entity",
+                                        "value": "source"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "sourceObjective"
+                                    }
+                                ],
+                                "=": [
+                                    {
+                                        "type": "entity",
+                                        "value": "source"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "sourceObjective"
+                                    }
+                                ],
+                                "=>": [
+                                    {
+                                        "type": "entity",
+                                        "value": "source"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "sourceObjective"
+                                    }
+                                ],
+                                ">": [
+                                    {
+                                        "type": "entity",
+                                        "value": "source"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "sourceObjective"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "id": {
+        "advancement": [
+            "minecraft:adventure/adventuring_time",
+            "minecraft:adventure/kill_a_mob",
+            "minecraft:adventure/kill_all_mobs",
+            "minecraft:adventure/root",
+            "minecraft:adventure/shoot_arrow",
+            "minecraft:adventure/sleep_in_bed",
+            "minecraft:adventure/sniper_duel",
+            "minecraft:adventure/summon_iron_golem",
+            "minecraft:adventure/totem_of_undying",
+            "minecraft:adventure/trade",
+            "minecraft:end/dragon_breath",
+            "minecraft:end/dragon_egg",
+            "minecraft:end/elytra",
+            "minecraft:end/enter_end_gateway",
+            "minecraft:end/find_end_city",
+            "minecraft:end/kill_dragon",
+            "minecraft:end/levitate",
+            "minecraft:end/respawn_dragon",
+            "minecraft:end/root",
+            "minecraft:husbandry/balanced_diet",
+            "minecraft:husbandry/break_diamond_hoe",
+            "minecraft:husbandry/bred_all_animals",
+            "minecraft:husbandry/breed_an_animal",
+            "minecraft:husbandry/plant_seed",
+            "minecraft:husbandry/root",
+            "minecraft:husbandry/tame_an_animal",
+            "minecraft:nether/all_effects",
+            "minecraft:nether/all_potions",
+            "minecraft:nether/brew_potion",
+            "minecraft:nether/create_beacon",
+            "minecraft:nether/create_full_beacon",
+            "minecraft:nether/fast_travel",
+            "minecraft:nether/find_fortress",
+            "minecraft:nether/get_wither_skull",
+            "minecraft:nether/obtain_blaze_rod",
+            "minecraft:nether/return_to_sender",
+            "minecraft:nether/root",
+            "minecraft:nether/summon_wither",
+            "minecraft:nether/uneasy_alliance",
+            "minecraft:recipes/brewing/blaze_powder",
+            "minecraft:recipes/brewing/brewing_stand",
+            "minecraft:recipes/brewing/cauldron",
+            "minecraft:recipes/brewing/fermented_spider_eye",
+            "minecraft:recipes/brewing/glass_bottle",
+            "minecraft:recipes/brewing/golden_carrot",
+            "minecraft:recipes/brewing/magma_cream",
+            "minecraft:recipes/brewing/speckled_melon",
+            "minecraft:recipes/building_blocks/acacia_planks",
+            "minecraft:recipes/building_blocks/acacia_stairs",
+            "minecraft:recipes/building_blocks/acacia_wooden_slab",
+            "minecraft:recipes/building_blocks/andesite",
+            "minecraft:recipes/building_blocks/birch_planks",
+            "minecraft:recipes/building_blocks/birch_stairs",
+            "minecraft:recipes/building_blocks/birch_wooden_slab",
+            "minecraft:recipes/building_blocks/black_concrete_powder",
+            "minecraft:recipes/building_blocks/black_stained_glass",
+            "minecraft:recipes/building_blocks/black_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/black_wool",
+            "minecraft:recipes/building_blocks/blue_concrete_powder",
+            "minecraft:recipes/building_blocks/blue_stained_glass",
+            "minecraft:recipes/building_blocks/blue_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/blue_wool",
+            "minecraft:recipes/building_blocks/bone_block",
+            "minecraft:recipes/building_blocks/bookshelf",
+            "minecraft:recipes/building_blocks/brick_block",
+            "minecraft:recipes/building_blocks/brick_slab",
+            "minecraft:recipes/building_blocks/brick_stairs",
+            "minecraft:recipes/building_blocks/brown_concrete_powder",
+            "minecraft:recipes/building_blocks/brown_stained_glass",
+            "minecraft:recipes/building_blocks/brown_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/brown_wool",
+            "minecraft:recipes/building_blocks/chiseled_quartz_block",
+            "minecraft:recipes/building_blocks/chiseled_red_sandstone",
+            "minecraft:recipes/building_blocks/chiseled_sandstone",
+            "minecraft:recipes/building_blocks/chiseled_stonebrick",
+            "minecraft:recipes/building_blocks/clay",
+            "minecraft:recipes/building_blocks/coal_block",
+            "minecraft:recipes/building_blocks/coarse_dirt",
+            "minecraft:recipes/building_blocks/cobblestone_slab",
+            "minecraft:recipes/building_blocks/cyan_concrete_powder",
+            "minecraft:recipes/building_blocks/cyan_stained_glass",
+            "minecraft:recipes/building_blocks/cyan_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/cyan_wool",
+            "minecraft:recipes/building_blocks/dark_oak_planks",
+            "minecraft:recipes/building_blocks/dark_oak_stairs",
+            "minecraft:recipes/building_blocks/dark_oak_wooden_slab",
+            "minecraft:recipes/building_blocks/dark_prismarine",
+            "minecraft:recipes/building_blocks/diamond_block",
+            "minecraft:recipes/building_blocks/diorite",
+            "minecraft:recipes/building_blocks/emerald_block",
+            "minecraft:recipes/building_blocks/end_bricks",
+            "minecraft:recipes/building_blocks/glowstone",
+            "minecraft:recipes/building_blocks/gold_block",
+            "minecraft:recipes/building_blocks/granite",
+            "minecraft:recipes/building_blocks/gray_concrete_powder",
+            "minecraft:recipes/building_blocks/gray_stained_glass",
+            "minecraft:recipes/building_blocks/gray_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/gray_wool",
+            "minecraft:recipes/building_blocks/green_concrete_powder",
+            "minecraft:recipes/building_blocks/green_stained_glass",
+            "minecraft:recipes/building_blocks/green_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/green_wool",
+            "minecraft:recipes/building_blocks/hay_block",
+            "minecraft:recipes/building_blocks/iron_block",
+            "minecraft:recipes/building_blocks/jungle_planks",
+            "minecraft:recipes/building_blocks/jungle_stairs",
+            "minecraft:recipes/building_blocks/jungle_wooden_slab",
+            "minecraft:recipes/building_blocks/lapis_block",
+            "minecraft:recipes/building_blocks/light_blue_concrete_powder",
+            "minecraft:recipes/building_blocks/light_blue_stained_glass",
+            "minecraft:recipes/building_blocks/light_blue_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/light_blue_wool",
+            "minecraft:recipes/building_blocks/light_gray_concrete_powder",
+            "minecraft:recipes/building_blocks/light_gray_stained_glass",
+            "minecraft:recipes/building_blocks/light_gray_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/light_gray_wool",
+            "minecraft:recipes/building_blocks/lime_concrete_powder",
+            "minecraft:recipes/building_blocks/lime_stained_glass",
+            "minecraft:recipes/building_blocks/lime_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/lime_wool",
+            "minecraft:recipes/building_blocks/lit_pumpkin",
+            "minecraft:recipes/building_blocks/magenta_concrete_powder",
+            "minecraft:recipes/building_blocks/magenta_stained_glass",
+            "minecraft:recipes/building_blocks/magenta_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/magenta_wool",
+            "minecraft:recipes/building_blocks/magma",
+            "minecraft:recipes/building_blocks/melon_block",
+            "minecraft:recipes/building_blocks/mossy_cobblestone",
+            "minecraft:recipes/building_blocks/mossy_stonebrick",
+            "minecraft:recipes/building_blocks/nether_brick",
+            "minecraft:recipes/building_blocks/nether_brick_slab",
+            "minecraft:recipes/building_blocks/nether_brick_stairs",
+            "minecraft:recipes/building_blocks/nether_wart_block",
+            "minecraft:recipes/building_blocks/oak_planks",
+            "minecraft:recipes/building_blocks/oak_stairs",
+            "minecraft:recipes/building_blocks/oak_wooden_slab",
+            "minecraft:recipes/building_blocks/orange_concrete_powder",
+            "minecraft:recipes/building_blocks/orange_stained_glass",
+            "minecraft:recipes/building_blocks/orange_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/orange_wool",
+            "minecraft:recipes/building_blocks/pillar_quartz_block",
+            "minecraft:recipes/building_blocks/pink_concrete_powder",
+            "minecraft:recipes/building_blocks/pink_stained_glass",
+            "minecraft:recipes/building_blocks/pink_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/pink_wool",
+            "minecraft:recipes/building_blocks/polished_andesite",
+            "minecraft:recipes/building_blocks/polished_diorite",
+            "minecraft:recipes/building_blocks/polished_granite",
+            "minecraft:recipes/building_blocks/prismarine",
+            "minecraft:recipes/building_blocks/prismarine_bricks",
+            "minecraft:recipes/building_blocks/purple_concrete_powder",
+            "minecraft:recipes/building_blocks/purple_stained_glass",
+            "minecraft:recipes/building_blocks/purple_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/purple_wool",
+            "minecraft:recipes/building_blocks/purpur_block",
+            "minecraft:recipes/building_blocks/purpur_pillar",
+            "minecraft:recipes/building_blocks/purpur_slab",
+            "minecraft:recipes/building_blocks/purpur_stairs",
+            "minecraft:recipes/building_blocks/quartz_block",
+            "minecraft:recipes/building_blocks/quartz_slab",
+            "minecraft:recipes/building_blocks/quartz_stairs",
+            "minecraft:recipes/building_blocks/red_concrete_powder",
+            "minecraft:recipes/building_blocks/red_nether_brick",
+            "minecraft:recipes/building_blocks/red_sandstone",
+            "minecraft:recipes/building_blocks/red_sandstone_slab",
+            "minecraft:recipes/building_blocks/red_sandstone_stairs",
+            "minecraft:recipes/building_blocks/red_stained_glass",
+            "minecraft:recipes/building_blocks/red_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/red_wool",
+            "minecraft:recipes/building_blocks/sandstone",
+            "minecraft:recipes/building_blocks/sandstone_slab",
+            "minecraft:recipes/building_blocks/sandstone_stairs",
+            "minecraft:recipes/building_blocks/sea_lantern",
+            "minecraft:recipes/building_blocks/smooth_red_sandstone",
+            "minecraft:recipes/building_blocks/smooth_sandstone",
+            "minecraft:recipes/building_blocks/snow",
+            "minecraft:recipes/building_blocks/spruce_planks",
+            "minecraft:recipes/building_blocks/spruce_stairs",
+            "minecraft:recipes/building_blocks/spruce_wooden_slab",
+            "minecraft:recipes/building_blocks/stone_brick_slab",
+            "minecraft:recipes/building_blocks/stone_brick_stairs",
+            "minecraft:recipes/building_blocks/stone_slab",
+            "minecraft:recipes/building_blocks/stone_stairs",
+            "minecraft:recipes/building_blocks/stonebrick",
+            "minecraft:recipes/building_blocks/string_to_wool",
+            "minecraft:recipes/building_blocks/white_concrete_powder",
+            "minecraft:recipes/building_blocks/white_stained_glass",
+            "minecraft:recipes/building_blocks/white_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/yellow_concrete_powder",
+            "minecraft:recipes/building_blocks/yellow_stained_glass",
+            "minecraft:recipes/building_blocks/yellow_stained_hardened_clay",
+            "minecraft:recipes/building_blocks/yellow_wool",
+            "minecraft:recipes/combat/arrow",
+            "minecraft:recipes/combat/bow",
+            "minecraft:recipes/combat/diamond_boots",
+            "minecraft:recipes/combat/diamond_chestplate",
+            "minecraft:recipes/combat/diamond_helmet",
+            "minecraft:recipes/combat/diamond_leggings",
+            "minecraft:recipes/combat/diamond_sword",
+            "minecraft:recipes/combat/golden_boots",
+            "minecraft:recipes/combat/golden_chestplate",
+            "minecraft:recipes/combat/golden_helmet",
+            "minecraft:recipes/combat/golden_leggings",
+            "minecraft:recipes/combat/golden_sword",
+            "minecraft:recipes/combat/iron_boots",
+            "minecraft:recipes/combat/iron_chestplate",
+            "minecraft:recipes/combat/iron_helmet",
+            "minecraft:recipes/combat/iron_leggings",
+            "minecraft:recipes/combat/iron_sword",
+            "minecraft:recipes/combat/leather_boots",
+            "minecraft:recipes/combat/leather_chestplate",
+            "minecraft:recipes/combat/leather_helmet",
+            "minecraft:recipes/combat/leather_leggings",
+            "minecraft:recipes/combat/shield",
+            "minecraft:recipes/combat/spectral_arrow",
+            "minecraft:recipes/combat/stone_sword",
+            "minecraft:recipes/combat/wooden_sword",
+            "minecraft:recipes/decorations/acacia_fence",
+            "minecraft:recipes/decorations/anvil",
+            "minecraft:recipes/decorations/armor_stand",
+            "minecraft:recipes/decorations/birch_fence",
+            "minecraft:recipes/decorations/black_banner",
+            "minecraft:recipes/decorations/black_bed",
+            "minecraft:recipes/decorations/black_bed_from_white_bed",
+            "minecraft:recipes/decorations/black_carpet",
+            "minecraft:recipes/decorations/black_stained_glass_pane",
+            "minecraft:recipes/decorations/blue_banner",
+            "minecraft:recipes/decorations/blue_bed",
+            "minecraft:recipes/decorations/blue_bed_from_white_bed",
+            "minecraft:recipes/decorations/blue_carpet",
+            "minecraft:recipes/decorations/blue_stained_glass_pane",
+            "minecraft:recipes/decorations/brown_banner",
+            "minecraft:recipes/decorations/brown_bed",
+            "minecraft:recipes/decorations/brown_bed_from_white_bed",
+            "minecraft:recipes/decorations/brown_carpet",
+            "minecraft:recipes/decorations/brown_stained_glass_pane",
+            "minecraft:recipes/decorations/chest",
+            "minecraft:recipes/decorations/cobblestone_wall",
+            "minecraft:recipes/decorations/crafting_table",
+            "minecraft:recipes/decorations/cyan_banner",
+            "minecraft:recipes/decorations/cyan_bed",
+            "minecraft:recipes/decorations/cyan_bed_from_white_bed",
+            "minecraft:recipes/decorations/cyan_carpet",
+            "minecraft:recipes/decorations/cyan_stained_glass_pane",
+            "minecraft:recipes/decorations/dark_oak_fence",
+            "minecraft:recipes/decorations/enchanting_table",
+            "minecraft:recipes/decorations/end_crystal",
+            "minecraft:recipes/decorations/end_rod",
+            "minecraft:recipes/decorations/ender_chest",
+            "minecraft:recipes/decorations/fence",
+            "minecraft:recipes/decorations/flower_pot",
+            "minecraft:recipes/decorations/furnace",
+            "minecraft:recipes/decorations/glass_pane",
+            "minecraft:recipes/decorations/gray_banner",
+            "minecraft:recipes/decorations/gray_bed",
+            "minecraft:recipes/decorations/gray_bed_from_white_bed",
+            "minecraft:recipes/decorations/gray_carpet",
+            "minecraft:recipes/decorations/gray_stained_glass_pane",
+            "minecraft:recipes/decorations/green_banner",
+            "minecraft:recipes/decorations/green_bed",
+            "minecraft:recipes/decorations/green_bed_from_white_bed",
+            "minecraft:recipes/decorations/green_carpet",
+            "minecraft:recipes/decorations/green_stained_glass_pane",
+            "minecraft:recipes/decorations/iron_bars",
+            "minecraft:recipes/decorations/item_frame",
+            "minecraft:recipes/decorations/jukebox",
+            "minecraft:recipes/decorations/jungle_fence",
+            "minecraft:recipes/decorations/ladder",
+            "minecraft:recipes/decorations/light_blue_banner",
+            "minecraft:recipes/decorations/light_blue_bed",
+            "minecraft:recipes/decorations/light_blue_bed_from_white_bed",
+            "minecraft:recipes/decorations/light_blue_carpet",
+            "minecraft:recipes/decorations/light_blue_stained_glass_pane",
+            "minecraft:recipes/decorations/light_gray_banner",
+            "minecraft:recipes/decorations/light_gray_bed",
+            "minecraft:recipes/decorations/light_gray_bed_from_white_bed",
+            "minecraft:recipes/decorations/light_gray_carpet",
+            "minecraft:recipes/decorations/light_gray_stained_glass_pane",
+            "minecraft:recipes/decorations/lime_banner",
+            "minecraft:recipes/decorations/lime_bed",
+            "minecraft:recipes/decorations/lime_bed_from_white_bed",
+            "minecraft:recipes/decorations/lime_carpet",
+            "minecraft:recipes/decorations/lime_stained_glass_pane",
+            "minecraft:recipes/decorations/magenta_banner",
+            "minecraft:recipes/decorations/magenta_bed",
+            "minecraft:recipes/decorations/magenta_bed_from_white_bed",
+            "minecraft:recipes/decorations/magenta_carpet",
+            "minecraft:recipes/decorations/magenta_stained_glass_pane",
+            "minecraft:recipes/decorations/mossy_cobblestone_wall",
+            "minecraft:recipes/decorations/nether_brick_fence",
+            "minecraft:recipes/decorations/orange_banner",
+            "minecraft:recipes/decorations/orange_bed",
+            "minecraft:recipes/decorations/orange_bed_from_white_bed",
+            "minecraft:recipes/decorations/orange_carpet",
+            "minecraft:recipes/decorations/orange_stained_glass_pane",
+            "minecraft:recipes/decorations/painting",
+            "minecraft:recipes/decorations/pink_banner",
+            "minecraft:recipes/decorations/pink_bed",
+            "minecraft:recipes/decorations/pink_bed_from_white_bed",
+            "minecraft:recipes/decorations/pink_carpet",
+            "minecraft:recipes/decorations/pink_stained_glass_pane",
+            "minecraft:recipes/decorations/purple_banner",
+            "minecraft:recipes/decorations/purple_bed",
+            "minecraft:recipes/decorations/purple_bed_from_white_bed",
+            "minecraft:recipes/decorations/purple_carpet",
+            "minecraft:recipes/decorations/purple_shulker_box",
+            "minecraft:recipes/decorations/purple_stained_glass_pane",
+            "minecraft:recipes/decorations/red_banner",
+            "minecraft:recipes/decorations/red_bed",
+            "minecraft:recipes/decorations/red_bed_from_white_bed",
+            "minecraft:recipes/decorations/red_carpet",
+            "minecraft:recipes/decorations/red_stained_glass_pane",
+            "minecraft:recipes/decorations/sign",
+            "minecraft:recipes/decorations/slime",
+            "minecraft:recipes/decorations/snow_layer",
+            "minecraft:recipes/decorations/spruce_fence",
+            "minecraft:recipes/decorations/torch",
+            "minecraft:recipes/decorations/white_banner",
+            "minecraft:recipes/decorations/white_bed",
+            "minecraft:recipes/decorations/white_carpet",
+            "minecraft:recipes/decorations/white_stained_glass_pane",
+            "minecraft:recipes/decorations/yellow_banner",
+            "minecraft:recipes/decorations/yellow_bed",
+            "minecraft:recipes/decorations/yellow_bed_from_white_bed",
+            "minecraft:recipes/decorations/yellow_carpet",
+            "minecraft:recipes/decorations/yellow_stained_glass_pane",
+            "minecraft:recipes/food/beetroot_soup",
+            "minecraft:recipes/food/bread",
+            "minecraft:recipes/food/cake",
+            "minecraft:recipes/food/cookie",
+            "minecraft:recipes/food/golden_apple",
+            "minecraft:recipes/food/mushroom_stew",
+            "minecraft:recipes/food/pumpkin_pie",
+            "minecraft:recipes/food/rabbit_stew_from_brown_mushroom",
+            "minecraft:recipes/food/rabbit_stew_from_red_mushroom",
+            "minecraft:recipes/misc/beacon",
+            "minecraft:recipes/misc/bone_meal_from_block",
+            "minecraft:recipes/misc/bone_meal_from_bone",
+            "minecraft:recipes/misc/book",
+            "minecraft:recipes/misc/bowl",
+            "minecraft:recipes/misc/bucket",
+            "minecraft:recipes/misc/coal",
+            "minecraft:recipes/misc/cyan_dye",
+            "minecraft:recipes/misc/diamond",
+            "minecraft:recipes/misc/emerald",
+            "minecraft:recipes/misc/ender_eye",
+            "minecraft:recipes/misc/fire_charge",
+            "minecraft:recipes/misc/gold_ingot_from_block",
+            "minecraft:recipes/misc/gold_ingot_from_nuggets",
+            "minecraft:recipes/misc/gold_nugget",
+            "minecraft:recipes/misc/gray_dye",
+            "minecraft:recipes/misc/iron_ingot_from_block",
+            "minecraft:recipes/misc/iron_ingot_from_nuggets",
+            "minecraft:recipes/misc/iron_nugget",
+            "minecraft:recipes/misc/lapis_lazuli",
+            "minecraft:recipes/misc/leather",
+            "minecraft:recipes/misc/light_blue_dye_from_blue_orchid",
+            "minecraft:recipes/misc/light_blue_dye_from_lapis_bonemeal",
+            "minecraft:recipes/misc/light_gray_dye_from_azure_bluet",
+            "minecraft:recipes/misc/light_gray_dye_from_gray_bonemeal",
+            "minecraft:recipes/misc/light_gray_dye_from_ink_bonemeal",
+            "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy",
+            "minecraft:recipes/misc/light_gray_dye_from_white_tulip",
+            "minecraft:recipes/misc/lime_dye",
+            "minecraft:recipes/misc/magenta_dye_from_allium",
+            "minecraft:recipes/misc/magenta_dye_from_lapis_ink_bonemeal",
+            "minecraft:recipes/misc/magenta_dye_from_lapis_red_pink",
+            "minecraft:recipes/misc/magenta_dye_from_lilac",
+            "minecraft:recipes/misc/magenta_dye_from_purple_and_pink",
+            "minecraft:recipes/misc/map",
+            "minecraft:recipes/misc/melon_seeds",
+            "minecraft:recipes/misc/orange_dye_from_orange_tulip",
+            "minecraft:recipes/misc/orange_dye_from_red_yellow",
+            "minecraft:recipes/misc/paper",
+            "minecraft:recipes/misc/pink_dye_from_peony",
+            "minecraft:recipes/misc/pink_dye_from_pink_tulip",
+            "minecraft:recipes/misc/pink_dye_from_red_bonemeal",
+            "minecraft:recipes/misc/pumpkin_seeds",
+            "minecraft:recipes/misc/purple_dye",
+            "minecraft:recipes/misc/red_dye_from_beetroot",
+            "minecraft:recipes/misc/red_dye_from_poppy",
+            "minecraft:recipes/misc/red_dye_from_rose_bush",
+            "minecraft:recipes/misc/red_dye_from_tulip",
+            "minecraft:recipes/misc/slime_ball",
+            "minecraft:recipes/misc/stick",
+            "minecraft:recipes/misc/sugar",
+            "minecraft:recipes/misc/wheat",
+            "minecraft:recipes/misc/writable_book",
+            "minecraft:recipes/misc/yellow_dye_from_dandelion",
+            "minecraft:recipes/misc/yellow_dye_from_sunflower",
+            "minecraft:recipes/redstone/acacia_door",
+            "minecraft:recipes/redstone/acacia_fence_gate",
+            "minecraft:recipes/redstone/birch_door",
+            "minecraft:recipes/redstone/birch_fence_gate",
+            "minecraft:recipes/redstone/comparator",
+            "minecraft:recipes/redstone/dark_oak_door",
+            "minecraft:recipes/redstone/dark_oak_fence_gate",
+            "minecraft:recipes/redstone/daylight_detector",
+            "minecraft:recipes/redstone/dispenser",
+            "minecraft:recipes/redstone/dropper",
+            "minecraft:recipes/redstone/fence_gate",
+            "minecraft:recipes/redstone/heavy_weighted_pressure_plate",
+            "minecraft:recipes/redstone/hopper",
+            "minecraft:recipes/redstone/iron_door",
+            "minecraft:recipes/redstone/iron_trapdoor",
+            "minecraft:recipes/redstone/jungle_door",
+            "minecraft:recipes/redstone/jungle_fence_gate",
+            "minecraft:recipes/redstone/lever",
+            "minecraft:recipes/redstone/light_weighted_pressure_plate",
+            "minecraft:recipes/redstone/noteblock",
+            "minecraft:recipes/redstone/observer",
+            "minecraft:recipes/redstone/piston",
+            "minecraft:recipes/redstone/redstone",
+            "minecraft:recipes/redstone/redstone_block",
+            "minecraft:recipes/redstone/redstone_lamp",
+            "minecraft:recipes/redstone/redstone_torch",
+            "minecraft:recipes/redstone/repeater",
+            "minecraft:recipes/redstone/spruce_door",
+            "minecraft:recipes/redstone/spruce_fence_gate",
+            "minecraft:recipes/redstone/sticky_piston",
+            "minecraft:recipes/redstone/stone_button",
+            "minecraft:recipes/redstone/stone_pressure_plate",
+            "minecraft:recipes/redstone/tnt",
+            "minecraft:recipes/redstone/trapdoor",
+            "minecraft:recipes/redstone/trapped_chest",
+            "minecraft:recipes/redstone/tripwire_hook",
+            "minecraft:recipes/redstone/wooden_button",
+            "minecraft:recipes/redstone/wooden_door",
+            "minecraft:recipes/redstone/wooden_pressure_plate",
+            "minecraft:recipes/root",
+            "minecraft:recipes/tools/clock",
+            "minecraft:recipes/tools/compass",
+            "minecraft:recipes/tools/diamond_axe",
+            "minecraft:recipes/tools/diamond_hoe",
+            "minecraft:recipes/tools/diamond_pickaxe",
+            "minecraft:recipes/tools/diamond_shovel",
+            "minecraft:recipes/tools/fishing_rod",
+            "minecraft:recipes/tools/flint_and_steel",
+            "minecraft:recipes/tools/golden_axe",
+            "minecraft:recipes/tools/golden_hoe",
+            "minecraft:recipes/tools/golden_pickaxe",
+            "minecraft:recipes/tools/golden_shovel",
+            "minecraft:recipes/tools/iron_axe",
+            "minecraft:recipes/tools/iron_hoe",
+            "minecraft:recipes/tools/iron_pickaxe",
+            "minecraft:recipes/tools/iron_shovel",
+            "minecraft:recipes/tools/lead",
+            "minecraft:recipes/tools/shears",
+            "minecraft:recipes/tools/stone_axe",
+            "minecraft:recipes/tools/stone_hoe",
+            "minecraft:recipes/tools/stone_pickaxe",
+            "minecraft:recipes/tools/stone_shovel",
+            "minecraft:recipes/tools/wooden_axe",
+            "minecraft:recipes/tools/wooden_hoe",
+            "minecraft:recipes/tools/wooden_pickaxe",
+            "minecraft:recipes/tools/wooden_shovel",
+            "minecraft:recipes/transportation/acacia_boat",
+            "minecraft:recipes/transportation/activator_rail",
+            "minecraft:recipes/transportation/birch_boat",
+            "minecraft:recipes/transportation/boat",
+            "minecraft:recipes/transportation/carrot_on_a_stick",
+            "minecraft:recipes/transportation/chest_minecart",
+            "minecraft:recipes/transportation/dark_oak_boat",
+            "minecraft:recipes/transportation/detector_rail",
+            "minecraft:recipes/transportation/furnace_minecart",
+            "minecraft:recipes/transportation/golden_rail",
+            "minecraft:recipes/transportation/hopper_minecart",
+            "minecraft:recipes/transportation/jungle_boat",
+            "minecraft:recipes/transportation/minecart",
+            "minecraft:recipes/transportation/rail",
+            "minecraft:recipes/transportation/spruce_boat",
+            "minecraft:recipes/transportation/tnt_minecart",
+            "minecraft:story/cure_zombie_villager",
+            "minecraft:story/deflect_arrow",
+            "minecraft:story/enchant_item",
+            "minecraft:story/enter_the_end",
+            "minecraft:story/enter_the_nether",
+            "minecraft:story/follow_ender_eye",
+            "minecraft:story/form_obsidian",
+            "minecraft:story/iron_tools",
+            "minecraft:story/lava_bucket",
+            "minecraft:story/mine_diamond",
+            "minecraft:story/mine_stone",
+            "minecraft:story/obtain_armor",
+            "minecraft:story/root",
+            "minecraft:story/shiny_gear",
+            "minecraft:story/smelt_iron",
+            "minecraft:story/upgrade_tools"
+        ],
+        "block": [
+            "minecraft:acacia_bark",
+            "minecraft:acacia_door",
+            "minecraft:acacia_fence",
+            "minecraft:acacia_leaves",
+            "minecraft:acacia_log",
+            "minecraft:acacia_planks",
+            "minecraft:acacia_sapling",
+            "minecraft:acacia_sapling_flower_pot",
+            "minecraft:acacia_slab",
+            "minecraft:acacia_stairs",
+            "minecraft:activator_rail",
+            "minecraft:air",
+            "minecraft:allium",
+            "minecraft:allium_flower_pot",
+            "minecraft:andesite",
+            "minecraft:anvil",
+            "minecraft:azure_bluet",
+            "minecraft:azure_bluet_flower_pot",
+            "minecraft:banner",
+            "minecraft:barrier",
+            "minecraft:beacon",
+            "minecraft:bed",
+            "minecraft:bedrock",
+            "minecraft:beetroots",
+            "minecraft:birch_bark",
+            "minecraft:birch_door",
+            "minecraft:birch_fence",
+            "minecraft:birch_fence_gate",
+            "minecraft:birch_leaves",
+            "minecraft:birch_log",
+            "minecraft:birch_planks",
+            "minecraft:birch_sapling",
+            "minecraft:birch_sapling_flower_pot",
+            "minecraft:birch_slab",
+            "minecraft:birch_stairs",
+            "minecraft:black_carpet",
+            "minecraft:black_concrete",
+            "minecraft:black_concrete_powder",
+            "minecraft:black_glazed_terracotta",
+            "minecraft:black_shulker_box",
+            "minecraft:black_stained_glass",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:black_terracotta",
+            "minecraft:black_wool",
+            "minecraft:blue_carpet",
+            "minecraft:blue_concrete",
+            "minecraft:blue_concrete_powder",
+            "minecraft:blue_glazed_terracotta",
+            "minecraft:blue_orchid",
+            "minecraft:blue_orchid_flower_pot",
+            "minecraft:blue_shulker_box",
+            "minecraft:blue_stained_glass",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:blue_terracotta",
+            "minecraft:blue_wool",
+            "minecraft:bone_block",
+            "minecraft:bookshelf",
+            "minecraft:brewing_stand",
+            "minecraft:brick_slab",
+            "minecraft:brick_stairs",
+            "minecraft:bricks",
+            "minecraft:brown_carpet",
+            "minecraft:brown_concrete",
+            "minecraft:brown_concrete_powder",
+            "minecraft:brown_glazed_terracotta",
+            "minecraft:brown_mushroom",
+            "minecraft:brown_mushroom_block",
+            "minecraft:brown_mushroom_flower_pot",
+            "minecraft:brown_shulker_box",
+            "minecraft:brown_stained_glass",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:brown_terracotta",
+            "minecraft:brown_wool",
+            "minecraft:cactus",
+            "minecraft:cactus_flower_pot",
+            "minecraft:cake",
+            "minecraft:carrots",
+            "minecraft:cauldron",
+            "minecraft:chain_command_block",
+            "minecraft:chest",
+            "minecraft:chipped_anvil",
+            "minecraft:chiseled_quartz",
+            "minecraft:chiseled_red_sandstone",
+            "minecraft:chiseled_sandstone",
+            "minecraft:chiseled_stone_bricks",
+            "minecraft:chorus_flower",
+            "minecraft:chorus_plant",
+            "minecraft:clay",
+            "minecraft:coal_block",
+            "minecraft:coal_ore",
+            "minecraft:coarse_dirt",
+            "minecraft:cobblestone",
+            "minecraft:cobblestone_slab",
+            "minecraft:cobblestone_stairs",
+            "minecraft:cobblestone_wall",
+            "minecraft:cobweb",
+            "minecraft:cocoa",
+            "minecraft:command_block",
+            "minecraft:comparator",
+            "minecraft:cracked_stone_bricks",
+            "minecraft:crafting_table",
+            "minecraft:creeper_head",
+            "minecraft:cut_red_sandstone",
+            "minecraft:cut_sandstone",
+            "minecraft:cyan_carpet",
+            "minecraft:cyan_concrete",
+            "minecraft:cyan_concrete_powder",
+            "minecraft:cyan_glazed_terracotta",
+            "minecraft:cyan_shulker_box",
+            "minecraft:cyan_stained_glass",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:cyan_terracotta",
+            "minecraft:cyan_wool",
+            "minecraft:damaged_anvil",
+            "minecraft:dandelion",
+            "minecraft:dandelion_flower_pot",
+            "minecraft:dark_oak_bark",
+            "minecraft:dark_oak_door",
+            "minecraft:dark_oak_fence",
+            "minecraft:dark_oak_fence_gate",
+            "minecraft:dark_oak_leaves",
+            "minecraft:dark_oak_log",
+            "minecraft:dark_oak_planks",
+            "minecraft:dark_oak_sapling",
+            "minecraft:dark_oak_sapling_flower_pot",
+            "minecraft:dark_oak_slab",
+            "minecraft:dark_oak_stairs",
+            "minecraft:dark_prismarine",
+            "minecraft:daylight_detector",
+            "minecraft:dead_bush",
+            "minecraft:dead_bush_flower_pot",
+            "minecraft:detector_rail",
+            "minecraft:diamond_block",
+            "minecraft:diamond_ore",
+            "minecraft:diorite",
+            "minecraft:dirt",
+            "minecraft:dispenser",
+            "minecraft:dragon_egg",
+            "minecraft:dragon_head",
+            "minecraft:dropper",
+            "minecraft:emerald_block",
+            "minecraft:emerald_ore",
+            "minecraft:enchanting_table",
+            "minecraft:end_gateway",
+            "minecraft:end_portal",
+            "minecraft:end_portal_frame",
+            "minecraft:end_rod",
+            "minecraft:end_stone",
+            "minecraft:end_stone_bricks",
+            "minecraft:ender_chest",
+            "minecraft:farmland",
+            "minecraft:fern",
+            "minecraft:fern_flower_pot",
+            "minecraft:fire",
+            "minecraft:flower_pot",
+            "minecraft:flowing_lava",
+            "minecraft:flowing_water",
+            "minecraft:frosted_ice",
+            "minecraft:furnace",
+            "minecraft:glass",
+            "minecraft:glass_pane",
+            "minecraft:glowstone",
+            "minecraft:gold_block",
+            "minecraft:gold_ore",
+            "minecraft:granite",
+            "minecraft:grass",
+            "minecraft:grass_block",
+            "minecraft:grass_path",
+            "minecraft:gravel",
+            "minecraft:gray_carpet",
+            "minecraft:gray_concrete",
+            "minecraft:gray_concrete_powder",
+            "minecraft:gray_glazed_terracotta",
+            "minecraft:gray_shulker_box",
+            "minecraft:gray_stained_glass",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:gray_terracotta",
+            "minecraft:gray_wool",
+            "minecraft:green_carpet",
+            "minecraft:green_concrete",
+            "minecraft:green_concrete_powder",
+            "minecraft:green_glazed_terracotta",
+            "minecraft:green_shulker_box",
+            "minecraft:green_stained_glass",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:green_terracotta",
+            "minecraft:green_wool",
+            "minecraft:hay_bale",
+            "minecraft:heavy_weighted_pressure_plate",
+            "minecraft:hopper",
+            "minecraft:ice",
+            "minecraft:infested_chiseled_stone_bricks",
+            "minecraft:infested_cobblestone",
+            "minecraft:infested_cracked_stone_bricks",
+            "minecraft:infested_mossy_stone_bricks",
+            "minecraft:infested_stone",
+            "minecraft:infested_stone_bricks",
+            "minecraft:iron_bars",
+            "minecraft:iron_block",
+            "minecraft:iron_door",
+            "minecraft:iron_ore",
+            "minecraft:iron_trapdoor",
+            "minecraft:jack_o_lantern",
+            "minecraft:jukebox",
+            "minecraft:jungle_bark",
+            "minecraft:jungle_door",
+            "minecraft:jungle_fence",
+            "minecraft:jungle_fence_gate",
+            "minecraft:jungle_leaves",
+            "minecraft:jungle_log",
+            "minecraft:jungle_planks",
+            "minecraft:jungle_sapling",
+            "minecraft:jungle_sapling_flower_pot",
+            "minecraft:jungle_slab",
+            "minecraft:jungle_stairs",
+            "minecraft:ladder",
+            "minecraft:lapis_block",
+            "minecraft:lapis_ore",
+            "minecraft:large_fern",
+            "minecraft:lava",
+            "minecraft:lever",
+            "minecraft:light_blue_carpet",
+            "minecraft:light_blue_concrete",
+            "minecraft:light_blue_concrete_powder",
+            "minecraft:light_blue_glazed_terracotta",
+            "minecraft:light_blue_shulker_box",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:light_blue_terracotta",
+            "minecraft:light_blue_wool",
+            "minecraft:light_gray_carpet",
+            "minecraft:light_gray_concrete",
+            "minecraft:light_gray_concrete_powder",
+            "minecraft:light_gray_glazed_terracotta",
+            "minecraft:light_gray_shulker_box",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:light_gray_terracotta",
+            "minecraft:light_gray_wool",
+            "minecraft:light_weighted_pressure_plate",
+            "minecraft:lilac",
+            "minecraft:lily_pad",
+            "minecraft:lime_carpet",
+            "minecraft:lime_concrete",
+            "minecraft:lime_concrete_powder",
+            "minecraft:lime_glazed_terracotta",
+            "minecraft:lime_shulker_box",
+            "minecraft:lime_stained_glass",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:lime_terracotta",
+            "minecraft:lime_wool",
+            "minecraft:magenta_carpet",
+            "minecraft:magenta_concrete",
+            "minecraft:magenta_concrete_powder",
+            "minecraft:magenta_glazed_terracotta",
+            "minecraft:magenta_shulker_box",
+            "minecraft:magenta_stained_glass",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:magenta_terracotta",
+            "minecraft:magenta_wool",
+            "minecraft:magma_block",
+            "minecraft:melon_block",
+            "minecraft:melon_plant",
+            "minecraft:melon_stem",
+            "minecraft:mob_spawner",
+            "minecraft:mossy_cobblestone",
+            "minecraft:mossy_cobblestone_wall",
+            "minecraft:mossy_stone_bricks",
+            "minecraft:mycelium",
+            "minecraft:nether_brick_fence",
+            "minecraft:nether_brick_slab",
+            "minecraft:nether_brick_stairs",
+            "minecraft:nether_bricks",
+            "minecraft:nether_portal",
+            "minecraft:nether_quartz_ore",
+            "minecraft:nether_wart",
+            "minecraft:nether_wart_block",
+            "minecraft:netherrack",
+            "minecraft:note_block",
+            "minecraft:oak_bark",
+            "minecraft:oak_door",
+            "minecraft:oak_fence",
+            "minecraft:oak_fence_gate",
+            "minecraft:oak_leaves",
+            "minecraft:oak_log",
+            "minecraft:oak_planks",
+            "minecraft:oak_sapling",
+            "minecraft:oak_sapling_flower_pot",
+            "minecraft:oak_slab",
+            "minecraft:oak_stairs",
+            "minecraft:observer",
+            "minecraft:obsidian",
+            "minecraft:orange_carpet",
+            "minecraft:orange_concrete",
+            "minecraft:orange_concrete_powder",
+            "minecraft:orange_glazed_terracotta",
+            "minecraft:orange_shulker_box",
+            "minecraft:orange_stained_glass",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:orange_terracotta",
+            "minecraft:orange_tulip",
+            "minecraft:orange_tulip_flower_pot",
+            "minecraft:orange_wool",
+            "minecraft:oxeye_daisy",
+            "minecraft:oxeye_daisy_flower_pot",
+            "minecraft:packed_ice",
+            "minecraft:peony",
+            "minecraft:petrified_oak_slab",
+            "minecraft:pink_carpet",
+            "minecraft:pink_concrete",
+            "minecraft:pink_concrete_powder",
+            "minecraft:pink_glazed_terracotta",
+            "minecraft:pink_shulker_box",
+            "minecraft:pink_stained_glass",
+            "minecraft:pink_stained_glass_pane",
+            "minecraft:pink_terracotta",
+            "minecraft:pink_tulip",
+            "minecraft:pink_tulip_flower_pot",
+            "minecraft:pink_wool",
+            "minecraft:piston",
+            "minecraft:piston_extension",
+            "minecraft:piston_head",
+            "minecraft:player_head",
+            "minecraft:podzol",
+            "minecraft:polished_andesite",
+            "minecraft:polished_diorite",
+            "minecraft:polished_granite",
+            "minecraft:poppy",
+            "minecraft:poppy_flower_pot",
+            "minecraft:potatoes",
+            "minecraft:powered_rail",
+            "minecraft:prismarine",
+            "minecraft:prismarine_bricks",
+            "minecraft:pumpkin",
+            "minecraft:pumpkin_plant",
+            "minecraft:pumpkin_stem",
+            "minecraft:purple_carpet",
+            "minecraft:purple_concrete",
+            "minecraft:purple_concrete_powder",
+            "minecraft:purple_glazed_terracotta",
+            "minecraft:purple_shulker_box",
+            "minecraft:purple_stained_glass",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:purple_terracotta",
+            "minecraft:purple_wool",
+            "minecraft:purpur_block",
+            "minecraft:purpur_pillar",
+            "minecraft:purpur_slab",
+            "minecraft:purpur_stairs",
+            "minecraft:quartz_block",
+            "minecraft:quartz_pillar",
+            "minecraft:quartz_slab",
+            "minecraft:quartz_stairs",
+            "minecraft:rail",
+            "minecraft:red_carpet",
+            "minecraft:red_concrete",
+            "minecraft:red_concrete_powder",
+            "minecraft:red_glazed_terracotta",
+            "minecraft:red_mushroom",
+            "minecraft:red_mushroom_block",
+            "minecraft:red_mushroom_flower_pot",
+            "minecraft:red_nether_bricks",
+            "minecraft:red_sand",
+            "minecraft:red_sandstone",
+            "minecraft:red_sandstone_slab",
+            "minecraft:red_sandstone_stairs",
+            "minecraft:red_shulker_box",
+            "minecraft:red_stained_glass",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:red_terracotta",
+            "minecraft:red_tulip",
+            "minecraft:red_tulip_flower_pot",
+            "minecraft:red_wool",
+            "minecraft:redstone_block",
+            "minecraft:redstone_lamp",
+            "minecraft:redstone_ore",
+            "minecraft:redstone_torch",
+            "minecraft:redstone_wire",
+            "minecraft:repeater",
+            "minecraft:repeating_command_block",
+            "minecraft:rose_bush",
+            "minecraft:sand",
+            "minecraft:sandstone",
+            "minecraft:sandstone_slab",
+            "minecraft:sandstone_stairs",
+            "minecraft:sea_lantern",
+            "minecraft:sign",
+            "minecraft:skeleton_skull",
+            "minecraft:slime_block",
+            "minecraft:smooth_red_sandstone",
+            "minecraft:smooth_sandstone",
+            "minecraft:smooth_stone",
+            "minecraft:snow",
+            "minecraft:snow_block",
+            "minecraft:soul_sand",
+            "minecraft:sponge",
+            "minecraft:spruce_bark",
+            "minecraft:spruce_door",
+            "minecraft:spruce_fence",
+            "minecraft:spruce_fence_gate",
+            "minecraft:spruce_leaves",
+            "minecraft:spruce_log",
+            "minecraft:spruce_planks",
+            "minecraft:spruce_sapling",
+            "minecraft:spruce_sapling_flower_pot",
+            "minecraft:spruce_slab",
+            "minecraft:spruce_stairs",
+            "minecraft:sticky_piston",
+            "minecraft:stone",
+            "minecraft:stone_brick_slab",
+            "minecraft:stone_brick_stairs",
+            "minecraft:stone_bricks",
+            "minecraft:stone_button",
+            "minecraft:stone_pressure_plate",
+            "minecraft:stone_slab",
+            "minecraft:structure_block",
+            "minecraft:structure_void",
+            "minecraft:sugar_cane",
+            "minecraft:sunflower",
+            "minecraft:tall_grass",
+            "minecraft:terracotta",
+            "minecraft:tnt",
+            "minecraft:torch",
+            "minecraft:trapped_chest",
+            "minecraft:tripwire",
+            "minecraft:tripwire_hook",
+            "minecraft:vine",
+            "minecraft:wall_banner",
+            "minecraft:wall_creeper_head",
+            "minecraft:wall_dragon_head",
+            "minecraft:wall_player_head",
+            "minecraft:wall_redstone_torch",
+            "minecraft:wall_sign",
+            "minecraft:wall_skeleton_skull",
+            "minecraft:wall_torch",
+            "minecraft:wall_wither_skeleton_skull",
+            "minecraft:wall_zombie_head",
+            "minecraft:water",
+            "minecraft:wet_sponge",
+            "minecraft:wheat",
+            "minecraft:white_carpet",
+            "minecraft:white_concrete",
+            "minecraft:white_concrete_powder",
+            "minecraft:white_glazed_terracotta",
+            "minecraft:white_shulker_box",
+            "minecraft:white_stained_glass",
+            "minecraft:white_stained_glass_pane",
+            "minecraft:white_terracotta",
+            "minecraft:white_tulip",
+            "minecraft:white_tulip_flower_pot",
+            "minecraft:white_wool",
+            "minecraft:wither_skeleton_skull",
+            "minecraft:wooden_button",
+            "minecraft:wooden_pressure_plate",
+            "minecraft:wooden_trapdoor",
+            "minecraft:yellow_carpet",
+            "minecraft:yellow_concrete",
+            "minecraft:yellow_concrete_powder",
+            "minecraft:yellow_glazed_terracotta",
+            "minecraft:yellow_shulker_box",
+            "minecraft:yellow_stained_glass",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:yellow_terracotta",
+            "minecraft:yellow_wool",
+            "minecraft:zombie_head"
+        ],
+        "effect": [
+            "minecraft:speed",
+            "minecraft:slowness",
+            "minecraft:haste",
+            "minecraft:mining_fatigue",
+            "minecraft:strength",
+            "minecraft:instant_health",
+            "minecraft:instant_damage",
+            "minecraft:jump_boost",
+            "minecraft:nausea",
+            "minecraft:regeneration",
+            "minecraft:resistance",
+            "minecraft:fire_resistence",
+            "minecraft:water_breathing",
+            "minecraft:invisibility",
+            "minecraft:blindness",
+            "minecraft:night_vision",
+            "minecraft:hunger",
+            "minecraft:weakness",
+            "minecraft:poison",
+            "minecraft:wither",
+            "minecraft:health_boost",
+            "minecraft:absorbtion",
+            "minecraft:saturation",
+            "minecraft:glowing",
+            "minecraft:levitation",
+            "minecraft:luck",
+            "minecraft:unluck"
+        ],
+        "enchantment": [
+            "minecraft:protection",
+            "minecraft:fire_protection",
+            "minecraft:feather_falling",
+            "minecraft:blast_protection",
+            "minecraft:projectile_protection",
+            "minecraft:respiration",
+            "minecraft:aqua_affinity",
+            "minecraft:throns",
+            "minecraft:depth_strider",
+            "minecraft:frost_walker",
+            "minecraft:binding_curse",
+            "minecraft:sharpness",
+            "minecraft:smite",
+            "minecraft:bane_of_arthropods",
+            "minecraft:knockback",
+            "minecraft:fire_aspect",
+            "minecraft:looting",
+            "minecraft:sweeping",
+            "minecraft:efficiency",
+            "minecraft:silk_touch",
+            "minecraft:unbreaking",
+            "minecraft:fortune",
+            "minecraft:power",
+            "minecraft:punch",
+            "minecraft:flame",
+            "minecraft:infinity",
+            "minecraft:luck_of_the_sea",
+            "minecraft:lure",
+            "minecraft:mending",
+            "minecraft:vanishing_curse"
+        ],
+        "entity": [
+            "minecraft:area_effect_cloud",
+            "minecraft:armor_stand",
+            "minecraft:arrow",
+            "minecraft:bat",
+            "minecraft:blaze",
+            "minecraft:boat",
+            "minecraft:cave_spider",
+            "minecraft:chest_minecart",
+            "minecraft:chicken",
+            "minecraft:commandblock_minecart",
+            "minecraft:cow",
+            "minecraft:creeper",
+            "minecraft:donkey",
+            "minecraft:dragon_fireball",
+            "minecraft:egg",
+            "minecraft:elder_guardian",
+            "minecraft:ender_crystal",
+            "minecraft:ender_dragon",
+            "minecraft:ender_pearl",
+            "minecraft:enderman",
+            "minecraft:endermite",
+            "minecraft:evocation_fangs",
+            "minecraft:evocation_illager",
+            "minecraft:eye_of_ender_signal",
+            "minecraft:falling_block",
+            "minecraft:fireball",
+            "minecraft:fireworks_rocket",
+            "minecraft:furnace_minecart",
+            "minecraft:ghast",
+            "minecraft:giant",
+            "minecraft:guardian",
+            "minecraft:hopper_minecart",
+            "minecraft:horse",
+            "minecraft:husk",
+            "minecraft:illusion_illager",
+            "minecraft:item",
+            "minecraft:item_frame",
+            "minecraft:leash_knot",
+            "minecraft:lightning_bolt",
+            "minecraft:llama",
+            "minecraft:llama_spit",
+            "minecraft:magma_cube",
+            "minecraft:minecart",
+            "minecraft:mooshroom",
+            "minecraft:mule",
+            "minecraft:ocelot",
+            "minecraft:painting",
+            "minecraft:parrot",
+            "minecraft:pig",
+            "minecraft:polar_bear",
+            "minecraft:potion",
+            "minecraft:rabbit",
+            "minecraft:sheep",
+            "minecraft:shulker",
+            "minecraft:shulker_bullet",
+            "minecraft:silverfish",
+            "minecraft:skeleton",
+            "minecraft:skeleton_horse",
+            "minecraft:slime",
+            "minecraft:small_fireball",
+            "minecraft:snowball",
+            "minecraft:snowman",
+            "minecraft:spawner_minecart",
+            "minecraft:spectral_arrow",
+            "minecraft:spider",
+            "minecraft:squid",
+            "minecraft:stray",
+            "minecraft:tnt",
+            "minecraft:tnt_minecart",
+            "minecraft:vex",
+            "minecraft:villager",
+            "minecraft:villager_golem",
+            "minecraft:vindication_illager",
+            "minecraft:witch",
+            "minecraft:wither",
+            "minecraft:wither_skeleton",
+            "minecraft:wither_skull",
+            "minecraft:wolf",
+            "minecraft:xp_bottle",
+            "minecraft:xp_orb",
+            "minecraft:zombie",
+            "minecraft:zombie_horse",
+            "minecraft:zombie_pigman",
+            "minecraft:zombie_villager"
+        ],
+        "item": [
+            "minecraft:acacia_boat",
+            "minecraft:acacia_door",
+            "minecraft:acacia_fence",
+            "minecraft:acacia_fence_gate",
+            "minecraft:acacia_stairs",
+            "minecraft:activator_rail",
+            "minecraft:air",
+            "minecraft:apple",
+            "minecraft:armor_stand",
+            "minecraft:arrow",
+            "minecraft:baked_potato",
+            "minecraft:banner",
+            "minecraft:barrier",
+            "minecraft:beacon",
+            "minecraft:bedrock",
+            "minecraft:beef",
+            "minecraft:beetroot",
+            "minecraft:beetroot_seeds",
+            "minecraft:beetroot_soup",
+            "minecraft:birch_boat",
+            "minecraft:birch_door",
+            "minecraft:birch_fence",
+            "minecraft:birch_fence_gate",
+            "minecraft:birch_stairs",
+            "minecraft:black_glazed_terracotta",
+            "minecraft:black_shulker_box",
+            "minecraft:blaze_powder",
+            "minecraft:blaze_rod",
+            "minecraft:blue_glazed_terracotta",
+            "minecraft:blue_shulker_box",
+            "minecraft:bone",
+            "minecraft:bone_block",
+            "minecraft:book",
+            "minecraft:bookshelf",
+            "minecraft:bow",
+            "minecraft:bowl",
+            "minecraft:bread",
+            "minecraft:brewing_stand",
+            "minecraft:brick",
+            "minecraft:brick_stairs",
+            "minecraft:brown_glazed_terracotta",
+            "minecraft:brown_mushroom",
+            "minecraft:brown_mushroom_block",
+            "minecraft:brown_shulker_box",
+            "minecraft:bucket",
+            "minecraft:cactus",
+            "minecraft:cake",
+            "minecraft:carpet",
+            "minecraft:carrot",
+            "minecraft:carrot_on_a_stick",
+            "minecraft:cauldron",
+            "minecraft:chain_command_block",
+            "minecraft:chainmail_boots",
+            "minecraft:chainmail_chestplate",
+            "minecraft:chainmail_helmet",
+            "minecraft:chainmail_leggings",
+            "minecraft:chest",
+            "minecraft:chest_minecart",
+            "minecraft:chicken",
+            "minecraft:chorus_flower",
+            "minecraft:chorus_fruit",
+            "minecraft:chorus_fruit_popped",
+            "minecraft:chorus_plant",
+            "minecraft:clay",
+            "minecraft:clay_ball",
+            "minecraft:clock",
+            "minecraft:coal",
+            "minecraft:coal_block",
+            "minecraft:coal_ore",
+            "minecraft:cobblestone",
+            "minecraft:cobblestone_wall",
+            "minecraft:command_block",
+            "minecraft:command_block_minecart",
+            "minecraft:comparator",
+            "minecraft:compass",
+            "minecraft:cooked_beef",
+            "minecraft:cooked_chicken",
+            "minecraft:cooked_fish",
+            "minecraft:cooked_mutton",
+            "minecraft:cooked_porkchop",
+            "minecraft:cooked_rabbit",
+            "minecraft:cookie",
+            "minecraft:crafting_table",
+            "minecraft:cyan_glazed_terracotta",
+            "minecraft:cyan_shulker_box",
+            "minecraft:dark_oak_boat",
+            "minecraft:dark_oak_door",
+            "minecraft:dark_oak_fence",
+            "minecraft:dark_oak_fence_gate",
+            "minecraft:dark_oak_stairs",
+            "minecraft:daylight_detector",
+            "minecraft:detector_rail",
+            "minecraft:diamond",
+            "minecraft:diamond_axe",
+            "minecraft:diamond_block",
+            "minecraft:diamond_boots",
+            "minecraft:diamond_chestplate",
+            "minecraft:diamond_helmet",
+            "minecraft:diamond_hoe",
+            "minecraft:diamond_horse_armor",
+            "minecraft:diamond_leggings",
+            "minecraft:diamond_ore",
+            "minecraft:diamond_pickaxe",
+            "minecraft:diamond_shovel",
+            "minecraft:diamond_sword",
+            "minecraft:dispenser",
+            "minecraft:dragon_breath",
+            "minecraft:dragon_egg",
+            "minecraft:dropper",
+            "minecraft:egg",
+            "minecraft:elytra",
+            "minecraft:emerald",
+            "minecraft:emerald_block",
+            "minecraft:emerald_ore",
+            "minecraft:enchanted_book",
+            "minecraft:enchanting_table",
+            "minecraft:end_portal_frame",
+            "minecraft:end_rod",
+            "minecraft:end_stone",
+            "minecraft:ender_chest",
+            "minecraft:ender_eye",
+            "minecraft:ender_pearl",
+            "minecraft:farmland",
+            "minecraft:feather",
+            "minecraft:fermented_spider_eye",
+            "minecraft:filled_map",
+            "minecraft:fire_charge",
+            "minecraft:firework_charge",
+            "minecraft:fireworks",
+            "minecraft:fishing_rod",
+            "minecraft:flint",
+            "minecraft:flint_and_steel",
+            "minecraft:flower_pot",
+            "minecraft:furnace",
+            "minecraft:furnace_minecart",
+            "minecraft:ghast_tear",
+            "minecraft:glass",
+            "minecraft:glass_bottle",
+            "minecraft:glass_pane",
+            "minecraft:glowstone",
+            "minecraft:glowstone_dust",
+            "minecraft:gold_block",
+            "minecraft:gold_ingot",
+            "minecraft:gold_nugget",
+            "minecraft:gold_ore",
+            "minecraft:golden_apple",
+            "minecraft:golden_axe",
+            "minecraft:golden_boots",
+            "minecraft:golden_carrot",
+            "minecraft:golden_chestplate",
+            "minecraft:golden_helmet",
+            "minecraft:golden_hoe",
+            "minecraft:golden_horse_armor",
+            "minecraft:golden_leggings",
+            "minecraft:golden_pickaxe",
+            "minecraft:golden_shovel",
+            "minecraft:golden_sword",
+            "minecraft:grass_path",
+            "minecraft:gravel",
+            "minecraft:gray_glazed_terracotta",
+            "minecraft:gray_shulker_box",
+            "minecraft:green_glazed_terracotta",
+            "minecraft:green_shulker_box",
+            "minecraft:gunpowder",
+            "minecraft:heavy_weighted_pressure_plate",
+            "minecraft:hopper",
+            "minecraft:hopper_minecart",
+            "minecraft:ice",
+            "minecraft:iron_axe",
+            "minecraft:iron_bars",
+            "minecraft:iron_block",
+            "minecraft:iron_boots",
+            "minecraft:iron_chestplate",
+            "minecraft:iron_door",
+            "minecraft:iron_helmet",
+            "minecraft:iron_hoe",
+            "minecraft:iron_horse_armor",
+            "minecraft:iron_ingot",
+            "minecraft:iron_leggings",
+            "minecraft:iron_nugget",
+            "minecraft:iron_ore",
+            "minecraft:iron_pickaxe",
+            "minecraft:iron_shovel",
+            "minecraft:iron_sword",
+            "minecraft:iron_trapdoor",
+            "minecraft:item_frame",
+            "minecraft:jukebox",
+            "minecraft:jungle_boat",
+            "minecraft:jungle_door",
+            "minecraft:jungle_fence",
+            "minecraft:jungle_fence_gate",
+            "minecraft:jungle_stairs",
+            "minecraft:knowledge_book",
+            "minecraft:ladder",
+            "minecraft:lapis_block",
+            "minecraft:lapis_ore",
+            "minecraft:lava_bucket",
+            "minecraft:lead",
+            "minecraft:leather",
+            "minecraft:leather_boots",
+            "minecraft:leather_chestplate",
+            "minecraft:leather_helmet",
+            "minecraft:leather_leggings",
+            "minecraft:lever",
+            "minecraft:light_blue_glazed_terracotta",
+            "minecraft:light_blue_shulker_box",
+            "minecraft:light_weighted_pressure_plate",
+            "minecraft:lime_glazed_terracotta",
+            "minecraft:lime_shulker_box",
+            "minecraft:lingering_potion",
+            "minecraft:magenta_glazed_terracotta",
+            "minecraft:magenta_shulker_box",
+            "minecraft:magma_cream",
+            "minecraft:map",
+            "minecraft:melon",
+            "minecraft:melon_block",
+            "minecraft:melon_seeds",
+            "minecraft:milk_bucket",
+            "minecraft:minecart",
+            "minecraft:mob_spawner",
+            "minecraft:mossy_cobblestone",
+            "minecraft:mushroom_stew",
+            "minecraft:mutton",
+            "minecraft:mycelium",
+            "minecraft:name_tag",
+            "minecraft:nether_brick_fence",
+            "minecraft:nether_brick_stairs",
+            "minecraft:nether_star",
+            "minecraft:nether_wart",
+            "minecraft:nether_wart_block",
+            "minecraft:netherrack",
+            "minecraft:oak_stairs",
+            "minecraft:observer",
+            "minecraft:obsidian",
+            "minecraft:orange_glazed_terracotta",
+            "minecraft:orange_shulker_box",
+            "minecraft:packed_ice",
+            "minecraft:painting",
+            "minecraft:paper",
+            "minecraft:pink_glazed_terracotta",
+            "minecraft:pink_shulker_box",
+            "minecraft:piston",
+            "minecraft:poisonous_potato",
+            "minecraft:porkchop",
+            "minecraft:potato",
+            "minecraft:potion",
+            "minecraft:prismarine",
+            "minecraft:prismarine_crystals",
+            "minecraft:prismarine_shard",
+            "minecraft:pumpkin",
+            "minecraft:pumpkin_pie",
+            "minecraft:pumpkin_seeds",
+            "minecraft:purple_glazed_terracotta",
+            "minecraft:purple_shulker_box",
+            "minecraft:purpur_block",
+            "minecraft:purpur_pillar",
+            "minecraft:purpur_slab",
+            "minecraft:purpur_stairs",
+            "minecraft:quartz",
+            "minecraft:quartz_block",
+            "minecraft:quartz_stairs",
+            "minecraft:rabbit",
+            "minecraft:rabbit_foot",
+            "minecraft:rabbit_hide",
+            "minecraft:rabbit_stew",
+            "minecraft:rail",
+            "minecraft:record_11",
+            "minecraft:record_13",
+            "minecraft:record_blocks",
+            "minecraft:record_cat",
+            "minecraft:record_chirp",
+            "minecraft:record_far",
+            "minecraft:record_mall",
+            "minecraft:record_mellohi",
+            "minecraft:record_stal",
+            "minecraft:record_strad",
+            "minecraft:record_wait",
+            "minecraft:record_ward",
+            "minecraft:red_glazed_terracotta",
+            "minecraft:red_mushroom",
+            "minecraft:red_mushroom_block",
+            "minecraft:red_sandstone",
+            "minecraft:red_sandstone_stairs",
+            "minecraft:red_shulker_box",
+            "minecraft:redstone_block",
+            "minecraft:redstone_lamp",
+            "minecraft:redstone_ore",
+            "minecraft:redstone_torch",
+            "minecraft:repeater",
+            "minecraft:repeating_command_block",
+            "minecraft:rotten_flesh",
+            "minecraft:saddle",
+            "minecraft:sandstone_stairs",
+            "minecraft:sea_lantern",
+            "minecraft:shears",
+            "minecraft:shield",
+            "minecraft:shulker_shell",
+            "minecraft:sign",
+            "minecraft:snow",
+            "minecraft:snowball",
+            "minecraft:soul_sand",
+            "minecraft:spawn_egg",
+            "minecraft:spectral_arrow",
+            "minecraft:spider_eye",
+            "minecraft:splash_potion",
+            "minecraft:spruce_boat",
+            "minecraft:spruce_door",
+            "minecraft:spruce_fence",
+            "minecraft:spruce_fence_gate",
+            "minecraft:spruce_stairs",
+            "minecraft:stained_glass_pane",
+            "minecraft:stained_hardened_clay",
+            "minecraft:stick",
+            "minecraft:sticky_piston",
+            "minecraft:stone_axe",
+            "minecraft:stone_brick_stairs",
+            "minecraft:stone_button",
+            "minecraft:stone_hoe",
+            "minecraft:stone_pickaxe",
+            "minecraft:stone_pressure_plate",
+            "minecraft:stone_shovel",
+            "minecraft:stone_sword",
+            "minecraft:string",
+            "minecraft:structure_block",
+            "minecraft:structure_void",
+            "minecraft:sugar",
+            "minecraft:tipped_arrow",
+            "minecraft:tnt",
+            "minecraft:tnt_minecart",
+            "minecraft:torch",
+            "minecraft:totem_of_undying",
+            "minecraft:trapped_chest",
+            "minecraft:tripwire_hook",
+            "minecraft:vine",
+            "minecraft:water_bucket",
+            "minecraft:wheat",
+            "minecraft:wheat_seeds",
+            "minecraft:white_glazed_terracotta",
+            "minecraft:white_shulker_box",
+            "minecraft:wooden_axe",
+            "minecraft:wooden_button",
+            "minecraft:wooden_hoe",
+            "minecraft:wooden_pickaxe",
+            "minecraft:wooden_pressure_plate",
+            "minecraft:wooden_shovel",
+            "minecraft:wooden_sword",
+            "minecraft:written_book",
+            "minecraft:yellow_glazed_terracotta",
+            "minecraft:yellow_shulker_box",
+            "minecraft:",
+            "minecraft:stone",
+            "minecraft:granite",
+            "minecraft:polished_granite",
+            "minecraft:diorite",
+            "minecraft:polished_diorite",
+            "minecraft:andesite",
+            "minecraft:polished_andesite",
+            "minecraft:grass_block",
+            "minecraft:dirt",
+            "minecraft:coarse_dirt",
+            "minecraft:podzol",
+            "minecraft:oak_planks",
+            "minecraft:spruce_planks",
+            "minecraft:birch_planks",
+            "minecraft:jungle_planks",
+            "minecraft:acacia_planks",
+            "minecraft:dark_oak_planks",
+            "minecraft:oak_sapling",
+            "minecraft:spruce_sapling",
+            "minecraft:birch_sapling",
+            "minecraft:jungle_sapling",
+            "minecraft:acacia_sapling",
+            "minecraft:dark_oak_sapling",
+            "minecraft:sand",
+            "minecraft:red_sand",
+            "minecraft:oak_log",
+            "minecraft:spruce_log",
+            "minecraft:birch_log",
+            "minecraft:jungle_log",
+            "minecraft:oak_bark",
+            "minecraft:spruce_bark",
+            "minecraft:birch_bark",
+            "minecraft:jungle_bark",
+            "minecraft:oak_leaves",
+            "minecraft:spruce_leaves",
+            "minecraft:birch_leaves",
+            "minecraft:jungle_leaves",
+            "minecraft:sponge",
+            "minecraft:wet_sponge",
+            "minecraft:sandstone",
+            "minecraft:chiseled_sandstone",
+            "minecraft:cut_sandstone",
+            "minecraft:note_block",
+            "minecraft:white_bed",
+            "minecraft:orange_bed",
+            "minecraft:magenta_bed",
+            "minecraft:light_blue_bed",
+            "minecraft:yellow_bed",
+            "minecraft:lime_bed",
+            "minecraft:pink_bed",
+            "minecraft:gray_bed",
+            "minecraft:light_gray_bed",
+            "minecraft:cyan_bed",
+            "minecraft:purple_bed",
+            "minecraft:blue_bed",
+            "minecraft:brown_bed",
+            "minecraft:green_bed",
+            "minecraft:red_bed",
+            "minecraft:black_bed",
+            "minecraft:powered_rail",
+            "minecraft:cobweb",
+            "minecraft:dead_bush",
+            "minecraft:grass",
+            "minecraft:fern",
+            "minecraft:white_wool",
+            "minecraft:orange_wool",
+            "minecraft:magenta_wool",
+            "minecraft:light_blue_wool",
+            "minecraft:yellow_wool",
+            "minecraft:lime_wool",
+            "minecraft:pink_wool",
+            "minecraft:gray_wool",
+            "minecraft:light_gray_wool",
+            "minecraft:cyan_wool",
+            "minecraft:purple_wool",
+            "minecraft:blue_wool",
+            "minecraft:brown_wool",
+            "minecraft:green_wool",
+            "minecraft:red_wool",
+            "minecraft:black_wool",
+            "minecraft:dandelion",
+            "minecraft:poppy",
+            "minecraft:blue_orchid",
+            "minecraft:allium",
+            "minecraft:azure_bluet",
+            "minecraft:red_tulip",
+            "minecraft:orange_tulip",
+            "minecraft:white_tulip",
+            "minecraft:pink_tulip",
+            "minecraft:oxeye_daisy",
+            "minecraft:stone_slab",
+            "minecraft:sandstone_slab",
+            "minecraft:petrified_oak_slab",
+            "minecraft:cobblestone_slab",
+            "minecraft:brick_slab",
+            "minecraft:stone_brick_slab",
+            "minecraft:nether_brick_slab",
+            "minecraft:quartz_slab",
+            "minecraft:smooth_sandstone",
+            "minecraft:smooth_stone",
+            "minecraft:bricks",
+            "minecraft:oak_door",
+            "minecraft:cobblestone_stairs",
+            "minecraft:snow_block",
+            "minecraft:sugar_cane",
+            "minecraft:oak_fence",
+            "minecraft:jack_o_lantern",
+            "minecraft:white_stained_glass",
+            "minecraft:orange_stained_glass",
+            "minecraft:magenta_stained_glass",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:yellow_stained_glass",
+            "minecraft:lime_stained_glass",
+            "minecraft:pink_stained_glass",
+            "minecraft:gray_stained_glass",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:cyan_stained_glass",
+            "minecraft:purple_stained_glass",
+            "minecraft:blue_stained_glass",
+            "minecraft:brown_stained_glass",
+            "minecraft:green_stained_glass",
+            "minecraft:red_stained_glass",
+            "minecraft:black_stained_glass",
+            "minecraft:wooden_trapdoor",
+            "minecraft:infested_stone",
+            "minecraft:infested_cobblestone",
+            "minecraft:infested_stone_bricks",
+            "minecraft:infested_mossy_stone_bricks",
+            "minecraft:infested_cracked_stone_bricks",
+            "minecraft:infested_chiseled_stone_bricks",
+            "minecraft:stone_bricks",
+            "minecraft:mossy_stone_bricks",
+            "minecraft:cracked_stone_bricks",
+            "minecraft:chiseled_stone_bricks",
+            "minecraft:oak_fence_gate",
+            "minecraft:lily_pad",
+            "minecraft:nether_bricks",
+            "minecraft:oak_slab",
+            "minecraft:spruce_slab",
+            "minecraft:birch_slab",
+            "minecraft:jungle_slab",
+            "minecraft:acacia_slab",
+            "minecraft:dark_oak_slab",
+            "minecraft:mossy_cobblestone_wall",
+            "minecraft:skeleton_skull",
+            "minecraft:wither_skeleton_skull",
+            "minecraft:zombie_head",
+            "minecraft:player_head",
+            "minecraft:creeper_head",
+            "minecraft:dragon_head",
+            "minecraft:anvil",
+            "minecraft:chipped_anvil",
+            "minecraft:damaged_anvil",
+            "minecraft:nether_quartz_ore",
+            "minecraft:chiseled_quartz",
+            "minecraft:quartz_pillar",
+            "minecraft:white_terracotta",
+            "minecraft:orange_terracotta",
+            "minecraft:magenta_terracotta",
+            "minecraft:light_blue_terracotta",
+            "minecraft:yellow_terracotta",
+            "minecraft:lime_terracotta",
+            "minecraft:pink_terracotta",
+            "minecraft:gray_terracotta",
+            "minecraft:light_gray_terracotta",
+            "minecraft:cyan_terracotta",
+            "minecraft:purple_terracotta",
+            "minecraft:blue_terracotta",
+            "minecraft:brown_terracotta",
+            "minecraft:green_terracotta",
+            "minecraft:red_terracotta",
+            "minecraft:black_terracotta",
+            "minecraft:white_stained_glass_pane",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:pink_stained_glass_pane",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:acacia_leaves",
+            "minecraft:dark_oak_leaves",
+            "minecraft:acacia_log",
+            "minecraft:dark_oak_log",
+            "minecraft:acacia_bark",
+            "minecraft:dark_oak_bark",
+            "minecraft:slime_block",
+            "minecraft:prismarine_bricks",
+            "minecraft:dark_primarine",
+            "minecraft:hay_bale",
+            "minecraft:white_carpet",
+            "minecraft:orange_carpet",
+            "minecraft:magenta_carpet",
+            "minecraft:light_blue_carpet",
+            "minecraft:yellow_carpet",
+            "minecraft:lime_carpet",
+            "minecraft:pink_carpet",
+            "minecraft:gray_carpet",
+            "minecraft:light_gray_carpet",
+            "minecraft:cyan_carpet",
+            "minecraft:purple_carpet",
+            "minecraft:blue_carpet",
+            "minecraft:brown_carpet",
+            "minecraft:green_carpet",
+            "minecraft:red_carpet",
+            "minecraft:black_carpet",
+            "minecraft:terracotta",
+            "minecraft:sunflower",
+            "minecraft:lilac",
+            "minecraft:tall_grass",
+            "minecraft:large_fern",
+            "minecraft:rose_bush",
+            "minecraft:peony",
+            "minecraft:chiseled_red_sandstone",
+            "minecraft:cut_red_sandstone",
+            "minecraft:smooth_red_sandstone",
+            "minecraft:end_stone_bricks",
+            "minecraft:magma_block",
+            "minecraft:red_nether_bricks",
+            "minecraft:light_gray_shulker_box",
+            "minecraft:light_gray_glazed_terracotta",
+            "minecraft:white_concrete",
+            "minecraft:orange_concrete",
+            "minecraft:magenta_concrete",
+            "minecraft:light_blue_concrete",
+            "minecraft:yellow_concrete",
+            "minecraft:lime_concrete",
+            "minecraft:pink_concrete",
+            "minecraft:gray_concrete",
+            "minecraft:light_gray_concrete",
+            "minecraft:cyan_concrete",
+            "minecraft:purple_concrete",
+            "minecraft:blue_concrete",
+            "minecraft:brown_concrete",
+            "minecraft:green_concrete",
+            "minecraft:red_concrete",
+            "minecraft:black_concrete",
+            "minecraft:white_concrete_powder",
+            "minecraft:orange_concrete_powder",
+            "minecraft:magenta_concrete_powder",
+            "minecraft:light_blue_concrete_powder",
+            "minecraft:yellow_concrete_powder",
+            "minecraft:lime_concrete_powder",
+            "minecraft:pink_concrete_powder",
+            "minecraft:gray_concrete_powder",
+            "minecraft:light_gray_concrete_powder",
+            "minecraft:cyan_concrete_powder",
+            "minecraft:purple_concrete_powder",
+            "minecraft:blue_concrete_powder",
+            "minecraft:brown_concrete_powder",
+            "minecraft:green_concrete_powder",
+            "minecraft:red_concrete_powder",
+            "minecraft:black_concrete_powder",
+            "minecraft:charcoal",
+            "minecraft:notch_apple",
+            "minecraft:redstone_dust",
+            "minecraft:oak_boat",
+            "minecraft:slimeball",
+            "minecraft:cod",
+            "minecraft:salmon",
+            "minecraft:clownfish",
+            "minecraft:pufferfish",
+            "minecraft:cooked_cod",
+            "minecraft:cooked_salmon",
+            "minecraft:bone_meal",
+            "minecraft:orange_dye",
+            "minecraft:magenta_dye",
+            "minecraft:light_blue_dye",
+            "minecraft:dandelion_yellow",
+            "minecraft:lime_dye",
+            "minecraft:pink_dye",
+            "minecraft:gray_dye",
+            "minecraft:light_gray_dye",
+            "minecraft:cyan_dye",
+            "minecraft:purple_dye",
+            "minecraft:lapis_lazuli",
+            "minecraft:cocoa_beans",
+            "minecraft:cactus_green",
+            "minecraft:rose_red",
+            "minecraft:ink_sac",
+            "minecraft:glistering_melon",
+            "minecraft:xp_bottle",
+            "minecraft:book_and_quill",
+            "minecraft:nether_brick",
+            "minecraft:ender_crystal",
+            "minecraft:music_disc_13",
+            "minecraft:music_disc_cat",
+            "minecraft:music_disc_blocks",
+            "minecraft:music_disc_chirp",
+            "minecraft:music_disc_far",
+            "minecraft:music_disc_mellohi",
+            "minecraft:music_disc_stal",
+            "minecraft:music_disc_strad",
+            "minecraft:music_disc_ward",
+            "minecraft:music_disc_11",
+            "minecraft:music_disc_wait"
+        ],
+        "recipe": [
+            "minecraft:acacia_boat",
+            "minecraft:acacia_door",
+            "minecraft:acacia_fence",
+            "minecraft:acacia_fence_gate",
+            "minecraft:acacia_planks",
+            "minecraft:acacia_stairs",
+            "minecraft:acacia_wooden_slab",
+            "minecraft:activator_rail",
+            "minecraft:andesite",
+            "minecraft:anvil",
+            "minecraft:armor_stand",
+            "minecraft:armordye",
+            "minecraft:arrow",
+            "minecraft:banneraddpattern",
+            "minecraft:bannerduplicate",
+            "minecraft:beacon",
+            "minecraft:beetroot_soup",
+            "minecraft:birch_boat",
+            "minecraft:birch_door",
+            "minecraft:birch_fence",
+            "minecraft:birch_fence_gate",
+            "minecraft:birch_planks",
+            "minecraft:birch_stairs",
+            "minecraft:birch_wooden_slab",
+            "minecraft:black_banner",
+            "minecraft:black_bed",
+            "minecraft:black_bed_from_white_bed",
+            "minecraft:black_carpet",
+            "minecraft:black_concrete_powder",
+            "minecraft:black_stained_glass",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:black_stained_hardened_clay",
+            "minecraft:black_wool",
+            "minecraft:blaze_powder",
+            "minecraft:blue_banner",
+            "minecraft:blue_bed",
+            "minecraft:blue_bed_from_white_bed",
+            "minecraft:blue_carpet",
+            "minecraft:blue_concrete_powder",
+            "minecraft:blue_stained_glass",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:blue_stained_hardened_clay",
+            "minecraft:blue_wool",
+            "minecraft:boat",
+            "minecraft:bone_block",
+            "minecraft:bone_meal_from_block",
+            "minecraft:bone_meal_from_bone",
+            "minecraft:book",
+            "minecraft:bookcloning",
+            "minecraft:bookshelf",
+            "minecraft:bow",
+            "minecraft:bowl",
+            "minecraft:bread",
+            "minecraft:brewing_stand",
+            "minecraft:brick_block",
+            "minecraft:brick_slab",
+            "minecraft:brick_stairs",
+            "minecraft:brown_banner",
+            "minecraft:brown_bed",
+            "minecraft:brown_bed_from_white_bed",
+            "minecraft:brown_carpet",
+            "minecraft:brown_concrete_powder",
+            "minecraft:brown_stained_glass",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:brown_stained_hardened_clay",
+            "minecraft:brown_wool",
+            "minecraft:bucket",
+            "minecraft:cake",
+            "minecraft:carrot_on_a_stick",
+            "minecraft:cauldron",
+            "minecraft:chest",
+            "minecraft:chest_minecart",
+            "minecraft:chiseled_quartz_block",
+            "minecraft:chiseled_red_sandstone",
+            "minecraft:chiseled_sandstone",
+            "minecraft:chiseled_stonebrick",
+            "minecraft:clay",
+            "minecraft:clock",
+            "minecraft:coal",
+            "minecraft:coal_block",
+            "minecraft:coarse_dirt",
+            "minecraft:cobblestone_slab",
+            "minecraft:cobblestone_wall",
+            "minecraft:comparator",
+            "minecraft:compass",
+            "minecraft:cookie",
+            "minecraft:crafting_table",
+            "minecraft:cyan_banner",
+            "minecraft:cyan_bed",
+            "minecraft:cyan_bed_from_white_bed",
+            "minecraft:cyan_carpet",
+            "minecraft:cyan_concrete_powder",
+            "minecraft:cyan_dye",
+            "minecraft:cyan_stained_glass",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:cyan_stained_hardened_clay",
+            "minecraft:cyan_wool",
+            "minecraft:dark_oak_boat",
+            "minecraft:dark_oak_door",
+            "minecraft:dark_oak_fence",
+            "minecraft:dark_oak_fence_gate",
+            "minecraft:dark_oak_planks",
+            "minecraft:dark_oak_stairs",
+            "minecraft:dark_oak_wooden_slab",
+            "minecraft:dark_prismarine",
+            "minecraft:daylight_detector",
+            "minecraft:detector_rail",
+            "minecraft:diamond",
+            "minecraft:diamond_axe",
+            "minecraft:diamond_block",
+            "minecraft:diamond_boots",
+            "minecraft:diamond_chestplate",
+            "minecraft:diamond_helmet",
+            "minecraft:diamond_hoe",
+            "minecraft:diamond_leggings",
+            "minecraft:diamond_pickaxe",
+            "minecraft:diamond_shovel",
+            "minecraft:diamond_sword",
+            "minecraft:diorite",
+            "minecraft:dispenser",
+            "minecraft:dropper",
+            "minecraft:emerald",
+            "minecraft:emerald_block",
+            "minecraft:enchanting_table",
+            "minecraft:end_bricks",
+            "minecraft:end_crystal",
+            "minecraft:end_rod",
+            "minecraft:ender_chest",
+            "minecraft:ender_eye",
+            "minecraft:fence",
+            "minecraft:fence_gate",
+            "minecraft:fermented_spider_eye",
+            "minecraft:fire_charge",
+            "minecraft:fireworks",
+            "minecraft:fishing_rod",
+            "minecraft:flint_and_steel",
+            "minecraft:flower_pot",
+            "minecraft:furnace",
+            "minecraft:furnace_minecart",
+            "minecraft:glass_bottle",
+            "minecraft:glass_pane",
+            "minecraft:glowstone",
+            "minecraft:gold_block",
+            "minecraft:gold_ingot_from_block",
+            "minecraft:gold_ingot_from_nuggets",
+            "minecraft:gold_nugget",
+            "minecraft:golden_apple",
+            "minecraft:golden_axe",
+            "minecraft:golden_boots",
+            "minecraft:golden_carrot",
+            "minecraft:golden_chestplate",
+            "minecraft:golden_helmet",
+            "minecraft:golden_hoe",
+            "minecraft:golden_leggings",
+            "minecraft:golden_pickaxe",
+            "minecraft:golden_rail",
+            "minecraft:golden_shovel",
+            "minecraft:golden_sword",
+            "minecraft:granite",
+            "minecraft:gray_banner",
+            "minecraft:gray_bed",
+            "minecraft:gray_bed_from_white_bed",
+            "minecraft:gray_carpet",
+            "minecraft:gray_concrete_powder",
+            "minecraft:gray_dye",
+            "minecraft:gray_stained_glass",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:gray_stained_hardened_clay",
+            "minecraft:gray_wool",
+            "minecraft:green_banner",
+            "minecraft:green_bed",
+            "minecraft:green_bed_from_white_bed",
+            "minecraft:green_carpet",
+            "minecraft:green_concrete_powder",
+            "minecraft:green_stained_glass",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:green_stained_hardened_clay",
+            "minecraft:green_wool",
+            "minecraft:hay_block",
+            "minecraft:heavy_weighted_pressure_plate",
+            "minecraft:hopper",
+            "minecraft:hopper_minecart",
+            "minecraft:iron_axe",
+            "minecraft:iron_bars",
+            "minecraft:iron_block",
+            "minecraft:iron_boots",
+            "minecraft:iron_chestplate",
+            "minecraft:iron_door",
+            "minecraft:iron_helmet",
+            "minecraft:iron_hoe",
+            "minecraft:iron_ingot_from_block",
+            "minecraft:iron_ingot_from_nuggets",
+            "minecraft:iron_leggings",
+            "minecraft:iron_nugget",
+            "minecraft:iron_pickaxe",
+            "minecraft:iron_shovel",
+            "minecraft:iron_sword",
+            "minecraft:iron_trapdoor",
+            "minecraft:item_frame",
+            "minecraft:jukebox",
+            "minecraft:jungle_boat",
+            "minecraft:jungle_door",
+            "minecraft:jungle_fence",
+            "minecraft:jungle_fence_gate",
+            "minecraft:jungle_planks",
+            "minecraft:jungle_stairs",
+            "minecraft:jungle_wooden_slab",
+            "minecraft:ladder",
+            "minecraft:lapis_block",
+            "minecraft:lapis_lazuli",
+            "minecraft:lead",
+            "minecraft:leather",
+            "minecraft:leather_boots",
+            "minecraft:leather_chestplate",
+            "minecraft:leather_helmet",
+            "minecraft:leather_leggings",
+            "minecraft:lever",
+            "minecraft:light_blue_banner",
+            "minecraft:light_blue_bed",
+            "minecraft:light_blue_bed_from_white_bed",
+            "minecraft:light_blue_carpet",
+            "minecraft:light_blue_concrete_powder",
+            "minecraft:light_blue_dye_from_blue_orchid",
+            "minecraft:light_blue_dye_from_lapis_bonemeal",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:light_blue_stained_hardened_clay",
+            "minecraft:light_blue_wool",
+            "minecraft:light_gray_banner",
+            "minecraft:light_gray_bed",
+            "minecraft:light_gray_bed_from_white_bed",
+            "minecraft:light_gray_carpet",
+            "minecraft:light_gray_concrete_powder",
+            "minecraft:light_gray_dye_from_azure_bluet",
+            "minecraft:light_gray_dye_from_gray_bonemeal",
+            "minecraft:light_gray_dye_from_ink_bonemeal",
+            "minecraft:light_gray_dye_from_oxeye_daisy",
+            "minecraft:light_gray_dye_from_white_tulip",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:light_gray_stained_hardened_clay",
+            "minecraft:light_gray_wool",
+            "minecraft:light_weighted_pressure_plate",
+            "minecraft:lime_banner",
+            "minecraft:lime_bed",
+            "minecraft:lime_bed_from_white_bed",
+            "minecraft:lime_carpet",
+            "minecraft:lime_concrete_powder",
+            "minecraft:lime_dye",
+            "minecraft:lime_stained_glass",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:lime_stained_hardened_clay",
+            "minecraft:lime_wool",
+            "minecraft:lit_pumpkin",
+            "minecraft:magenta_banner",
+            "minecraft:magenta_bed",
+            "minecraft:magenta_bed_from_white_bed",
+            "minecraft:magenta_carpet",
+            "minecraft:magenta_concrete_powder",
+            "minecraft:magenta_dye_from_allium",
+            "minecraft:magenta_dye_from_lapis_ink_bonemeal",
+            "minecraft:magenta_dye_from_lapis_red_pink",
+            "minecraft:magenta_dye_from_lilac",
+            "minecraft:magenta_dye_from_purple_and_pink",
+            "minecraft:magenta_stained_glass",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:magenta_stained_hardened_clay",
+            "minecraft:magenta_wool",
+            "minecraft:magma",
+            "minecraft:magma_cream",
+            "minecraft:map",
+            "minecraft:mapcloning",
+            "minecraft:mapextending",
+            "minecraft:melon_block",
+            "minecraft:melon_seeds",
+            "minecraft:minecart",
+            "minecraft:mossy_cobblestone",
+            "minecraft:mossy_cobblestone_wall",
+            "minecraft:mossy_stonebrick",
+            "minecraft:mushroom_stew",
+            "minecraft:nether_brick",
+            "minecraft:nether_brick_fence",
+            "minecraft:nether_brick_slab",
+            "minecraft:nether_brick_stairs",
+            "minecraft:nether_wart_block",
+            "minecraft:noteblock",
+            "minecraft:oak_planks",
+            "minecraft:oak_stairs",
+            "minecraft:oak_wooden_slab",
+            "minecraft:observer",
+            "minecraft:orange_banner",
+            "minecraft:orange_bed",
+            "minecraft:orange_bed_from_white_bed",
+            "minecraft:orange_carpet",
+            "minecraft:orange_concrete_powder",
+            "minecraft:orange_dye_from_orange_tulip",
+            "minecraft:orange_dye_from_red_yellow",
+            "minecraft:orange_stained_glass",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:orange_stained_hardened_clay",
+            "minecraft:orange_wool",
+            "minecraft:painting",
+            "minecraft:paper",
+            "minecraft:pillar_quartz_block",
+            "minecraft:pink_banner",
+            "minecraft:pink_bed",
+            "minecraft:pink_bed_from_white_bed",
+            "minecraft:pink_carpet",
+            "minecraft:pink_concrete_powder",
+            "minecraft:pink_dye_from_peony",
+            "minecraft:pink_dye_from_pink_tulip",
+            "minecraft:pink_dye_from_red_bonemeal",
+            "minecraft:pink_stained_glass",
+            "minecraft:pink_stained_glass_pane",
+            "minecraft:pink_stained_hardened_clay",
+            "minecraft:pink_wool",
+            "minecraft:piston",
+            "minecraft:polished_andesite",
+            "minecraft:polished_diorite",
+            "minecraft:polished_granite",
+            "minecraft:prismarine",
+            "minecraft:prismarine_bricks",
+            "minecraft:pumpkin_pie",
+            "minecraft:pumpkin_seeds",
+            "minecraft:purple_banner",
+            "minecraft:purple_bed",
+            "minecraft:purple_bed_from_white_bed",
+            "minecraft:purple_carpet",
+            "minecraft:purple_concrete_powder",
+            "minecraft:purple_dye",
+            "minecraft:purple_shulker_box",
+            "minecraft:purple_stained_glass",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:purple_stained_hardened_clay",
+            "minecraft:purple_wool",
+            "minecraft:purpur_block",
+            "minecraft:purpur_pillar",
+            "minecraft:purpur_slab",
+            "minecraft:purpur_stairs",
+            "minecraft:quartz_block",
+            "minecraft:quartz_slab",
+            "minecraft:quartz_stairs",
+            "minecraft:rabbit_stew_from_brown_mushroom",
+            "minecraft:rabbit_stew_from_red_mushroom",
+            "minecraft:rail",
+            "minecraft:red_banner",
+            "minecraft:red_bed",
+            "minecraft:red_bed_from_white_bed",
+            "minecraft:red_carpet",
+            "minecraft:red_concrete_powder",
+            "minecraft:red_dye_from_beetroot",
+            "minecraft:red_dye_from_poppy",
+            "minecraft:red_dye_from_rose_bush",
+            "minecraft:red_dye_from_tulip",
+            "minecraft:red_nether_brick",
+            "minecraft:red_sandstone",
+            "minecraft:red_sandstone_slab",
+            "minecraft:red_sandstone_stairs",
+            "minecraft:red_stained_glass",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:red_stained_hardened_clay",
+            "minecraft:red_wool",
+            "minecraft:redstone",
+            "minecraft:redstone_block",
+            "minecraft:redstone_lamp",
+            "minecraft:redstone_torch",
+            "minecraft:repairitem",
+            "minecraft:repeater",
+            "minecraft:sandstone",
+            "minecraft:sandstone_slab",
+            "minecraft:sandstone_stairs",
+            "minecraft:sea_lantern",
+            "minecraft:shears",
+            "minecraft:shield",
+            "minecraft:shielddecoration",
+            "minecraft:shulkerboxcoloring",
+            "minecraft:sign",
+            "minecraft:slime",
+            "minecraft:slime_ball",
+            "minecraft:smooth_red_sandstone",
+            "minecraft:smooth_sandstone",
+            "minecraft:snow",
+            "minecraft:snow_layer",
+            "minecraft:speckled_melon",
+            "minecraft:spectral_arrow",
+            "minecraft:spruce_boat",
+            "minecraft:spruce_door",
+            "minecraft:spruce_fence",
+            "minecraft:spruce_fence_gate",
+            "minecraft:spruce_planks",
+            "minecraft:spruce_stairs",
+            "minecraft:spruce_wooden_slab",
+            "minecraft:stick",
+            "minecraft:sticky_piston",
+            "minecraft:stone_axe",
+            "minecraft:stone_brick_slab",
+            "minecraft:stone_brick_stairs",
+            "minecraft:stone_button",
+            "minecraft:stone_hoe",
+            "minecraft:stone_pickaxe",
+            "minecraft:stone_pressure_plate",
+            "minecraft:stone_shovel",
+            "minecraft:stone_slab",
+            "minecraft:stone_stairs",
+            "minecraft:stone_sword",
+            "minecraft:stonebrick",
+            "minecraft:string_to_wool",
+            "minecraft:sugar",
+            "minecraft:tippedarrow",
+            "minecraft:tnt",
+            "minecraft:tnt_minecart",
+            "minecraft:torch",
+            "minecraft:trapdoor",
+            "minecraft:trapped_chest",
+            "minecraft:tripwire_hook",
+            "minecraft:wheat",
+            "minecraft:white_banner",
+            "minecraft:white_bed",
+            "minecraft:white_carpet",
+            "minecraft:white_concrete_powder",
+            "minecraft:white_stained_glass",
+            "minecraft:white_stained_glass_pane",
+            "minecraft:white_stained_hardened_clay",
+            "minecraft:wooden_axe",
+            "minecraft:wooden_button",
+            "minecraft:wooden_door",
+            "minecraft:wooden_hoe",
+            "minecraft:wooden_pickaxe",
+            "minecraft:wooden_pressure_plate",
+            "minecraft:wooden_shovel",
+            "minecraft:wooden_sword",
+            "minecraft:writable_book",
+            "minecraft:yellow_banner",
+            "minecraft:yellow_bed",
+            "minecraft:yellow_bed_from_white_bed",
+            "minecraft:yellow_carpet",
+            "minecraft:yellow_concrete_powder",
+            "minecraft:yellow_dye_from_dandelion",
+            "minecraft:yellow_dye_from_sunflower",
+            "minecraft:yellow_stained_glass",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:yellow_stained_hardened_clay",
+            "minecraft:yellow_wool",
+            "*"
+        ],
+        "slot": {
+            "inventory": [
+                "slot.armor.chest",
+                "slot.armor.feet",
+                "slot.armor.head",
+                "slot.armor.legs",
+                "slot.container.0",
+                "slot.container.1",
+                "slot.container.10",
+                "slot.container.11",
+                "slot.container.12",
+                "slot.container.13",
+                "slot.container.14",
+                "slot.container.15",
+                "slot.container.16",
+                "slot.container.17",
+                "slot.container.18",
+                "slot.container.19",
+                "slot.container.2",
+                "slot.container.20",
+                "slot.container.21",
+                "slot.container.22",
+                "slot.container.23",
+                "slot.container.24",
+                "slot.container.25",
+                "slot.container.26",
+                "slot.container.27",
+                "slot.container.28",
+                "slot.container.29",
+                "slot.container.3",
+                "slot.container.30",
+                "slot.container.31",
+                "slot.container.32",
+                "slot.container.33",
+                "slot.container.34",
+                "slot.container.35",
+                "slot.container.36",
+                "slot.container.37",
+                "slot.container.38",
+                "slot.container.39",
+                "slot.container.4",
+                "slot.container.40",
+                "slot.container.41",
+                "slot.container.42",
+                "slot.container.43",
+                "slot.container.44",
+                "slot.container.45",
+                "slot.container.46",
+                "slot.container.47",
+                "slot.container.48",
+                "slot.container.49",
+                "slot.container.5",
+                "slot.container.50",
+                "slot.container.51",
+                "slot.container.52",
+                "slot.container.53",
+                "slot.container.6",
+                "slot.container.7",
+                "slot.container.8",
+                "slot.container.9",
+                "slot.enderchest.0",
+                "slot.enderchest.1",
+                "slot.enderchest.10",
+                "slot.enderchest.11",
+                "slot.enderchest.12",
+                "slot.enderchest.13",
+                "slot.enderchest.14",
+                "slot.enderchest.15",
+                "slot.enderchest.16",
+                "slot.enderchest.17",
+                "slot.enderchest.18",
+                "slot.enderchest.19",
+                "slot.enderchest.2",
+                "slot.enderchest.20",
+                "slot.enderchest.21",
+                "slot.enderchest.22",
+                "slot.enderchest.23",
+                "slot.enderchest.24",
+                "slot.enderchest.25",
+                "slot.enderchest.26",
+                "slot.enderchest.3",
+                "slot.enderchest.4",
+                "slot.enderchest.5",
+                "slot.enderchest.6",
+                "slot.enderchest.7",
+                "slot.enderchest.8",
+                "slot.enderchest.9",
+                "slot.horse.0",
+                "slot.horse.1",
+                "slot.horse.10",
+                "slot.horse.11",
+                "slot.horse.12",
+                "slot.horse.13",
+                "slot.horse.14",
+                "slot.horse.2",
+                "slot.horse.3",
+                "slot.horse.4",
+                "slot.horse.5",
+                "slot.horse.6",
+                "slot.horse.7",
+                "slot.horse.8",
+                "slot.horse.9",
+                "slot.horse.armor",
+                "slot.horse.chest",
+                "slot.horse.saddle",
+                "slot.hotbar.0",
+                "slot.hotbar.1",
+                "slot.hotbar.2",
+                "slot.hotbar.3",
+                "slot.hotbar.4",
+                "slot.hotbar.5",
+                "slot.hotbar.6",
+                "slot.hotbar.7",
+                "slot.hotbar.8",
+                "slot.inventory.0",
+                "slot.inventory.1",
+                "slot.inventory.10",
+                "slot.inventory.11",
+                "slot.inventory.12",
+                "slot.inventory.13",
+                "slot.inventory.14",
+                "slot.inventory.15",
+                "slot.inventory.16",
+                "slot.inventory.17",
+                "slot.inventory.18",
+                "slot.inventory.19",
+                "slot.inventory.2",
+                "slot.inventory.20",
+                "slot.inventory.21",
+                "slot.inventory.22",
+                "slot.inventory.23",
+                "slot.inventory.24",
+                "slot.inventory.25",
+                "slot.inventory.26",
+                "slot.inventory.3",
+                "slot.inventory.4",
+                "slot.inventory.5",
+                "slot.inventory.6",
+                "slot.inventory.7",
+                "slot.inventory.8",
+                "slot.inventory.9",
+                "slot.villager.0",
+                "slot.villager.1",
+                "slot.villager.2",
+                "slot.villager.3",
+                "slot.villager.4",
+                "slot.villager.5",
+                "slot.villager.6",
+                "slot.villager.7",
+                "slot.weapon",
+                "slot.weapon.mainhand",
+                "slot.weapon.offhand"
+            ],
+            "scoreboard": [
+                "belowName",
+                "list",
+                "sidebar",
+                "sidebar.team.aqua",
+                "sidebar.team.black",
+                "sidebar.team.blue",
+                "sidebar.team.dark_aqua",
+                "sidebar.team.dark_blue",
+                "sidebar.team.dark_gray",
+                "sidebar.team.dark_green",
+                "sidebar.team.dark_purple",
+                "sidebar.team.dark_red",
+                "sidebar.team.gold",
+                "sidebar.team.gray",
+                "sidebar.team.green",
+                "sidebar.team.light_purple",
+                "sidebar.team.red",
+                "sidebar.team.white",
+                "sidebar.team.yellow"
+            ]
+        }
+    }
+}
