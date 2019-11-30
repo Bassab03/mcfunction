@@ -1,7 +1,0 @@
-name: 'setworldspawn'
-cycleMarkers: [
-	{
-		type: 'coord'
-		value: 'x y z'
-	}
-]

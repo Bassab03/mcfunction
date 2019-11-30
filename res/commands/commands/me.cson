@@ -1,7 +1,0 @@
-name: 'me'
-cycleMarkers: [
-	{
-		type: 'greedy'
-		value: 'action'
-	}
-]

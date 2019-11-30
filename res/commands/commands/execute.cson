@@ -1,6 +1,0 @@
-name: 'execute'
-cycleMarkers: [
-	{
-		include: 'execute'
-	}
-]
