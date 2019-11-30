@@ -10,44 +10,12 @@ This is a fork of https://github.com/MrYurihi/mcfunction.
 I have no idea how he made this, but adding and removing entries in a JSON file,
 I do know how to do, so I updated it to 1.15. All Credit goes to them.
 
-## Changes
-### Added
-	data "modify ...."
-	data ... "storage" .. from "storage"
+If you find something missing, a command, command option, id, etc.
+Leave it as en issue or feel free to add them your self and do a pull request,
+over at : https://github.com/Czaplicki/mcfunction-support-resources/
 
-	execute store "storage" ...
-	execute "positioned"
-	execute if score target objective "matches range" .....
-
-	target is now optinal for:
-		kill "target"
-		effect clear "target"
-
-	gamerule "disableRaids"
-	gamerule "doInsomnia"
-	gamerule "doImmediateRespawn"
-	gamerule "drowningDamage"
-	gamerule "fallDamage"
-	gamerule "fireDamage"
-
-	scoreboard "get target objective"
-
-	"minecraft:" prefix for NamespacedID
-### Removed
-	gamerule "structureSaveLocation"
-	gamerule "gameLoopFunction"
-
-	execute "offset"
-### Missing
-	execute store "bossbar"
 
 ## IMO
-This is the best available package on apm for datapacks in 1.15.  
+This is the best available package on apm for datapacks in 1.15.
 This is *not* the best available package on apm for datapacks in 1.13.  
 For 1.13, use https://github.com/MrYurihi/mcfunction.
-
-## Notes
-All thing listed in Missing are so for one or another reason,
-I'm currently trying to rewrite the whole package,
-and anything that would take a longer time to add,
-will be missing until the rewrite is complete.
