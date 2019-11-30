@@ -1,3 +1,2 @@
-msg:
-	name: 'msg'
-	alias: 'tell'
+name: 'msg'
+alias: 'tell'
