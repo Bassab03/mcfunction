@@ -20,6 +20,12 @@
 		color: @syntax-color-keyword;
 		background: fadeout(@syntax-color-keyword, 80%);
 	}
+	&.recipe {
+		background: fadeout(#0c9b43, 80%);
+	}
+	&.enchantment {
+		background: fadeout(#75056d, 50%);
+	}
 }
 
 .syntax--source.syntax--mcfunction {
@@ -29,6 +35,17 @@
 	}
 
 	.syntax--argument {
+
+		.syntax--name {
+			color: @syntax-color-tag;
+		}
+
+		.syntax--value {
+			.syntax--string;
+		}
+	}
+
+	.syntax--state {
 
 		.syntax--name {
 			color: @syntax-color-tag;

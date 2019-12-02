@@ -1,5 +1,5 @@
-const res = require("./res");
-const fs = require("fs");
+res = require "./res"
+fs = require "fs"
 
 module.exports = {
 
@@ -152,7 +152,6 @@ module.exports = {
 	},
 
 	getSuggestions: function (args) {
-		console.log("AAAAAAAAAAAAAAAAaa");
 		if(! atom.config.get("mcfunction-support.autocomplete")) return;
 		var bufferPos = args.bufferPosition;
 		var editor = args.editor;
