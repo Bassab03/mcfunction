@@ -123,32 +123,7 @@
                         "change": {
                             "get": [
                                 {
-                                    "type": "option",
-                                    "value": [
-                                        "block",
-                                        "entity",
-                                        "storage"
-                                    ],
-                                    "change": {
-                                        "block": [
-                                            {
-                                                "type": "coord",
-                                                "value": "x y z"
-                                            }
-                                        ],
-                                        "entity": [
-                                            {
-                                                "type": "entity",
-                                                "value": "target"
-                                            }
-                                        ],
-                                        "storage": [
-                                            {
-                                                "type": "string",
-                                                "value": "target"
-                                            }
-                                        ]
-                                    }
+                                    "include": "nbt-location"
                                 },
                                 {
                                     "type": "string",
@@ -166,32 +141,7 @@
                             ],
                             "merge": [
                                 {
-                                    "type": "option",
-                                    "value": [
-                                        "block",
-                                        "entity",
-                                        "storage"
-                                    ],
-                                    "change": {
-                                        "block": [
-                                            {
-                                                "type": "coord",
-                                                "value": "x y z"
-                                            }
-                                        ],
-                                        "entity": [
-                                            {
-                                                "type": "entity",
-                                                "value": "target"
-                                            }
-                                        ],
-                                        "storage": [
-                                            {
-                                                "type": "string",
-                                                "value": "target"
-                                            }
-                                        ]
-                                    }
+                                    "include": "nbt-location"
                                 },
                                 {
                                     "type": "nbt",
@@ -203,32 +153,7 @@
                             ],
                             "modify": [
                                 {
-                                    "type": "option",
-                                    "value": [
-                                        "block",
-                                        "entity",
-                                        "storage"
-                                    ],
-                                    "change": {
-                                        "block": [
-                                            {
-                                                "type": "coord",
-                                                "value": "x y z"
-                                            }
-                                        ],
-                                        "entity": [
-                                            {
-                                                "type": "entity",
-                                                "value": "target"
-                                            }
-                                        ],
-                                        "storage": [
-                                            {
-                                                "type": "string",
-                                                "value": "target"
-                                            }
-                                        ]
-                                    }
+                                    "include": "nbt-location"
                                 },
                                 {
                                     "type": "string",
@@ -262,32 +187,7 @@
                                     "change": {
                                         "from": [
                                             {
-                                                "type": "option",
-                                                "value": [
-                                                    "block",
-                                                    "entity",
-                                                    "storage"
-                                                ],
-                                                "change": {
-                                                    "block": [
-                                                        {
-                                                            "type": "coord",
-                                                            "value": "x y z"
-                                                        }
-                                                    ],
-                                                    "entity": [
-                                                        {
-                                                            "type": "entity",
-                                                            "value": "target"
-                                                        }
-                                                    ],
-                                                    "storage": [
-                                                        {
-                                                            "type": "string",
-                                                            "value": "target"
-                                                        }
-                                                    ]
-                                                }
+                                                "include": "nbt-location"
                                             },
                                             {
                                                 "type": "string",
@@ -306,32 +206,7 @@
                             ],
                             "remove": [
                                 {
-                                    "type": "option",
-                                    "value": [
-                                        "block",
-                                        "entity",
-                                        "storage"
-                                    ],
-                                    "change": {
-                                        "block": [
-                                            {
-                                                "type": "coord",
-                                                "value": "x y z"
-                                            }
-                                        ],
-                                        "entity": [
-                                            {
-                                                "type": "entity",
-                                                "value": "target"
-                                            }
-                                        ],
-                                        "storage": [
-                                            {
-                                                "type": "string",
-                                                "value": "target"
-                                            }
-                                        ]
-                                    }
+                                    "include": "nbt-location"
                                 },
                                 {
                                     "type": "string",
@@ -1855,7 +1730,9 @@
                     "entity",
                     "block",
                     "blocks",
-                    "score"
+                    "score",
+                    "predicate",
+                    "data"
                 ],
                 "change": {
                     "entity": [
@@ -1972,6 +1849,49 @@
                                     }
                                 ]
                             }
+                        }
+                    ],
+                    "predicate": [
+                        {
+                            "type": "string",
+                            "value": "target"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "include": "nbt-location"
+                        },
+                        {
+                            "type": "string",
+                            "value": "path"
+                        }
+                    ]
+                }
+            },
+            "nbt-location": {
+                "type": "option",
+                "value": [
+                    "block",
+                    "entity",
+                    "storage"
+                ],
+                "change": {
+                    "block": [
+                        {
+                            "type": "coord",
+                            "value": "x y z"
+                        }
+                    ],
+                    "entity": [
+                        {
+                            "type": "entity",
+                            "value": "target"
+                        }
+                    ],
+                    "storage": [
+                        {
+                            "type": "string",
+                            "value": "target"
                         }
                     ]
                 }
@@ -4360,5 +4280,6 @@
                 "sidebar.team.yellow"
             ]
         }
-    }
+    },
+    "res": {}
 }
