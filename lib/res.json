@@ -220,6 +220,52 @@
                     }
                 ]
             },
+            "datapack": {
+                "name": "datapack",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "disable",
+                            "enable",
+                            "list"
+                        ],
+                        "change": {
+                            "disable": [
+                                {
+                                    "type": "string",
+                                    "value": "name"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "enable": [
+                                {
+                                    "type": "string",
+                                    "value": "name"
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "list": [
+                                {
+                                    "type": "option",
+                                    "optional": true,
+                                    "value": [
+                                        "availble",
+                                        "enabled"
+                                    ]
+                                },
+                                {
+                                    "type": "end"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
             "defaultgamemode": {
                 "name": "defaultgamemode",
                 "cycleMarkers": [
@@ -761,13 +807,41 @@
                 ]
             },
             "schedule": {
-                "location": {
-                    "first_line": 13,
-                    "first_column": 2,
-                    "last_line": 13,
-                    "last_column": 2
-                },
-                "code": "name: \"schedule\"\ncycleMarkers : [\n\t{\n\t\ttype : \"option\"\n\t\tvalue : [\n\t\t\t\"function\",\n\t\t\t\"clear\"\n\t\t],\n\t\tchange : {\n\t\t\tclear : [\n\t\t\t\t{ type : \"end\" }\n\t\t\t]\n\t\t}\n\t\t{\n\t\t\ttype : \"function\"\n\t\t\tvalue : \"function\"\n\t\t}\n\t\t{\n\t\t\ttype: \"string\"\n\t\t\tvalue: \"time\"\n\t\t}\n\t\t{\n\t\t\ttype: \"option\"\n\t\t\toptional : true\n\t\t\tvalue : [\n\t\t\t\t\"append\"\n\t\t\t\t\"replace\"\n\t\t\t]\n\t\t}\n\t}\n]\n"
+                "name": "schedule",
+                "cycleMarkers": [
+                    {
+                        "type": "option",
+                        "value": [
+                            "function",
+                            "clear"
+                        ],
+                        "change": {
+                            "clear": [
+                                {
+                                    "type": "end"
+                                }
+                            ],
+                            "function": [
+                                {
+                                    "type": "function",
+                                    "value": "function"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "time"
+                                },
+                                {
+                                    "type": "option",
+                                    "optional": true,
+                                    "value": [
+                                        "append",
+                                        "replace"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "scoreboard": {
                 "name": "scoreboard",
