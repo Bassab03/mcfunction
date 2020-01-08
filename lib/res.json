@@ -1684,6 +1684,18 @@
                             "include": "execute"
                         }
                     ],
+                    "anchored": [
+                        {
+                            "type": "option",
+                            "value": [
+                                "eyes",
+                                "feet"
+                            ]
+                        },
+                        {
+                            "include": "execute"
+                        }
+                    ],
                     "as": [
                         {
                             "type": "entity",
@@ -4363,5 +4375,6 @@
                 "sidebar.team.yellow"
             ]
         }
-    }
+    },
+    "res": {}
 }
