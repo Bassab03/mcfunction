@@ -103,11 +103,36 @@
 									"style",
 									"value",
 									"visible"
-								]
+								],
+								"change": {
+									"color": [
+										{
+											"type": "option",
+											"value": [
+												"blue",
+												"green",
+												"pink",
+												"purple",
+												"red",
+												"white",
+												"yellow"
+											]
+										}
+									],
+									"max": [
+										{
+											"type": "option",
+											"value": "max"
+										}
+									]
+								}
 							}
 						],
 						"remove": [
-
+							{
+								"type": "option",
+								"value": "id"
+							}
 						]
 					}
 				}
