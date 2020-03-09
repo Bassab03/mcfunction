@@ -50,6 +50,69 @@
 				}
 			]
 		},
+		"bossbar": {
+			"name": "bossbar",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"add",
+						"get",
+						"set",
+						"list",
+						"remove"
+					],
+					"change": {
+						"add": [
+							{
+								"type": "option",
+								"value": "id"
+							},
+							{
+								"type": "string",
+								"value": "name"
+							}
+						],
+						"get": [
+							{
+								"type": "option",
+								"value": "id"
+							},
+							{
+								"type": "option",
+								"value": [
+									"max",
+									"players",
+									"value",
+									"visible"
+								]
+							}
+						],
+						"set": [
+							{
+								"type": "option",
+								"value": "id"
+							},
+							{
+								"type": "option",
+								"value": [
+									"color",
+									"max",
+									"name",
+									"players",
+									"style",
+									"value",
+									"visible"
+								]
+							}
+						],
+						"remove": [
+
+						]
+					}
+				}
+			]
+		},
 		"clear": {
 			"name": "clear",
 			"cycleMarkers": [

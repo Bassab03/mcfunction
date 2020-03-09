@@ -1,6 +1,6 @@
 {
 	"scopeName": "source.mcfunction13",
-	"name": "mcfunction13",
+	"name": "Minecraft Function 1.13+",
 	"fileTypes": ["mcfunction"],
 	"patterns": [
 		{
@@ -164,7 +164,7 @@
 			"name": "value.string.nbt"
 		},
 		"nbt-number": {
-			"match": "-?\\d+(?:\\.\\d+)?[bfdl]?",
+			"match": "-?\\d+(?:\\.\\d+)?[bfdls]?(?=\s?[},])",
 			"name": "value.number.nbt"
 		}
 	}

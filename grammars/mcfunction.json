@@ -1,6 +1,6 @@
 {
 	"scopeName": "source.mcfunction",
-	"name": "mcfunction",
+	"name": "Minecraft Function < 1.12",
 	"fileTypes": [""],
 	"patterns": [
 		{
