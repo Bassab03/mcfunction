@@ -124,6 +124,45 @@
 											"type": "option",
 											"value": "max"
 										}
+									],
+									"name": [
+										{
+											"type": "string",
+											"value": "name"
+										}
+									],
+									"players": [
+										{
+											"type": "entity",
+											"value": "targets"
+										}
+									],
+									"style": [
+										{
+											"type": "option",
+											"value": [
+												"notched_6",
+												"notched_10",
+												"notched_12",
+												"notched_20",
+												"progress"
+											]
+										}
+									],
+									"value": [
+										{
+											"type": "string",
+											"value": "value"
+										}
+									],
+									"visible": [
+										{
+											"type": "option",
+											"value": [
+												"true",
+												"false"
+											]
+										}
 									]
 								}
 							}
