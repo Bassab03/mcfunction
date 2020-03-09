@@ -1,10 +1,10 @@
 {
   "name": "mcfunction",
-  "version": "0.6.4",
+  "version": "1.16.0-20w10a",
   "description": "Minecraft function language. Has syntax highlighting and snippets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrYurihi/mcfunction.git"
+    "url": "https://github.com/theusaf/mcfunction.git"
   },
   "main": "./lib/main",
   "license": "MIT",

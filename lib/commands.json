@@ -1531,7 +1531,9 @@
 				"entity",
 				"block",
 				"blocks",
-				"score"
+				"score",
+				"data",
+				"predicate"
 			],
 			"change": {
 				"entity": [
@@ -1587,8 +1589,17 @@
 							"<=",
 							"=",
 							">=",
-							">"
-						]
+							">",
+							"matches"
+						],
+						"change": {
+							"matches": [
+								{
+									"type": "option",
+									"value": "range"
+								}
+							]
+						}
 					},
 					{
 						"type": "entity",
@@ -1597,6 +1608,54 @@
 					{
 						"type": "string",
 						"value": "sourceObjective"
+					}
+				],
+				"data": [
+					{
+						"type": "option",
+						"value": [
+							"block",
+							"entity",
+							"storage"
+						],
+						"change": {
+							"block": [
+								{
+									"type": "coord",
+									"value": "sourcePos"
+								},
+								{
+									"type": "string",
+									"value": "path"
+								}
+							],
+							"entity": [
+								{
+									"type": "entity",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "path"
+								}
+							],
+							"storage": [
+								{
+									"type": "option",
+									"value": "source"
+								},
+								{
+									"type": "string",
+									"value": "path"
+								}
+							]
+						}
+					}
+				],
+				"predicate": [
+					{
+						"type": "option",
+						"value": "predicate"
 					}
 				]
 			}
@@ -1611,7 +1670,12 @@
 				"offset",
 				"store",
 				"unless",
-				"run"
+				"run",
+				"positioned",
+				"in",
+				"anchored",
+				"facing",
+				"rotated"
 			],
 			"change": {
 				"align": [
@@ -1743,6 +1807,86 @@
 				"run": [
 					{
 						"type": "command"
+					}
+				],
+				"positioned": [
+					{
+						"type": "coord",
+						"value": [
+							"x y z",
+							"as"
+						],
+						"change": {
+							"as": [
+								{
+									"type": "entity",
+									"value": "targets"
+								}
+							]
+						}
+					},
+					{
+						"include": "execute"
+					}
+				],
+				"in": [
+					{
+						"type": "string",
+						"value": [
+							"overworld",
+							"the_nether",
+							"the_end"
+						]
+					}
+				],
+				"anchored": [
+					{
+						"type": "option",
+						"value": [
+							"eyes",
+							"feet"
+						]
+					}
+				],
+				"facing": [
+					{
+						"type": "coord",
+						"value": [
+							"x y z",
+							"entity"
+						],
+						"change": {
+							"entity": [
+								{
+									"type": "entity",
+									"value": "target"
+								},
+								{
+									"type": "option",
+									"value": [
+										"eyes",
+										"feet"
+									]
+								}
+							]
+						}
+					}
+				],
+				"rotated": [
+					{
+						"type": "option",
+						"value": [
+							"rot",
+							"as"
+						],
+						"change": {
+							"as": [
+								{
+									"type": "entity",
+									"value": "targets"
+								}
+							]
+						}
 					}
 				]
 			}
