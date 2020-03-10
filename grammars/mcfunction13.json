@@ -85,9 +85,6 @@
 					"name": "value"
 				}
 			}
-		},
-		{
-			"include": "source.json"
 		}
 	],
 	"repository": {
@@ -164,7 +161,7 @@
 			"name": "value.string.nbt"
 		},
 		"nbt-number": {
-			"match": "-?\\d+(?:\\.\\d+)?[bfdls]?(?=\\s?[},])",
+			"match": "-?\\d+(?:\\.\\d+)?[bfdls]?(?=\\s?[}\\],])",
 			"name": "value.number.nbt"
 		}
 	}
