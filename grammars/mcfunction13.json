@@ -22,10 +22,15 @@
 					}
 				},
 				{
-					"begin": "(?<==)",
+					"begin": "(?==)",
 					"end": "(?=,|\\])",
 					"name": "value",
 					"patterns": [
+						{
+							"begin": "(?==)",
+							"end": "(?<==)",
+							"name": "equals"
+						},
 						{
 							"begin": "\"",
 							"end": "\"",
