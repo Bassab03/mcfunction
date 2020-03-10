@@ -65,7 +65,7 @@
 					"change": {
 						"add": [
 							{
-								"type": "option",
+								"type": "id",
 								"value": "id"
 							},
 							{
@@ -75,7 +75,7 @@
 						],
 						"get": [
 							{
-								"type": "string",
+								"type": "id",
 								"value": "id"
 							},
 							{
@@ -90,7 +90,7 @@
 						],
 						"set": [
 							{
-								"type": "string",
+								"type": "id",
 								"value": "id"
 							},
 							{
@@ -157,11 +157,8 @@
 									],
 									"visible": [
 										{
-											"type": "option",
-											"value": [
-												"true",
-												"false"
-											]
+											"type": "boolean",
+											"value": "value"
 										}
 									]
 								}
@@ -169,7 +166,7 @@
 						],
 						"remove": [
 							{
-								"type": "string",
+								"type": "id",
 								"value": "id"
 							}
 						]
@@ -1065,8 +1062,8 @@
 								"change": {
 									"add": [
 										{
-											"type": "string",
-											"value": "objective"
+											"type": "id",
+											"value": "name"
 										},
 										{
 											"type": "objective",
@@ -1087,7 +1084,7 @@
 									],
 									"setdisplay": [
 										{
-											"type": "objective-slot",
+											"type": "scoreboard-slot",
 											"value": "slot"
 										},
 										{
