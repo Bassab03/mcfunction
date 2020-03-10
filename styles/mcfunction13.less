@@ -16,6 +16,14 @@
 	color: #f2d202
 }
 
+.syntax--none {
+	color: auto
+}
+
+.syntax--num {
+	color: #e09302
+}
+
 @import "ui-variables";
 @import (optional) "index.less";
 
@@ -67,8 +75,21 @@
 		}
 
 		.syntax--value {
-			.syntax--string;
+			.syntax--number {
+				.syntax--num
+			}
+			
+			.syntax--string
 		}
+
+		.syntax--compound {
+			.syntax--none
+		}
+
+		.syntax--array {
+			.syntax--none
+		}
+
 	}
 
 	.syntax--command {

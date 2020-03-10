@@ -140,10 +140,10 @@
 					"include": "#nbt-string"
 				},
 				{
-					"include": "#nbt-number"
+					"include": "#nbt-compound"
 				},
 				{
-					"include": "#nbt-compound"
+					"include": "#nbt-number"
 				},
 				{
 					"include": "#nbt-array"
@@ -158,11 +158,11 @@
 					"match": "\\\\(?:[\"\\\\/bfnrt])|(?:u[0-9a-fA-F]{4})"
 				}
 			],
-			"name": "value.string.nbt"
+			"name": "string.nbt"
 		},
 		"nbt-number": {
 			"match": "-?\\d+(?:\\.\\d+)?[bfdls]?(?=\\s?[}\\],])",
-			"name": "value.number.nbt"
+			"name": "number.nbt"
 		}
 	}
 }
