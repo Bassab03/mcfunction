@@ -147,6 +147,9 @@
 				},
 				{
 					"include": "#nbt-array"
+				},
+				{
+					"include": "#nbt-boolean"
 				}
 			]
 		},
@@ -163,6 +166,10 @@
 		"nbt-number": {
 			"match": "-?\\d+(?:\\.\\d+)?[bfdls]?(?=\\s?[}\\],])",
 			"name": "number.nbt"
+		},
+		"nbt-boolean": {
+			"match": "(true|false)(?=\\s?[}\\],])",
+			"name": "boolean.nbt"
 		}
 	}
 }
