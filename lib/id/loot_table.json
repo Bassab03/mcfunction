@@ -1,7 +1,6 @@
 [
   "minecraft:empty",
   "minecraft:blocks/<block>",
-  "minecraft:entity/<entity>",
   "minecraft:mine/<block>",
   "minecraft:chests/abandoned_mineshaft",
   "minecraft:chests/buried_treasure",
