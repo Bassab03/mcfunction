@@ -17,7 +17,7 @@ me sdfjsadfjsajfjasljf
 recipe give @s minecraft:zombie_head
 spawnpoint @s ~ ~ ~
 setworldspawn
-spreadplayers ~ ~ 1 1 true
+spreadplayers ~ ~ 1 1
 stopsound @s ambient
 summon minecraft:armor_stand ~ ~ ~
 time query day
