@@ -17,7 +17,9 @@ me sdfjsadfjsajfjasljf
 recipe give @s minecraft:zombie_head
 spawnpoint @s ~ ~ ~
 setworldspawn
-spreadplayers ~ ~ 1 1
+spreadplayers ~ ~ 1 maxRange
+worldborder center ~ ~
+worldborder add 1 1
 stopsound @s ambient
 summon minecraft:armor_stand ~ ~ ~
 time query day
@@ -26,6 +28,6 @@ w
 weather
 worldborder
 tell
-tellraw
+tellraw @s {hi:true}
 trigger
 xp
