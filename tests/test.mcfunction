@@ -13,4 +13,5 @@ clone ~ ~ ~ ~ ~ ~ ~ ~ ~ filtered minecraft:acacia_bark force
 clone ~ ~ ~ ~ ~ ~ ~ ~ ~ masked force
 locate EndCity
 me sdfjsadfjsajfjasljf
-recipe give
+# yes, i know this isn't a real recipe, but i'm too lazy too look up all the recipes
+recipe give @s minecraft:zombie_head

@@ -956,7 +956,7 @@
 						"join",
 						"leave",
 						"list",
-						"option",
+						"modify",
 						"remove"
 					],
 					"change": {
@@ -1013,7 +1013,7 @@
 								"type": "end"
 							}
 						],
-						"option": [
+						"modify": [
 							{
 								"type": "string",
 								"value": "team"
@@ -1026,7 +1026,10 @@
 									"deathMessageVisibility",
 									"friendlyFire",
 									"nametagVisibility",
-									"seeFriendlyInvisibles"
+									"seeFriendlyInvisibles",
+									"prefix",
+									"suffix",
+									"displayName"
 								],
 								"change": {
 									"collisionRule": [
@@ -1113,6 +1116,24 @@
 										},
 										{
 											"type": "end"
+										}
+									],
+									"prefix": [
+										{
+											"type": "string",
+											"value": "prefix"
+										}
+									],
+									"suffix": [
+										{
+											"type": "string",
+											"value": "suffix"
+										}
+									],
+									"displayName": [
+										{
+											"type": "string",
+											"value": "name"
 										}
 									]
 								}
