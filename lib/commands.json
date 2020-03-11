@@ -1985,6 +1985,19 @@
 					}
 				}
 			]
+		},
+		"teammsg": {
+			"name": "teammsg",
+			"cycleMarkers": [
+				{
+					"type": "string",
+					"value": "message"
+				}
+			]
+		},
+		"tm": {
+			"name": "tm",
+			"alias": "teammsg"
 		}
 	},
 	"reference": {
