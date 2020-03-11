@@ -1154,7 +1154,7 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target"
+					"value": "targets"
 				},
 				{
 					"type": "option",
@@ -1568,8 +1568,8 @@
 					"value": "targets"
 				},
 				{
-					"type": "string",
-					"value": "message"
+					"type": "nbt",
+					"value": "raw json message"
 				}
 			]
 		},
@@ -1657,8 +1657,8 @@
 					}
 				},
 				{
-					"type": "string",
-					"value": "title"
+					"type": "nbt",
+					"value": "raw json title"
 				}
 			]
 		},

@@ -15,3 +15,17 @@ locate EndCity
 me sdfjsadfjsajfjasljf
 # yes, i know this isn't a real recipe, but i'm too lazy too look up all the recipes
 recipe give @s minecraft:zombie_head
+spawnpoint @s ~ ~ ~
+setworldspawn
+spreadplayers ~ ~ 1 1 true
+stopsound @s ambient
+summon minecraft:armor_stand ~ ~ ~
+time query day
+title @s title {}
+w
+weather
+worldborder
+tell
+tellraw
+trigger
+xp
