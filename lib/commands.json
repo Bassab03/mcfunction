@@ -240,7 +240,8 @@
 					"value": [
 						"get",
 						"merge",
-						"remove"
+						"remove",
+						"modify"
 					],
 					"change": {
 						"get": [
@@ -248,7 +249,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -258,6 +260,12 @@
 										}
 									],
 									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
 										{
 											"type": "entity",
 											"value": "target"
@@ -284,7 +292,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -294,6 +303,12 @@
 										}
 									],
 									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
 										{
 											"type": "entity",
 											"value": "target"
@@ -314,7 +329,8 @@
 								"type": "option",
 								"value": [
 									"block",
-									"entity"
+									"entity",
+									"storage"
 								],
 								"change": {
 									"block": [
@@ -328,6 +344,12 @@
 											"type": "entity",
 											"value": "target"
 										}
+									],
+									"storage": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
 									]
 								}
 							},
@@ -337,6 +359,108 @@
 							},
 							{
 								"type": "end"
+							}
+						],
+						"modify": [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity",
+									"storage"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "targetPos"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									],
+									"storage": [
+										{
+											"type": "entity",
+											"value": "target"
+										}
+									]
+								}
+							},
+							{
+								"type": "string",
+								"value": "targetPath"
+							},
+							{
+								"type": "option",
+								"value": [
+									"append",
+									"insert",
+									"merge",
+									"prepend",
+									"set"
+								],
+								"change": {
+									"insert": [
+										{
+											"type": "string",
+											"value": "index"
+										}
+									]
+								}
+							},
+							{
+								"type": "option",
+								"value": [
+									"from",
+									"value"
+								],
+								"change": {
+									"value": [
+										{
+											"type": "string",
+											"value": "value"
+										},
+										{
+											"type": "end"
+										}
+									]
+								}
+							},
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity",
+									"storage"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "sourcePos"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "source"
+										}
+									],
+									"storage": [
+										{
+											"type": "entity",
+											"value": "source"
+										}
+									]
+								}
+							},
+							{
+								"type": "string",
+								"value": "sourcePath"
 							}
 						]
 					}
