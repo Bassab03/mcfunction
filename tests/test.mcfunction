@@ -37,9 +37,10 @@ loot give @s mine ~ ~ ~ <item>
 loot spawn ~ ~ ~ fish
 # TODO: fix tp
 tp @e ~ ~ ~ facing entity @s feet
+tp @s ~ ~ ~ ~ ~
 spectate @s @s
 schedule clear function
 schedule function function time append
 execute if score @s targetObjective matches ..1
-give @s
+give @s minecraft:diamond_axe
 locatebiome minecraft:river
