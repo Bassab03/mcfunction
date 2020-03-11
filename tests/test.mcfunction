@@ -35,7 +35,9 @@ xp
 loot give @s mine ~ ~ ~ <item>
 # TODO: Add loot tables
 loot spawn ~ ~ ~ fish
-# TODO: fix tp
+loot give @s kill @s
+# TODO: Add some kind of placeholder for options
+loot give @s mine ~ ~ ~ <item>
 tp @e[test=ya] ~ ~ ~ facing entity @s feet
 tp @s ~ ~ ~ ~ ~
 tp ~ ~ ~ ~ ~
