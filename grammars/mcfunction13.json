@@ -66,7 +66,7 @@
 			"name": "comment"
 		},
 		{
-			"match": "(?<=(spreadplayers)|(worldborder center))(?: (?:[~^]-?(?:\\d*\\.)?\\d*|-?(?:\\d*\\.)?\\d+)){2}",
+			"match": "(?<=(spreadplayers)|(worldborder center)|(tp @[espra] [~\\d] [~\\d] [~\\d])|(teleport @[espra] [~\\d] [~\\d] [~\\d])|(tp [~\\d] [~\\d] [~\\d])|(teleport [~\\d] [~\\d] [~\\d]))(?: (?:[~^]-?(?:\\d*\\.)?\\d*|-?(?:\\d*\\.)?\\d+)){2}",
 			"name": "coordc"
 		},
 		{
@@ -94,6 +94,10 @@
 					"name": "value"
 				}
 			}
+		},
+		{
+			"match": " (\\.*\\d+\\.*|true|false)",
+			"name": "basicNumber"
 		}
 	],
 	"repository": {

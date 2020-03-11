@@ -36,8 +36,9 @@ loot give @s mine ~ ~ ~ <item>
 # TODO: Add loot tables
 loot spawn ~ ~ ~ fish
 # TODO: fix tp
-tp @e ~ ~ ~ facing entity @s feet
+tp @e[test=ya] ~ ~ ~ facing entity @s feet
 tp @s ~ ~ ~ ~ ~
+tp ~ ~ ~ ~ ~
 spectate @s @s
 schedule clear function
 schedule function function time append
