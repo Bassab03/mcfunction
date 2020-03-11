@@ -780,17 +780,8 @@
 			"name": "locate",
 			"cycleMarkers": [
 				{
-					"type": "option",
-					"value": [
-						"EndCity",
-						"Fortress",
-						"Mansion",
-						"Mineshaft",
-						"Monument",
-						"Stronghold",
-						"Temple",
-						"Village"
-					]
+					"type": "structure",
+					"value": "structure"
 				}
 			]
 		},
