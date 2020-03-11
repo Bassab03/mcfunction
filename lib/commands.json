@@ -121,7 +121,7 @@
 									],
 									"max": [
 										{
-											"type": "option",
+											"type": "stringg",
 											"value": "max"
 										}
 									],
