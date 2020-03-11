@@ -1057,7 +1057,8 @@
 								"value": [
 									"add",
 									"remove",
-									"setdisplay"
+									"setdisplay",
+									"modify"
 								],
 								"change": {
 									"add": [
@@ -1093,6 +1094,36 @@
 										},
 										{
 											"type": "end"
+										}
+									],
+									"modify": [
+										{
+											"type": "id",
+											"value": "objective"
+										},
+										{
+											"type": "option",
+											"value": [
+												"rendertype",
+												"displayname"
+											],
+											"change": {
+												"rendertype": [
+													{
+														"type": "choice",
+														"value": [
+															"integer",
+															"hearts"
+														]
+													}
+												],
+												"displayname": [
+													{
+														"type": "string",
+														"value": "displayName"
+													}
+												]
+											}
 										}
 									]
 								}

@@ -5,3 +5,10 @@ setblock ~ ~ ~ minecraft:diamond_block[state=false]{test:123s,ok:{yes:"true"},te
 scoreboard objectives add name minecraft.crafted:minecraft.minecraft:acacia_bark
 
 bossbar set id visible true
+
+data get block ~ ~ ~ path scale
+data get entity @s path scale
+data merge block ~ ~ ~ {}
+data remove block ~ ~ ~ path
+
+scoreboard objectives 
