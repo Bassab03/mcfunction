@@ -5,7 +5,7 @@ scoreboard objectives add name minecraft.crafted:minecraft.minecraft:acacia_bark
 bossbar set id visible true
 data get block ~ ~ ~ path scale
 data get entity @s path scale
-data merge block ~ ~ ~ {}
+data merge block ~ ~ ~ {but:5s}
 data remove block ~ ~ ~ path
 scoreboard objectives
 advancement grant @s until minecraft:adventure/adventuring_time
@@ -18,12 +18,13 @@ recipe give @s minecraft:zombie_head
 spawnpoint @s ~ ~ ~
 setworldspawn
 spreadplayers ~ ~ 1 maxRange
+spreadplayers ~ ~ 1 1 true @s
 worldborder center ~ ~
 worldborder add 1 1
 stopsound @s ambient
 summon minecraft:armor_stand ~ ~ ~
 time query day
-title @s title {}
+title @s title {what:"is_this"}
 w
 weather
 worldborder

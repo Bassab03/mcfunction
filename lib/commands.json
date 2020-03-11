@@ -1813,6 +1813,51 @@
 		"xp": {
 			"alias": "experience",
 			"name": "xp"
+		},
+		"forceload": {
+			"name": "forceload",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"add",
+						"remove",
+						"query"
+					],
+					"change": {
+						"add": [
+							{
+								"type": "center",
+								"value": "x1 z1"
+							},
+							{
+								"type": "center",
+								"value": "x2 z2",
+								"optional": true
+							},
+							{
+								"type": "end"
+							}
+						],
+						"remove": [
+							{
+								"type": "option",
+								"value": [
+									"all",
+									"x1 z1"
+								]
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "center",
+					"value": "x1 z1"
+				}
+			]
 		}
 	},
 	"reference": {
