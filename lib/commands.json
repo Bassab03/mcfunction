@@ -2218,7 +2218,7 @@
 						"change": {
 							"matches": [
 								{
-									"type": "option",
+									"type": "text",
 									"value": "range"
 								}
 							]

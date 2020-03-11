@@ -40,3 +40,4 @@ tp @e ~ ~ ~ facing entity @s feet
 spectate @s @s
 schedule clear function
 schedule function function time append
+execute if score @s targetObjective matches ..1
