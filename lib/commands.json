@@ -2052,6 +2052,91 @@
 					"optional": true
 				}
 			]
+		},
+		"teleport": {
+			"name": "teleport",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"~ ~ ~",
+						"@e",
+						"@a",
+						"@s",
+						"@p",
+						"@r",
+						"player"
+					],
+					"change": {
+						"~ ~ ~": [
+							{
+								"type": "center",
+								"value": "rotx roty",
+								"optional": true
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "option",
+					"value": [
+						"~ ~ ~",
+						"@e",
+						"@a",
+						"@s",
+						"@p",
+						"@r",
+						"player"
+					],
+					"optional": true,
+					"change": {
+						"~ ~ ~": [
+							{
+								"type": "option",
+								"value": [
+									"~ ~",
+									"facing"
+								],
+								"optional": true,
+								"change": {
+									"facing": [
+										{
+											"type": "option",
+											"value": [
+												"entity",
+												"~ ~ ~"
+											],
+											"change": {
+												"entity": [
+													{
+														"type": "entity",
+														"value": "facingEntity"
+													},
+													{
+														"type": "option",
+														"value": [
+															"feet",
+															"eyes"
+														],
+														"optional": true
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		"tp": {
+			"name": "tp",
+			"alias": "teleport"
 		}
 	},
 	"reference": {
