@@ -2059,7 +2059,7 @@
 				{
 					"type": "option",
 					"value": [
-						"~ ~ ~",
+						"~",
 						"@e",
 						"@a",
 						"@s",
@@ -2068,7 +2068,11 @@
 						"player"
 					],
 					"change": {
-						"~ ~ ~": [
+						"~": [
+							{
+								"type": "center",
+								"value": ".. y z"
+							},
 							{
 								"type": "center",
 								"value": "rotx roty",
@@ -2083,7 +2087,7 @@
 				{
 					"type": "option",
 					"value": [
-						"~ ~ ~",
+						"~",
 						"@e",
 						"@a",
 						"@s",
@@ -2093,7 +2097,11 @@
 					],
 					"optional": true,
 					"change": {
-						"~ ~ ~": [
+						"~": [
+							{
+								"type": "center",
+								"value": "y z"
+							},
 							{
 								"type": "option",
 								"value": [
