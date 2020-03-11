@@ -11,4 +11,6 @@ scoreboard objectives
 advancement grant @s until minecraft:adventure/adventuring_time
 clone ~ ~ ~ ~ ~ ~ ~ ~ ~ filtered minecraft:acacia_bark force
 clone ~ ~ ~ ~ ~ ~ ~ ~ ~ masked force
-locate 
+locate EndCity
+me sdfjsadfjsajfjasljf
+recipe give
