@@ -1998,6 +1998,60 @@
 		"tm": {
 			"name": "tm",
 			"alias": "teammsg"
+		},
+		"schedule": {
+			"name": "schedule",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"function",
+						"clear"
+					],
+					"change": {
+						"clear": [
+							{
+								"type": "id",
+								"value": "function"
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "id",
+					"value": "function"
+				},
+				{
+					"type": "string",
+					"value": "time"
+				},
+				{
+					"type": "option",
+					"value": [
+						"append",
+						"replace"
+					],
+					"optional": true
+				}
+			]
+		},
+		"spectate": {
+			"name": "spectate",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "target",
+					"optional": true
+				},
+				{
+					"type": "entity",
+					"value": "player",
+					"optional": true
+				}
+			]
 		}
 	},
 	"reference": {
