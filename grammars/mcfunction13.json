@@ -58,7 +58,7 @@
 			"include": "#nbt-compound"
 		},
 		{
-			"match": "(?:^|(?<=run ))(?:forceload|advancement|clear|clone|data|defaultgamemode|difficulty|effect|execute|experience|fill|function|gamemode|gamerule|give|kill|locate|msg|particle|playsound|recipe|reload|replaceitem|say|scoreboard|tag|team|seed|setblock|setworldspawn|spreadplayers|stopsound|summon|teleport|tellraw|tell|time|title|tp|trigger|w|weather|worldborder|xp|bossbar|me|spawnpoint)\\b",
+			"match": "(?:^|(?<=run ))(?:loot|forceload|advancement|clear|clone|data|defaultgamemode|difficulty|effect|execute|experience|fill|function|gamemode|gamerule|give|kill|locate|msg|particle|playsound|recipe|reload|replaceitem|say|scoreboard|tag|team|seed|setblock|setworldspawn|spreadplayers|stopsound|summon|teleport|tellraw|tell|time|title|tp|trigger|w|weather|worldborder|xp|bossbar|me|spawnpoint)\\b",
 			"name": "command"
 		},
 		{

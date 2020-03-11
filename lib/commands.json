@@ -1858,6 +1858,133 @@
 					"value": "x1 z1"
 				}
 			]
+		},
+		"locatebiome": {
+			"name": "locatebiome",
+			"cycleMarkers": [
+				{
+					"type": "biome",
+					"value": "BiomeID"
+				}
+			]
+		},
+		"loot": {
+			"name": "loot",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"spawn",
+						"replace",
+						"give",
+						"insert"
+					],
+					"change": {
+						"spawn": [
+							{
+								"type": "coord",
+								"value": "x y z"
+							}
+						],
+						"replace": [
+							{
+								"type": "option",
+								"value": [
+									"block",
+									"entity"
+								],
+								"change": {
+									"block": [
+										{
+											"type": "coord",
+											"value": "x y z"
+										}
+									],
+									"entity": [
+										{
+											"type": "entity",
+											"value": "selector"
+										}
+									]
+								}
+							},
+							{
+								"type": "inventory-slot",
+								"value": "slot"
+							}
+						],
+						"give": [
+							{
+								"type": "entity",
+								"value": "player"
+							}
+						],
+						"insert": [
+							{
+								"type": "coord",
+								"value": "x y z"
+							}
+						]
+					}
+				},
+				{
+					"type": "option",
+					"value": [
+						"fish",
+						"loot",
+						"kill",
+						"mine"
+					],
+					"change": {
+						"fish": [
+							{
+								"type": "loot",
+								"value": "LootTableID"
+							},
+							{
+								"type": "string",
+								"value": "FisingLocation"
+							},
+							{
+								"type": "option",
+								"value": [
+									"<item>",
+									"mainhand",
+									"offhand"
+								],
+								"optional": true
+							}
+						],
+						"loot": [
+							{
+								"type": "loot",
+								"value": "LootTableID"
+							}
+						],
+						"kill": [
+							{
+								"type": "entity",
+								"value": "target"
+							}
+						],
+						"mine": [
+							{
+								"type": "coord",
+								"value": "x y z"
+							},
+							{
+								"type": "option",
+								"value": [
+									"<item>",
+									"mainhand",
+									"offhand"
+								],
+								"optional": true
+							}
+						]
+					}
+				}
+			]
 		}
 	},
 	"reference": {

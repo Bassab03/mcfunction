@@ -32,3 +32,6 @@ tell
 tellraw @s {hi:true}
 trigger
 xp
+loot give @s mine ~ ~ ~ <item>
+# TODO: Add loot tables
+loot spawn ~ ~ ~ fish
