@@ -25,5 +25,8 @@
 	"minecraft:glowing",
 	"minecraft:levitation",
 	"minecraft:luck",
-	"minecraft:unluck"
+	"minecraft:unluck",
+	"minecraft:conduit_power",
+	"minecraft:dolphins_grace",
+	"minecraft:slow_falling"
 ]
