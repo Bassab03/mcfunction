@@ -6,5 +6,13 @@
   "Monument",
   "Stronghold",
   "Temple",
-  "Village"
+  "Village",
+  "Buried_Treasure",
+  "Shipwreck",
+  "Oceab_Ruin",
+  "Desert_Pyramid",
+  "Igloo",
+  "Jungle_Pyramid",
+  "Swamp_Hut",
+  "Pillager_Outpost"
 ]
