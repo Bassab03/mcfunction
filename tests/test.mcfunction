@@ -35,3 +35,8 @@ xp
 loot give @s mine ~ ~ ~ <item>
 # TODO: Add loot tables
 loot spawn ~ ~ ~ fish
+# TODO: fix tp
+tp ~ ~ ~
+spectate @s @s
+schedule clear function
+schedule function function time append
