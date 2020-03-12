@@ -91,5 +91,12 @@
 	"minecraft:zombie_horse",
 	"minecraft:zombie_pigman",
 	"minecraft:zombified_piglin",
-	"minecraft:zombie_villager"
+	"minecraft:zombie_villager",
+	"minecraft:cat",
+	"minecraft:fox",
+	"minecraft:panda",
+	"minecraft:pillager",
+	"minecraft:ravager",
+	"minecraft:trader_llama",
+	"minecraft:wamdering_trader"
 ]
