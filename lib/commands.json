@@ -2064,8 +2064,7 @@
 						"@a",
 						"@s",
 						"@p",
-						"@r",
-						"player"
+						"@r"
 					],
 					"change": {
 						"~": [
@@ -2092,8 +2091,7 @@
 						"@a",
 						"@s",
 						"@p",
-						"@r",
-						"player"
+						"@r"
 					],
 					"optional": true,
 					"change": {

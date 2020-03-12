@@ -48,3 +48,6 @@ execute if score @s targetObjective matches ..1
 give @s minecraft:diamond_axe
 locatebiome minecraft:river
 execute align x align xz offset ~ ~ ~ in overworld run
+particle minecraft:block minecraft:minecraft:diamond_block ~ ~ ~ ~ ~ ~ 1 30 normal
+advancement grant @s from minecraft:adventure/adventuring_time
+scoreboard objectives add test minecraft.dropped:minecraft.minecraft:diamond_block
