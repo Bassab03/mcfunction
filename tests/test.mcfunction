@@ -33,12 +33,10 @@ tellraw @s {hi:true}
 trigger
 xp
 loot give @s mine ~ ~ ~ <item>
-# TODO: Add loot tables
 loot spawn ~ ~ ~ fish minecraft:empty
 loot spawn ~ ~ ~ fish minecraft:entity/minecraft:enderman
 loot spawn ~ ~ ~ loot minecraft:blocks/minecraft:banner
 loot give @s kill @s
-# TODO: Add some kind of placeholder for options
 loot give @s mine ~ ~ ~ <item>
 tp @e[test=ya] ~ ~ ~ facing entity @s feet
 tp @s ~ ~ ~ ~ ~
