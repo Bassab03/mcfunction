@@ -47,3 +47,4 @@ schedule function function time append
 execute if score @s targetObjective matches ..1
 give @s minecraft:diamond_axe
 locatebiome minecraft:river
+execute align x align xz offset ~ ~ ~ in overworld run
