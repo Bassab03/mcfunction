@@ -32,5 +32,8 @@
 	"minecraft:channeling",
 	"minecraft:impaling",
 	"minecraft:loyalty",
-	"minecraft:riptide"
+	"minecraft:riptide",
+	"minecraft:multishot",
+	"minecraft:quick_charge",
+	"minecraft:piercing"
 ]
