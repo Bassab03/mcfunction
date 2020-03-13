@@ -66,7 +66,7 @@
 			"name": "comment"
 		},
 		{
-			"match": "(?<=(spreadplayers)|(worldborder center)|(tp @[espra] [~\\d] [~\\d] [~\\d])|(teleport @[espra] [~\\d] [~\\d] [~\\d])|(tp [~\\d] [~\\d] [~\\d])|(teleport [~\\d] [~\\d] [~\\d]))(?: (?:[~^]-?(?:\\d*\\.)?\\d*|-?(?:\\d*\\.)?\\d+)){2}",
+			"match": "(?<=(spreadplayers)|(worldborder center)|(tp @[espra] [~\\d] [~\\d] [~\\d])|(teleport @[espra] [~\\d] [~\\d] [~\\d])|(tp [~\\d] [~\\d] [~\\d])|(rotated)|(forceload remove)|(forceload query)|(teleport [~\\d] [~\\d] [~\\d]))(?: (?:[~^]-?(?:\\d*\\.)?\\d*|-?(?:\\d*\\.)?\\d+)){2}|((?<=forceload add [~\\d] [~\\d] [~\\d] )[~\\d])",
 			"name": "coordc"
 		},
 		{

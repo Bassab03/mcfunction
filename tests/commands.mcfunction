@@ -35,3 +35,49 @@ effect give @s minecraft:conduit_power 10 0 false
 execute align xy rotated as @s in overworld positioned as @s anchored eyes facing entity @s eyes if entity @s if blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ masked offset ~ ~ ~ store success block ~ ~ ~ path double 1 run experience query @s points
 execute positioned ~ ~ ~ rotated ~ ~
 experience add @s 1 points
+fill ~ ~ ~ ~ ~ ~ minecraft:gold_block replace minecraft:nether_gold_ore
+function name
+forceload add ~ ~ ~ ~
+forceload remove ~ ~
+forceload query ~ ~
+gamemode adventure @s
+give @s minecraft:acacia_door 1
+kill @s
+locate Buried_Treasure
+locatebiome minecraft:ocean
+loot spawn ~ ~ ~ fish minecraft:blocks/<block> FisingLocation mainhand
+loot replace block ~ ~ ~ slot fish minecraft:blocks/<block> FisingLocation mainhand
+me hi
+msg @s message
+particle minecraft:ash ~ ~ ~ ~ ~ ~ 1 1 normal
+playsound minecraft:ambient.underwater.loop.additions record @r ~ ~ ~ 1 0 0
+recipe give @s minecraft:acacia_bark
+recipe take @s minecraft:acacia_bark
+replaceitem entity @s slot minecraft:acacia_bark
+replaceitem block ~ ~ ~ slot minecraft:acacia_bark
+say jo
+scoreboard objectives add name air {}
+scoreboard objectives setdisplay list objective
+scoreboard objectives modify objective rendertype integer
+scoreboard objectives modify objective displayname ""
+scoreboard players test @s objective min max
+schedule function function time
+team add team ""
+team join team @s
+team leave @s
+team modify team color aqua
+team modify team prefix {}
+tell @s hi
+tellraw @s {}
+time add 100
+title @s times 1 2 1
+title @s subtitle ""
+trigger objective set 1
+teammsg message
+teleport ~ ~ ~ ~ ~
+weather clear 120000
+worldborder center ~ ~
+worldborder get
+worldborder damage amount 0.5
+worldborder warning distance 50
+worldborder set 29000000 0

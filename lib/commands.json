@@ -722,7 +722,7 @@
 					]
 				},
 				{
-					"type": "player",
+					"type": "entity",
 					"value": "target"
 				}
 			]
@@ -1337,7 +1337,7 @@
 											"change": {
 												"rendertype": [
 													{
-														"type": "choice",
+														"type": "option",
 														"value": [
 															"integer",
 															"hearts"
@@ -1501,11 +1501,11 @@
 											"value": "objective"
 										},
 										{
-											"type": "num",
+											"type": "number",
 											"value": "min"
 										},
 										{
-											"type": "num",
+											"type": "number",
 											"value": "max"
 										},
 										{
@@ -1768,6 +1768,10 @@
 						"add",
 						"set"
 					]
+				},
+				{
+					"type": "number",
+					"value": "value"
 				}
 			]
 		},
@@ -1943,7 +1947,7 @@
 								"type": "option",
 								"value": [
 									"all",
-									"x1 z1"
+									"~ ~"
 								]
 							},
 							{
@@ -2122,7 +2126,7 @@
 					"value": "function"
 				},
 				{
-					"type": "string",
+					"type": "number",
 					"value": "time"
 				},
 				{
