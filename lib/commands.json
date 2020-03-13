@@ -186,8 +186,9 @@
 					"value": "item"
 				},
 				{
-					"type": "string",
-					"value": "maxCount"
+					"type": "number",
+					"value": "maxCount",
+					"default": 64
 				}
 			]
 		},
@@ -275,13 +276,11 @@
 							},
 							{
 								"type": "string",
-								"value": "path",
-								"optional": true
+								"value": "path"
 							},
 							{
 								"type": "string",
-								"value": "scale",
-								"optional": true
+								"value": "scale"
 							},
 							{
 								"type": "end"
@@ -484,8 +483,7 @@
 								"value": [
 									"available",
 									"enabled"
-								],
-								"optional": true
+								]
 							},
 							{
 								"type": "end"
@@ -514,7 +512,6 @@
 						"before",
 						"after"
 					],
-					"optional": true,
 					"change": {
 						"first": [
 							{
@@ -592,12 +589,14 @@
 					"value": "effect"
 				},
 				{
-					"type": "string",
-					"value": "seconds"
+					"type": "number",
+					"value": "seconds",
+					"default": 10
 				},
 				{
-					"type": "string",
-					"value": "amplifier"
+					"type": "number",
+					"value": "amplifier",
+					"default": 0
 				},
 				{
 					"type": "boolean",
@@ -647,8 +646,9 @@
 					"value": "players"
 				},
 				{
-					"type": "string",
-					"value": "amount"
+					"type": "number",
+					"value": "amount",
+					"default": 1
 				},
 				{
 					"type": "option",
@@ -717,8 +717,7 @@
 				},
 				{
 					"type": "player",
-					"value": "target",
-					"optional": true
+					"value": "target"
 				}
 			]
 		},
@@ -735,10 +734,18 @@
 						"doEntityDrops",
 						"doFireTick",
 						"doLimitedCrafting",
-						"doMobloot",
+						"doMobLoot",
 						"doMobSpawning",
 						"doTileDrops",
 						"doWeatherCycle",
+						"doInsomnia",
+						"doImmediateRespawn",
+						"doPatrolSpawning",
+						"doTraderSpawning",
+						"drowningDamage",
+						"fallDamage",
+						"fireDamage",
+						"disableRaids",
 						"gameLoopFunction",
 						"keepInventory",
 						"logAdminCommands",
@@ -751,8 +758,7 @@
 						"sendCommandFeedback",
 						"showDeathMessages",
 						"spawnRadius",
-						"spectatorsGenerateChunks",
-						"structureSaveLocation"
+						"spectatorsGenerateChunks"
 					],
 					"change": {
 						"gameLoopFunction": [
@@ -766,8 +772,9 @@
 						],
 						"maxCommandChainLength": [
 							{
-								"type": "string",
-								"value": "value"
+								"type": "number",
+								"value": "value",
+								"default": 65536
 							},
 							{
 								"type": "end"
@@ -775,8 +782,9 @@
 						],
 						"maxEntityCramming": [
 							{
-								"type": "string",
-								"value": "value"
+								"type": "number",
+								"value": "value",
+								"default": 24
 							},
 							{
 								"type": "end"
@@ -784,8 +792,9 @@
 						],
 						"randomTickSpeed": [
 							{
-								"type": "string",
-								"value": "value"
+								"type": "number",
+								"value": "value",
+								"default": 3
 							},
 							{
 								"type": "end"
@@ -793,8 +802,9 @@
 						],
 						"spawnRadius": [
 							{
-								"type": "string",
-								"value": "value"
+								"type": "number",
+								"value": "value",
+								"default": 10
 							},
 							{
 								"type": "end"
@@ -829,8 +839,9 @@
 					"value": "item"
 				},
 				{
-					"type": "string",
-					"value": "count"
+					"type": "number",
+					"value": "count",
+					"default": 1
 				}
 			]
 		},
@@ -881,12 +892,14 @@
 					"value": "x y z"
 				},
 				{
-					"type": "string",
-					"value": "speed"
+					"type": "number",
+					"value": "speed",
+					"default": 1
 				},
 				{
-					"type": "string",
-					"value": "count"
+					"type": "number",
+					"value": "count",
+					"default": 1
 				},
 				{
 					"type": "option",
@@ -932,15 +945,16 @@
 					"value": "x y z"
 				},
 				{
-					"type": "string",
-					"value": "volume"
+					"type": "number",
+					"value": "volume",
+					"defualt": 1
 				},
 				{
-					"type": "string",
+					"type": "number",
 					"value": "pitch"
 				},
 				{
-					"type": "string",
+					"type": "number",
 					"value": "minVolume"
 				}
 			]
@@ -1356,7 +1370,7 @@
 											"value": "objective"
 										},
 										{
-											"type": "string",
+											"type": "number",
 											"value": "score"
 										},
 										{
@@ -1460,7 +1474,7 @@
 											"value": "objective"
 										},
 										{
-											"type": "string",
+											"type": "number",
 											"value": "score"
 										},
 										{
@@ -1477,12 +1491,12 @@
 											"value": "objective"
 										},
 										{
-											"type": "string",
+											"type": "num",
 											"value": "min"
 										},
 										{
-											"type": "string",
-											"value": "min"
+											"type": "num",
+											"value": "max"
 										},
 										{
 											"type": "end"
@@ -1534,13 +1548,11 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target",
-					"optional": true
+					"value": "target"
 				},
 				{
 					"type": "coord",
-					"value": "x y z",
-					"optional": true
+					"value": "x y z"
 				}
 			]
 		},
@@ -1899,8 +1911,7 @@
 							},
 							{
 								"type": "center",
-								"value": "x2 z2",
-								"optional": true
+								"value": "x2 z2"
 							},
 							{
 								"type": "end"
@@ -2018,8 +2029,7 @@
 									"<item>",
 									"mainhand",
 									"offhand"
-								],
-								"optional": true
+								]
 							}
 						],
 						"loot": [
@@ -2045,8 +2055,7 @@
 									"<item>",
 									"mainhand",
 									"offhand"
-								],
-								"optional": true
+								]
 							}
 						]
 					}
@@ -2100,8 +2109,7 @@
 					"value": [
 						"append",
 						"replace"
-					],
-					"optional": true
+					]
 				}
 			]
 		},
@@ -2110,13 +2118,11 @@
 			"cycleMarkers": [
 				{
 					"type": "entity",
-					"value": "target",
-					"optional": true
+					"value": "target"
 				},
 				{
 					"type": "entity",
-					"value": "player",
-					"optional": true
+					"value": "player"
 				}
 			]
 		},
@@ -2141,8 +2147,7 @@
 							},
 							{
 								"type": "center",
-								"value": "rotx roty",
-								"optional": true
+								"value": "rotx roty"
 							},
 							{
 								"type": "end"
@@ -2160,7 +2165,6 @@
 						"@p",
 						"@r"
 					],
-					"optional": true,
 					"change": {
 						"~": [
 							{
@@ -2173,7 +2177,6 @@
 									"~ ~",
 									"facing"
 								],
-								"optional": true,
 								"change": {
 									"facing": [
 										{
@@ -2193,8 +2196,7 @@
 														"value": [
 															"feet",
 															"eyes"
-														],
-														"optional": true
+														]
 													}
 												]
 											}
