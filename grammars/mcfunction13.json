@@ -96,7 +96,7 @@
 			}
 		},
 		{
-			"match": " -?(\\.*\\d+\\.*|true|false)(?= |$)",
+			"match": " -?(\\.*\\d+\\.*\\d*|true|false)(?= |$)",
 			"name": "basicNumber"
 		}
 	],
