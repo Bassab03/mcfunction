@@ -947,7 +947,7 @@
 				{
 					"type": "number",
 					"value": "volume",
-					"defualt": 1
+					"default": 1
 				},
 				{
 					"type": "number",
@@ -1564,11 +1564,11 @@
 					"value": "x z"
 				},
 				{
-					"type": "string",
+					"type": "number",
 					"value": "spreadDistance"
 				},
 				{
-					"type": "string",
+					"type": "number",
 					"value": "maxRange"
 				},
 				{
@@ -1665,8 +1665,9 @@
 					"change": {
 						"add": [
 							{
-								"type": "string",
-								"value": "time"
+								"type": "number",
+								"value": "time",
+								"default": 100
 							},
 							{
 								"type": "end"
@@ -1687,7 +1688,7 @@
 						],
 						"set": [
 							{
-								"type": "string",
+								"type": "number",
 								"value": "time"
 							},
 							{
@@ -1718,16 +1719,19 @@
 					"change": {
 						"times": [
 							{
-								"type": "string",
-								"value": "fadeIn"
+								"type": "number",
+								"value": "fadeIn",
+								"default": 1
 							},
 							{
-								"type": "string",
-								"value": "stay"
+								"type": "number",
+								"value": "stay",
+								"default": 2
 							},
 							{
-								"type": "string",
-								"value": "fadeOut"
+								"type": "number",
+								"value": "fadeOut",
+								"default": 1
 							},
 							{
 								"type": "end"
@@ -1773,8 +1777,9 @@
 					]
 				},
 				{
-					"type": "string",
-					"value": "duration"
+					"type": "number",
+					"value": "duration",
+					"default": 120000
 				}
 			]
 		},
@@ -1794,12 +1799,14 @@
 					"change": {
 						"add": [
 							{
-								"type": "string",
-								"value": "distance"
+								"type": "number",
+								"value": "distance",
+								"default": 29000000
 							},
 							{
-								"type": "string",
-								"value": "time"
+								"type": "number",
+								"value": "time",
+								"default": 60
 							},
 							{
 								"type": "end"
@@ -1824,8 +1831,9 @@
 								"change": {
 									"amount": [
 										{
-											"type": "string",
-											"value": "damagePerBlock"
+											"type": "number",
+											"value": "damagePerBlock",
+											"default": 0.5
 										},
 										{
 											"type": "end"
@@ -1833,8 +1841,9 @@
 									],
 									"buffer": [
 										{
-											"type": "string",
-											"value": "distance"
+											"type": "number",
+											"value": "distance",
+											"default": 10
 										},
 										{
 											"type": "end"
@@ -1845,11 +1854,12 @@
 						],
 						"set": [
 							{
-								"type": "string",
-								"value": "distance"
+								"type": "number",
+								"value": "distance",
+								"default": 29000000
 							},
 							{
-								"type": "string",
+								"type": "number",
 								"value": "time"
 							},
 							{
@@ -1866,8 +1876,9 @@
 								"change": {
 									"distance": [
 										{
-											"type": "string",
-											"value": "distance"
+											"type": "number",
+											"value": "distance",
+											"default": 50
 										},
 										{
 											"type": "end"
@@ -1875,7 +1886,7 @@
 									],
 									"time": [
 										{
-											"type": "string",
+											"type": "number",
 											"value": "time"
 										},
 										{
