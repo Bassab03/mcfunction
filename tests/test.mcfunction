@@ -5,6 +5,8 @@ scoreboard objectives add name minecraft.crafted:minecraft.minecraft:acacia_bark
 bossbar set id visible true
 data get block ~ ~ ~ path scale
 data get entity @s path scale
+datapack list available
+datapack enable info before datapack:etc
 data merge block ~ ~ ~ {but:5s}
 data remove block ~ ~ ~ path
 scoreboard objectives

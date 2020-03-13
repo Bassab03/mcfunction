@@ -467,6 +467,73 @@
 				}
 			]
 		},
+		"datapack": {
+			"name": "datapack",
+			"cycleMarkers": [
+				{
+					"type": "option",
+					"value": [
+						"disable",
+						"enable",
+						"list"
+					],
+					"change": {
+						"list": [
+							{
+								"type": "option",
+								"value": [
+									"available",
+									"enabled"
+								],
+								"optional": true
+							},
+							{
+								"type": "end"
+							}
+						],
+						"disable": [
+							{
+								"type": "id",
+								"value": "name"
+							},
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "id",
+					"value": "name"
+				},
+				{
+					"type": "option",
+					"value": [
+						"first",
+						"last",
+						"before",
+						"after"
+					],
+					"optional": true,
+					"change": {
+						"first": [
+							{
+								"type": "end"
+							}
+						],
+						"last": [
+							{
+								"type": "end"
+							}
+						]
+					}
+				},
+				{
+					"type": "id",
+					"value": "existing"
+				}
+			]
+		},
 		"defaultgamemode": {
 			"name": "defaultgamemode",
 			"cycleMarkers": [
