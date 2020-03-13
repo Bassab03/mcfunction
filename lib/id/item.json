@@ -810,5 +810,11 @@
 	"minecraft:stripped_dark_oak_log",
 	"minecraft:stripped_jungle_log",
 	"minecraft:stripped_acacia_log",
-	"minecraft:turtle_egg"
+	"minecraft:turtle_egg",
+	"minecraft:beehive",
+	"minecraft:bee_nest",
+	"minecraft:honey_block",
+	"minecraft:honeycomb_block",
+	"minecraft:honey_bottle",
+	"minecraft:honeycomb"
 ]

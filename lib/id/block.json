@@ -619,5 +619,9 @@
 	"minecraft:smithing_table",
 	"minecraft:smoker",
 	"minecraft:stonecutter",
-	"minecraft:sweet_berry_bush"
+	"minecraft:sweet_berry_bush",
+	"minecraft:beehive",
+	"minecraft:bee_nest",
+	"minecraft:honey_block",
+	"minecraft:honeycomb_block"
 ]
