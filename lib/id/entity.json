@@ -99,5 +99,7 @@
 	"minecraft:pillager",
 	"minecraft:ravager",
 	"minecraft:trader_llama",
-	"minecraft:wamdering_trader"
+	"minecraft:wamdering_trader",
+	"minecraft:hoglin",
+	"minecraft:piglin"
 ]
