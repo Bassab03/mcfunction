@@ -14,5 +14,5 @@ If you are using it for 1.13 functions, be careful that you don't use commands a
 
 - Suggestions for NBT tags, selectors, and block states.
 - Config option for minecraft version.
-- Custom color picker for color-based nbt tags..
-- Improved text highlighting
+- Custom color picker for color-based nbt tags.
+- Improved text highlighting.
