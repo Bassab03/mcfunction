@@ -54,3 +54,5 @@ particle minecraft:block minecraft:minecraft:diamond_block ~ ~ ~ ~ ~ ~ 1 30 norm
 advancement grant @s from minecraft:adventure/adventuring_time
 scoreboard objectives add test minecraft.dropped:minecraft.minecraft:diamond_block
 playsound minecraft:ambient.underwater.exit ambient @s ~ ~ ~ volume pitch minVolume
+/execute run /execute
+execute run /execute

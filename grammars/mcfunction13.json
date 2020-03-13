@@ -74,7 +74,7 @@
 			"name": "coord"
 		},
 		{
-			"match": "^/",
+			"match": "(^/|(?<=run )/)",
 			"name": "error"
 		},
 		{
