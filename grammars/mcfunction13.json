@@ -98,6 +98,16 @@
 		{
 			"match": " -?(\\.*\\d+\\.*\\d*|true|false)(?= |$)",
 			"name": "basicNumber"
+		},
+		{
+			"begin": "\"",
+			"end": "\"",
+			"name": "basicString",
+			"patterns": [
+				{
+					"match": "(?:(?<=\")(.*)(?=\"))"
+				}
+			]
 		}
 	],
 	"repository": {
