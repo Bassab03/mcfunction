@@ -1,5 +1,12 @@
 # mcfunction-support for Atom
 
+# CONTRIBUTE
+I have stoped using atom as my text editor,
+so I'm not as inclined to continue working on this extention.
+I will do my best with look at the pull requests,
+but if anyone would what to take over the repository,
+it would be highly appriciated!
+
 A syntax highlighter, auto-complete provider and snippet package for Minecraft 1.15
 function files, built for the [Atom editor](https://atom.io/). The autocomplete
 provider is *very* competent and almost has an identical feel to Minecraft's native
