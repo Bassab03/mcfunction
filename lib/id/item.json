@@ -859,5 +859,7 @@
 	"minecraft:netherite_hoe",
 	"minecraft:netherite_pickaxe",
 	"minecraft:netherite_ingot",
-	"minecraft:netherite_scrap"
+	"minecraft:netherite_scrap",
+	"minecraft:polished_basalt",
+	"minecraft:respawn_anchor"
 ]
