@@ -1,0 +1,128 @@
+[
+  {
+    "name": "sort",
+    "type": "option",
+    "value": [
+      "nearest",
+      "random",
+      "furthest",
+      "arbitrary"
+    ]
+  },
+  {
+    "name": "x",
+    "type": "number",
+    "value": "x position",
+    "default": 0
+  },
+  {
+    "name": "y",
+    "type": "number",
+    "value": "y position",
+    "default": 0
+  },
+  {
+    "name": "z",
+    "type": "number",
+    "value": "z position",
+    "default": 0
+  },
+  {
+    "name": "distance",
+    "type": "number",
+    "value": "distance",
+    "default": "..1"
+  },
+  {
+    "name": "dx",
+    "type": "number",
+    "value": "distance in x position",
+    "default": 1
+  },
+  {
+    "name": "dy",
+    "type": "number",
+    "value": "distance in y position",
+    "default": 1
+  },
+  {
+    "name": "dz",
+    "type": "number",
+    "value": "distance in z position",
+    "default": 1
+  },
+  {
+    "name": "scores",
+    "type": "nbt",
+    "value": "{objective-id=50..100}"
+  },
+  {
+    "name": "tag",
+    "type": "string",
+    "value": "tag"
+  },
+  {
+    "name": "team",
+    "type": "string",
+    "value": "team"
+  },
+  {
+    "name": "limit",
+    "type": "number",
+    "value": "maximim entities selected",
+    "default": 1
+  },
+  {
+    "name": "level",
+    "type": "number",
+    "value": "experience levels",
+    "default": 10
+  },
+  {
+    "name": "gamemode",
+    "type": "option",
+    "value": [
+      "creative",
+      "survival",
+      "adventure",
+      "spectator"
+    ]
+  },
+  {
+    "name": "name",
+    "type": "string",
+    "value": "entity name"
+  },
+  {
+    "name": "x_rotation",
+    "type": "number",
+    "value": "vertical rotation",
+    "default": 0
+  },
+  {
+    "name": "y_rotation",
+    "type": "number",
+    "value": "horizontal rotation",
+    "default": 0
+  },
+  {
+    "name": "type",
+    "type": "entity-id",
+    "value": "entity id"
+  },
+  {
+    "name": "nbt",
+    "type": "nbt",
+    "value": "nbt"
+  },
+  {
+    "name": "advancements",
+    "type": "nbt",
+    "value": "{namespace/advancement=true|false}"
+  },
+  {
+    "name": "predicate",
+    "type": "id",
+    "value": "predicate"
+  }
+]
