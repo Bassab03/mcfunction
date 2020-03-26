@@ -945,5 +945,5 @@
   "minecraft:ui.stonecutter.select_recipe",
   "minecraft:ui.stonecutter.take_result",
   "minecraft:weather.rain",
-  "minecraft:weather.rain.above",
+  "minecraft:weather.rain.above"
 ]
