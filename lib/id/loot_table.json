@@ -1,7 +1,5 @@
 [
   "minecraft:empty",
-  "minecraft:blocks/<block>",
-  "minecraft:mine/<block>",
   "minecraft:chests/abandoned_mineshaft",
   "minecraft:chests/buried_treasure",
   "minecraft:chests/desert_pyramid",

@@ -253,10 +253,6 @@
 		"minecraft.custom:minecraft.walk_on_water_one_cm",
 		"minecraft.custom:minecraft.walk_one_cm",
 		"minecraft.custom:minecraft.walk_under_water_one_cm",
-		"minecraft.crafted:minecraft.<item>",
-		"minecraft.used:minecraft.<item>",
-		"minecraft.broken:minecraft.<tool>",
-		"minecraft.mined:minecraft.<block>",
 		"teamkill.black",
 		"teamkill.dark_blue",
 		"teamkill.dark_green",
@@ -288,10 +284,6 @@
 		"killedByTeam.red",
 		"killedByTeam.light_purple",
 		"killedByTeam.yellow",
-		"killedByTeam.white",
-		"minecraft.killed:minecraft.<entity>",
-		"minecraft.picked_up:minecraft.<item>",
-		"minecraft.dropped:minecraft.<item>",
-		"minecraft.killed_by:minecraft.<entity>"
+		"killedByTeam.white"
 	]
 }
