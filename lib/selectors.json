@@ -7,7 +7,8 @@
       "random",
       "furthest",
       "arbitrary"
-    ]
+    ],
+    "negative": false
   },
   {
     "name": "x",
@@ -31,52 +32,61 @@
     "name": "distance",
     "type": "number",
     "value": "distance",
-    "default": "..1"
+    "default": "..1",
+    "negative": false
   },
   {
     "name": "dx",
     "type": "number",
     "value": "distance in x position",
-    "default": 1
+    "default": 1,
+    "negative": false
   },
   {
     "name": "dy",
     "type": "number",
     "value": "distance in y position",
-    "default": 1
+    "default": 1,
+    "negative": false
   },
   {
     "name": "dz",
     "type": "number",
     "value": "distance in z position",
-    "default": 1
+    "default": 1,
+    "negative": false
   },
   {
     "name": "scores",
     "type": "nbt",
-    "value": "{objective-id=50..100}"
+    "value": "{objective-id=50..100}",
+    "negative": false
   },
   {
     "name": "tag",
     "type": "string",
-    "value": "tag"
+    "value": "tag",
+    "negative": true
   },
   {
     "name": "team",
     "type": "string",
-    "value": "team"
+    "value": "team",
+    "negative": true
   },
   {
     "name": "limit",
     "type": "number",
     "value": "maximim entities selected",
-    "default": 1
+    "default": 1,
+    "negative": false
   },
   {
     "name": "level",
     "type": "number",
     "value": "experience levels",
-    "default": 10
+    "default": 10,
+    "negative": false
   },
   {
     "name": "gamemode",
@@ -86,43 +96,51 @@
       "survival",
       "adventure",
       "spectator"
-    ]
+    ],
+    "negative": true
   },
   {
     "name": "name",
     "type": "string",
-    "value": "entity name"
+    "value": "entity name",
+    "negative": true
   },
   {
     "name": "x_rotation",
     "type": "number",
     "value": "vertical rotation",
-    "default": 0
+    "default": 0,
+    "negative": false
   },
   {
     "name": "y_rotation",
     "type": "number",
     "value": "horizontal rotation",
-    "default": 0
+    "default": 0,
+    "negative": false
   },
   {
     "name": "type",
     "type": "entity-id",
-    "value": "entity id"
+    "value": "entity id",
+    "negative": true
   },
   {
     "name": "nbt",
     "type": "nbt",
-    "value": "nbt"
+    "value": "nbt",
+    "negative": true
   },
   {
     "name": "advancements",
     "type": "nbt",
-    "value": "{namespace/advancement=true|false}"
+    "value": "{namespace/advancement=true|false}",
+    "negative": false
   },
   {
     "name": "predicate",
     "type": "id",
-    "value": "predicate"
+    "value": "predicate",
+    "negative": true
   }
 ]
