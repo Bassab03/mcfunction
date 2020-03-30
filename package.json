@@ -1,6 +1,6 @@
 {
   "name": "mcfunction-lang",
-  "version": "1.16.0-20w13b",
+  "version": "1.16.0-20w13b-1",
   "description": "Minecraft function language. Has syntax highlighting and autocompletion. Updated, maintained, and improved for 1.16.",
   "repository": {
     "type": "git",
