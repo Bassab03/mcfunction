@@ -884,5 +884,10 @@
 	"minecraft:polished_blackstone_stairs",
 	"minecraft:polished_blackstone_wall",
 	"minecraft:quartz_bricks",
-	"minecraft:soul_campfire"
+	"minecraft:soul_campfire",
+	"minecraft:piglin_banner_pattern",
+	"minecraft:creeper_banner_pattern",
+	"minecraft:skull_banner_pattern",
+	"minecraft:mojang_banner_pattern",
+	"minecraft:globe_banner_pattern"
 ]
