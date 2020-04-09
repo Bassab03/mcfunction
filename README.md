@@ -23,3 +23,8 @@ If you are using it for 1.15- functions, be careful that you don't use commands 
 - Config option for minecraft version.
 - Custom color picker for color-based nbt tags.
 - Improved text highlighting.
+- Add item, block, and entity tags
+
+# Alternative packages:
+- mcfunction (stable, but not up to date)
+- mcfunction-novum (A good alternative. Maybe even better.)
