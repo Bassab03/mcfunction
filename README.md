@@ -26,5 +26,5 @@ If you are using it for 1.15- functions, be careful that you don't use commands 
 - Add item, block, and entity tags
 
 # Alternative packages:
-- mcfunction (stable, but not up to date)
-- mcfunction-novum (A good alternative. Maybe even better.)
+- mcfunction (the original package. It works, but is not maintained and is out of date.)
+- mcfunction-novum (A very good alternative)
