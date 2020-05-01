@@ -3,6 +3,11 @@ advancement grant @s from minecraft:adventure/adventuring_time
 advancement grant @s only minecraft:adventure/adventuring_time
 advancement revoke @p through minecraft:adventure/adventuring_time
 advancement revoke @r until minecraft:adventure/adventuring_time
+attribute @s attribute get 1
+attribute @s attribute base set 1
+attribute @s attribute modifier value get uuid 1
+attribute @s attribute modifier add uuid name 1
+attribute @s attribute modifier remove uuid
 bossbar add id ""
 bossbar get id
 bossbar set id color blue

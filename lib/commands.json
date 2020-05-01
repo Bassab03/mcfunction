@@ -50,6 +50,108 @@
 				}
 			]
 		},
+		"attribute": {
+			"name": "attribute",
+			"cycleMarkers": [
+				{
+					"type": "entity",
+					"value": "target"
+				},
+				{
+					"type": "attribute",
+					"value": "attribute"
+				},
+				{
+					"type": "option",
+					"value": [
+						"get",
+						"base",
+						"modifier"
+					],
+					"change": {
+						"get": [
+							{
+								"type": "number",
+								"value": "scale",
+								"default": 1
+							}
+						],
+						"base": [
+							{
+								"type": "option",
+								"value": [
+									"set",
+									"get"
+								]
+							},
+							{
+								"type": "number",
+								"value": "scale/value",
+								"default": 1
+							}
+						],
+						"modifier": [
+							{
+								"type": "option",
+								"value": [
+									"add",
+									"remove",
+									"value"
+								],
+								"change": {
+									"add": [
+										{
+											"type": "id",
+											"value": "uuid"
+										},
+										{
+											"type": "string",
+											"value": "name"
+										},
+										{
+											"type": "number",
+											"value": "value",
+											"default": 1
+										},
+										{
+											"type": "option",
+											"value": [
+												"add",
+												"multiply",
+												"multiply_base"
+											]
+										}
+									],
+									"remove": [
+										{
+											"type": "id",
+											"value": "uuid"
+										}
+									],
+									"value": [
+										{
+											"type": "option",
+											"value": [
+												"get"
+											]
+										},
+										{
+											"type": "id",
+											"value": "uuid"
+										},
+										{
+											"type": "number",
+											"value": "scale",
+											"default": 1
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		},
 		"bossbar": {
 			"name": "bossbar",
 			"cycleMarkers": [
