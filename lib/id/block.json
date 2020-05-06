@@ -682,5 +682,9 @@
 	"minecraft:polished_blackstone_wall",
 	"minecraft:quartz_bricks",
 	"minecraft:soul_campfire",
-	"minecraft:chain"
+	"minecraft:chain",
+	"minecraft:crimson_door",
+	"minecraft:warped_door",
+	"minecraft:crimson_trapdoor",
+	"minecraft:warped_trapdoor"
 ]

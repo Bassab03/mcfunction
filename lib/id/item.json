@@ -890,5 +890,10 @@
 	"minecraft:skull_banner_pattern",
 	"minecraft:mojang_banner_pattern",
 	"minecraft:globe_banner_pattern",
-	"minecraft:music_disc_pigstep"
+	"minecraft:music_disc_pigstep",
+	"minecraft:chain",
+	"minecraft:crimson_door",
+	"minecraft:warped_door",
+	"minecraft:crimson_trapdoor",
+	"minecraft:warped_trapdoor"
 ]
