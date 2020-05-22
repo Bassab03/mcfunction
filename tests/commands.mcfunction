@@ -67,6 +67,8 @@ scoreboard objectives modify objective rendertype integer
 scoreboard objectives modify objective displayname ""
 scoreboard players test @s objective min max
 schedule function function time
+spreadplayers ~ ~ 0 0 true @a
+spreadplayers ~ ~ 0 0 under 256 false @e
 team add team ""
 team join team @s
 team leave @s

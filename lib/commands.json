@@ -1684,8 +1684,24 @@
 					"value": "maxRange"
 				},
 				{
-					"type": "boolean",
-					"value": "respectTeams"
+					"type": "option",
+					"value": [
+						"under",
+						"true"
+					],
+					"change": {
+						"under": [
+							{
+								"type": "number",
+								"value": "maxHeight",
+								"default": 256
+							},
+							{
+								"type": "boolean",
+								"value": "respectTeams"
+							}
+						]
+					}
 				},
 				{
 					"type": "entity",
