@@ -1,4 +1,5 @@
 Copyright (c) 2017 MrYurihi Redstone
+
 Copyright (c) 2020 theusaf
 
 Permission is hereby granted, free of charge, to any person obtaining
