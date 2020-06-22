@@ -866,7 +866,9 @@
 						"sendCommandFeedback",
 						"showDeathMessages",
 						"spawnRadius",
-						"spectatorsGenerateChunks"
+						"spectatorsGenerateChunks",
+						"forgiveDeadPlayers",
+						"universalAnger"
 					],
 					"change": {
 						"gameLoopFunction": [
