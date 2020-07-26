@@ -1,10 +1,17 @@
 {
-  "name": "mcfunction",
-  "version": "0.5.4",
-  "description": "Minecraft function language. Has syntax highlighting and snippets",
+  "name": "mcfunction-support",
+  "version": "3.6.0",
+  "description": "Minecraft 1.15 function file, syntax highlighter, auto-complete and snippet provider.",
+  "keywords": [
+    "minecraft",
+    "mc",
+    "mcfunction",
+    "1.15",
+    "datapack"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrYurihi/mcfunction.git"
+    "url": "https://github.com/Czaplicki/mcfunction-support.git"
   },
   "main": "./lib/main",
   "license": "MIT",

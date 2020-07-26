@@ -1,0 +1,10 @@
+{
+	"scopeName": "source.mcmeta",
+	"name": "mcmeta",
+	"fileTypes": ["mcmeta"],
+	"patterns" : [
+		{
+			"include" : "source.json"
+		}
+	]
+}
