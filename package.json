@@ -8,7 +8,12 @@
   },
   "keywords": [
     "minecraft",
+    "1.12",
+    "1.13",
+    "1.14",
+    "1.15",
     "1.16",
+    "1.17",
     "mcfunction",
     "function",
     "highligter",
@@ -26,7 +31,7 @@
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
-        "2.0.0": "getProvider"
+        "4.0.0": "getProvider"
       }
     }
   },
