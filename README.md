@@ -2,14 +2,15 @@
 
 A syntax highlighter and snippet package for Minecraft's function files
 
-Supports 1.13+ and has a version for 1.12-
+Supports 1.12 - 1.17
 
 # Features:
 
 - Items, Sounds, Enchantments, Biomes, Particles, Loot Tables, Objectives, Recipes, Effects, Entities, Blocks, Advancements, and Structures are kept up to date with the latest Minecraft snapshots.
-- Syntax highlighting
+- Improved Syntax highlighting
 - Autocomplete for commands, selectors, and more
 - Options to disable "minecraft:" in autocompletion.
+- Version switching!
 
 # What's different about this mcfunction highligter?
 
