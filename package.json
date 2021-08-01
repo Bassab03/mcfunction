@@ -26,7 +26,7 @@
   "main": "./lib/main",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.43.0 <2.0.0"
+    "atom": "*"
   },
   "providedServices": {
     "autocomplete.provider": {
@@ -36,7 +36,7 @@
     }
   },
   "dependencies": {
-    "tree-sitter-mcfunction-lang": "^0.1.2-beta3"
+    "tree-sitter-mcfunction-lang": "^0.1.4"
   },
   "devDependencies": {
     "eslint": "^6.8.0"

@@ -77,7 +77,7 @@ team modify team prefix {}
 tell @s hi
 tellraw @s {}
 time add 100
-title @s times 1 2 1
+title @s[foo=0..,nbt={so:true, foo:{"bar":1b}},scores={hoo=0..},yes=ok] times 1 2 1
 title @s subtitle ""
 trigger objective set 1
 teammsg message
