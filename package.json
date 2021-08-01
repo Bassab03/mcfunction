@@ -36,7 +36,7 @@
     }
   },
   "dependencies": {
-    "tree-sitter-mcfunction-lang": "^1.0.0"
+    "tree-sitter-mcfunction-lang": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
