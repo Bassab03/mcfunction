@@ -12,7 +12,7 @@ Supports 1.12 - 1.17
 - Options to disable "minecraft:" in autocompletion.
 - Version switching!
 
-# What's different about this mcfunction highligter?
+# What's different about this mcfunction highlighter?
 
 This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfunction), fixes many of the issues listed in it, adds more commands, items, entities, and has more suggestions, such as loot tables, sounds, and particles!
 
