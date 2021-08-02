@@ -28,6 +28,9 @@ This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfu
 - the line is not being highlighted
   - Atom limits the number of characters per line that can be highlighted. You can install [this package](https://atom.io/packages/grammar-token-limit) to change this limit. This will affect performance.
 
+# Issue Reporting
+If you find an issue, no matter how small, please create an issue! There may be many things missing from the data files.
+
 # Alternative packages:
 - mcfunction (the original package. It works, but is not maintained and is out of date.)
 - mcfunction-novum (A very good alternative, updated frequently)
