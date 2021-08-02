@@ -14,18 +14,20 @@ Supports 1.12 - 1.17
 
 # What's different about this mcfunction highligter?
 
-This package, forked from [Yurihaia/mcfunction](https://github.com/Yurihaia/mcfunction), fixes many of the issues listed in it, adds more commands, items, entities, and has more suggestions, such as loot tables, sounds, and particles!
-
-If you are using it for 1.15- functions, be careful that you don't use commands and items not in that version. Otherwise, this is currently one of the best mcfunction highlighters for 1.13+ for atom.
+This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfunction), fixes many of the issues listed in it, adds more commands, items, entities, and has more suggestions, such as loot tables, sounds, and particles!
 
 # Features I am thinking of adding:
 
 - Suggestions for NBT tags and block states.
-- Config option for minecraft version.
 - Custom color picker for color-based nbt tags.
-- Improved text highlighting.
 - Add item, block, and entity tags
+
+# Common Issues
+- x command is not working
+  - Ensure you are using the correct version in the config
+- the line is not being highlighted
+  - Atom limits the number of characters per line that can be highlighted. You can install [this package](https://atom.io/packages/grammar-token-limit) to change this limit. This will affect performance.
 
 # Alternative packages:
 - mcfunction (the original package. It works, but is not maintained and is out of date.)
-- mcfunction-novum (A very good alternative)
+- mcfunction-novum (A very good alternative, updated frequently)
