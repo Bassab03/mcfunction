@@ -21,6 +21,7 @@ This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfu
 - Suggestions for NBT tags and block states.
 - Custom color picker for color-based nbt tags.
 - Add item, block, and entity tags
+- Reading the file system to get function calls
 
 # Common Issues
 - x command is not working
