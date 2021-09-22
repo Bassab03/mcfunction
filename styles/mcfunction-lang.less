@@ -53,10 +53,16 @@
     color: #ffcc00;
   }
 
-  .syntax--error {
+  .syntax--error,
+  .syntax--command + .syntax--comment {
     color: #ddd;
     text-decoration: line-through;
     text-decoration-color: rgba(255, 34, 0, 0.8);
+  }
+
+  .syntax--command + .syntax--error {
+    color: darkgrey;
+    text-decoration: none;
   }
 
   .syntax--keyword {
