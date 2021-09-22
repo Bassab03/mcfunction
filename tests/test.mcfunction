@@ -9,3 +9,5 @@ gamerule keepInventory true
 say hello world @e foobar
 particle snowshovel ~ ~ ~ 1 1 1 0 1 force @s woo hoo yeah! yeeeee
 enchant @p minecraft:protection
+give @a nether_brick_stairs 64 0 {ench:[{lvl:64, id:16}]}
+kill @p
