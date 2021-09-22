@@ -6,3 +6,4 @@ effect @a minecraft:hero_of_the_village 50 0 true
 gamemode survival @r
 fill ~ ~ ~ ~ ~ ~ minecraft:air 0 outline {}
 gamerule keepInventory true
+say hello world @e foobar
