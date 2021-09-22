@@ -7,3 +7,4 @@ gamemode survival @r
 fill ~ ~ ~ ~ ~ ~ minecraft:air 0 outline {}
 gamerule keepInventory true
 say hello world @e foobar
+particle snowshovel ~ ~ ~ 1 1 1 0 1 force @s woo hoo yeah! yeeeee
