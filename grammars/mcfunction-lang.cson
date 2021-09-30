@@ -41,3 +41,6 @@ scopes:
   "execute_keyword": "keyword.execute"
   "state_key": "definition.key.state"
   "state_value": "definition.value.state"
+
+comments:
+  start: "# "
