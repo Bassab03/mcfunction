@@ -13,3 +13,4 @@ give @a nether_brick_stairs 64 0 {ench:[{lvl:64, id:16}]}
 kill @p
 recipe take @a minecraft:iron_chestplate
 replaceitem block ~ ~ ~ slot.armor.head minecraft:dye 1 0 {}
+scoreboard teams option foobar seeFriendlyInvisibles true
