@@ -18,3 +18,6 @@ spreadplayers ~ ~ 0 10 true @e
 stats entity @p[foo = bar] set AffectedBlocks @p objective
 replaceitem block ~ ~ ~ slot.armor.chest minecraft:iron_ingot 100 10 {}
 replaceitem entity @p slot.armor.chest minecraft:dye 1 0 {}
+tp @p ~ ~ ~ ~ ~
+tp ~ ~ ~ ~ ~
+tp @a @p
