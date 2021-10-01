@@ -1,12 +1,14 @@
+@import 'ui-variables';
+
 .syntax--mcfunction-lang {
 
   .syntax--comment {
-  	color: #7c7c7c;
+  	color: @text-color-subtle;
   	font-style: italic;
   }
 
   .syntax--command {
-    color: darkgrey;
+    color: @text-color;
   }
 
   .syntax--command.syntax--keyword.syntax--name {
@@ -61,7 +63,7 @@
   }
 
   .syntax--command + .syntax--error {
-    color: darkgrey;
+    color: @text-color;
     text-decoration: none;
   }
 
