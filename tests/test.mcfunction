@@ -15,3 +15,4 @@ recipe take @a minecraft:iron_chestplate
 replaceitem block ~ ~ ~ slot.armor.head minecraft:dye 1 0 {}
 scoreboard teams option foobar seeFriendlyInvisibles true
 spreadplayers ~ ~ 0 10 true @e
+stats entity @p[foo = bar] set AffectedBlocks @p objective
