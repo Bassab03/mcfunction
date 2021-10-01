@@ -21,3 +21,4 @@ replaceitem entity @p slot.armor.chest minecraft:dye 1 0 {}
 tp @p ~ ~ ~ ~ ~
 tp ~ ~ ~ ~ ~
 tp @a @p
+tellraw @p {"text":"example"}
