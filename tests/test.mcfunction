@@ -22,3 +22,4 @@ tp @p ~ ~ ~ ~ ~
 tp ~ ~ ~ ~ ~
 tp @a @p
 tellraw @p {"text":"example"}
+time query gametime
