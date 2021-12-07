@@ -7,3 +7,4 @@ worldborder get
 worldborder set 0
 worldborder damage buffer 0
 xp 123L @p
+bossbar add id {"text":"efooo"}
