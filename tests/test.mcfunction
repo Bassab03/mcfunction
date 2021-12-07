@@ -8,3 +8,8 @@ worldborder set 0
 worldborder damage buffer 0
 xp 123L @p
 bossbar add id {"text":"efooo"}
+data get block ~ ~ ~ my.path[0]."name" 0
+data get entity @p my.path[0]."name" 1
+data merge block ~ ~ ~ {}
+data merge entity @p {}
+data remove entity @p my.path[0]."name"
