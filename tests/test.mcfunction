@@ -16,4 +16,5 @@ data remove entity @p my.path[0]."name"
 datapack disable name
 datapack enable name before existing
 datapack list available
-tp @p ~ ~ ~ facing ~ ~ ~
+tp @p ~ ~ ~
+time set midnight
