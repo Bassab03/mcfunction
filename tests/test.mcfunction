@@ -13,3 +13,6 @@ data get entity @p my.path[0]."name" 1
 data merge block ~ ~ ~ {}
 data merge entity @p {}
 data remove entity @p my.path[0]."name"
+datapack disable name
+datapack enable name before existing
+datapack list available
