@@ -16,3 +16,7 @@ team join team @p
 team modify example collisionRule pushOtherTeams
 replaceitem entity @p slot.container.10 minecraft:emerald 1
 replaceitem block ~ ~ ~ slot.container.12 minecraft:nether_star 1
+loot replace block ~ ~ ~ slot.container.11 fish
+loot replace entity @p slot.container.13 0 loot
+loot give @p
+loot spawn ~ ~ ~ loot empty
