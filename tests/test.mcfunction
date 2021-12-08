@@ -20,3 +20,4 @@ loot replace block ~ ~ ~ slot.container.11 fish
 loot replace entity @p slot.container.13 0 loot
 loot give @p
 loot spawn ~ ~ ~ loot empty
+schedule function foo 
