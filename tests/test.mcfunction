@@ -9,3 +9,8 @@ particle block minecraft:air ~ ~ ~ ~ ~ ~ 0 0 0 1 force @p
 particle barrier ~ ~ ~ ~ ~ ~ 0 0 0 1 normal @r
 particle item minecraft:gold_nugget ~ ~ ~ ~ ~ ~ 0 0 0 1 normal @e
 setblock ~ ~ ~ minecraft:air keep
+tellraw @p {"text":"example"}
+team list team
+team add foo {"text":"my team name"}
+team join team @p
+team modify example collisionRule pushOtherTeams
