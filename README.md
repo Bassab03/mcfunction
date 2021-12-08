@@ -2,7 +2,7 @@
 
 A syntax highlighter and snippet package for Minecraft's function files
 
-Supports 1.12 - 1.17
+Supports 1.12 - 1.18
 
 # Features:
 
@@ -21,7 +21,7 @@ This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfu
 - Suggestions for NBT tags and block states.
 - Custom color picker for color-based nbt tags.
 - Add item, block, and entity tags
-- Reading the file system to get function calls
+- Reading the file system to get functions
 
 # Common Issues
 - x command is not working
@@ -33,5 +33,4 @@ This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfu
 If you find an issue, no matter how small, please create an issue! There may be many things missing from the data files.
 
 # Alternative packages:
-- mcfunction (the original package. It works, but is not maintained and is out of date.)
 - mcfunction-novum (A very good alternative, updated frequently)

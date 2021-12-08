@@ -1,6 +1,6 @@
-Copyright (c) 2017 MrYurihi Redstone
+Copyright 2017 MrYurihi Redstone
 
-Copyright (c) 2020-2021 theusaf
+Copyright 2020-2021 theusaf
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
