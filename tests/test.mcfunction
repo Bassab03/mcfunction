@@ -19,4 +19,4 @@ datapack list available
 tp @p ~ ~ ~
 time set midnight
 effect give @p minecraft:speed 10 1 true
-execute
+execute if score @p foobar <= @p sourceObjective run die
