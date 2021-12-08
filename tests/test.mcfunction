@@ -14,3 +14,5 @@ team list team
 team add foo {"text":"my team name"}
 team join team @p
 team modify example collisionRule pushOtherTeams
+replaceitem entity @p slot.container.10 minecraft:emerald 1
+replaceitem block ~ ~ ~ slot.container.12 minecraft:nether_star 1
