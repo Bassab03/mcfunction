@@ -10,13 +10,13 @@ Supports 1.12 - 1.18
 - Improved Syntax highlighting
 - Autocomplete for commands, selectors, and more
 - Options to disable "minecraft:" in autocompletion.
-- Version switching!
+- Version switching (from 1.12 - 1.18)!
 
 # What's different about this mcfunction highlighter?
 
 This package, forked from [Yurihaia/mcfunction](https://github.com/Bassab03/mcfunction), fixes many of the issues listed in it, adds more commands, items, entities, and has more suggestions, such as loot tables, sounds, and particles!
 
-# Features I am thinking of adding:
+# Features I am planning to add:
 
 - Suggestions for NBT tags and block states.
 - Custom color picker for color-based nbt tags.
