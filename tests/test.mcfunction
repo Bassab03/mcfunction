@@ -15,3 +15,4 @@ data modify block ~ ~ ~ my.path[0]."to modify" set from storage source my.path[0
 data modify entity @p my.path[0]."to modify" insert 0 from storage source my.path[0]."to get"
 execute store result storage storage path.to.store[0]."in" byte 1 run die
 say hi
+locatebiome frozen_river
