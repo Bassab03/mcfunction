@@ -16,3 +16,4 @@ data modify entity @p my.path[0]."to modify" insert 0 from storage source my.pat
 execute store result storage storage path.to.store[0]."in" byte 1 run die
 say hi
 locatebiome frozen_river
+spreadplayers ~ ~ 0 10 under 100 false @p
