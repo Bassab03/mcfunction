@@ -90,3 +90,5 @@ worldborder warning distance 50
 worldborder set 29000000 0
 setblock ~ ~ ~ diamond_block[state=1,foo=north]
 give @p diamond{nbtData:true}
+setblock ~ ~ ~ chest[facing=north]{nbt:"yes"}
+setblock ~ ~ ~ minecraft:chest[facing=north]{nbt:"yes"}
