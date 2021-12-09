@@ -7,3 +7,9 @@ forceload add ~ ~ ~ ~
 forceload remove ~ ~ ~ ~
 forceload query ~ ~
 spectate @p @a
+data get storage foo yeet
+data get block ~ ~ ~ my.path[0]."name"
+data merge storage source {}
+data remove storage source my.path[0]."name"
+data modify block ~ ~ ~ my.path[0]."to modify" set from storage source my.path[0]."to get"
+data modify entity @p my.path[0]."to modify" insert 0 from storage source my.path[0]."to get"
