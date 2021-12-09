@@ -18,3 +18,6 @@ say hi
 locatebiome frozen_river
 spreadplayers ~ ~ 0 10 under 100 false @p
 debug function foobar
+item modify block ~ ~ ~ slot.armor.chest modifier
+item modify entity @p slot.armor.chest modifier
+item replace block ~ ~ ~ from block ~ ~ ~ slot.armor.chest modifier
