@@ -6,3 +6,4 @@ replaceitem entity @p slot.container.10 minecraft:iron_nugget
 forceload add ~ ~ ~ ~
 forceload remove ~ ~ ~ ~
 forceload query ~ ~
+spectate @p @a
