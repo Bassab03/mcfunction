@@ -17,3 +17,4 @@ execute store result storage storage path.to.store[0]."in" byte 1 run die
 say hi
 locatebiome frozen_river
 spreadplayers ~ ~ 0 10 under 100 false @p
+debug function foobar
