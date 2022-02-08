@@ -3,3 +3,4 @@ blockdata ~ ~ ~123
 bossbar set id name {"text":"bossbar name"}
 defaultgamemode creative
 deop foo
+enchant @p minecraft:protection 100
