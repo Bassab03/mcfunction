@@ -4,4 +4,4 @@ bossbar set id name {"text":"bossbar name"}
 defaultgamemode creative
 deop foo
 enchant @p minecraft:protection 100
-? 0
+? scoreboard add
